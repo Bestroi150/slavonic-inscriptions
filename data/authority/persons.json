@@ -1,0 +1,143 @@
+{
+"persons": {
+		"text": {
+			"body": {
+				"listPerson": {
+					"person": [
+						{
+							"persName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Калоян"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Kaloyan"
+								}
+							],
+							"_xml:id": "Kalo"
+						},
+						{
+							"persName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Йоан Асен II"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Ioan Asen II"
+								}
+							],
+							"_xml:id": "IA2"
+						},
+						{
+							"persName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Йоан Асен I"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Ioan Asen I"
+								}
+							],
+							"_xml:id": "IA1"
+						},
+						{
+							"persName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Теодор Комнин"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Theodore Komnenos Doukas"
+								}
+							],
+							"_xml:id": "TheoK"
+						},
+						{
+							"persName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Михаил II Асен"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Michael II Asen"
+								}
+							],
+							"idno": {
+								"_type": "wikidata",
+								"__text": "https://www.wikidata.org/wiki/Q518598"
+							},
+							"_xml:id": "Mich2A"
+						},
+						{
+							"persName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Константин Тих Асен"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Konstantin Tih Asen"
+								}
+							],
+							"_xml:id": "KTihA"
+						},
+						{
+							"persName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Ирина Дукаина Ласкарина"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Irene Doukaina Laskarina"
+								}
+							],
+							"_xml:id": "Iri"
+						},
+						{
+							"persName": [
+								{
+									"_xml:lang": "bg"
+								},
+								{
+									"_xml:lang": "en"
+								}
+							],
+							"_xml:id": "s"
+						},
+						{
+							"persName": [
+								{
+									"_xml:lang": "en"
+								},
+								{
+									"_xml:lang": "bg"
+								}
+							],
+							"_xml:id": "l"
+						},
+						{
+							"persName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "неизвестен"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "unknown"
+								}
+							],
+							"_xml:id": "unknown"
+						}
+					]
+				}
+			}
+		},
+		"_xmlns": "http://www.tei-c.org/ns/1.0"
+	}
+}

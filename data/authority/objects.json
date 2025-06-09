@@ -1,0 +1,133 @@
+{
+"objects": {
+	    "text": {
+			"body": {
+				"list": {
+					"item": [
+						{
+							"term": [
+								{
+									"_xml:lang": "bg",
+									"__text": "надгробен паметник"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "funerary monument"
+								}
+							],
+							"desc": {
+								"_xml:lang": "en",
+								"__text": "A monument commemorating a deceased person"
+							},
+							"_xml:id": "funerary-monument"
+						},
+						{
+							"term": [
+								{
+									"_xml:lang": "bg",
+									"__text": "вотивен паметник"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "votive monument"
+								}
+							],
+							"desc": {
+								"_xml:lang": "en",
+								"__text": "A monument dedicated to a deity or for religious purposes"
+							},
+							"_xml:id": "votive-monument"
+						},
+						{
+							"term": [
+								{
+									"_xml:lang": "bg",
+									"__text": "посветителен надпис"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "dedicatory inscription"
+								}
+							],
+							"desc": {
+								"_xml:lang": "en",
+								"__text": "An inscription dedicating something to someone or for a purpose"
+							},
+							"_xml:id": "dedicatory-inscription"
+						},
+						{
+							"term": [
+								{
+									"_xml:lang": "bg",
+									"__text": "строителен надпис"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "building inscription"
+								}
+							],
+							"desc": {
+								"_xml:lang": "en",
+								"__text": "An inscription related to construction or renovation of buildings"
+							},
+							"_xml:id": "building-inscription"
+						},
+						{
+							"term": [
+								{
+									"_xml:lang": "bg",
+									"__text": "граничен камък"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "boundary stone"
+								}
+							],
+							"desc": {
+								"_xml:lang": "en",
+								"__text": "A stone marking territorial boundaries"
+							},
+							"_xml:id": "boundary-stone"
+						},
+						{
+							"term": [
+								{
+									"_xml:lang": "bg",
+									"__text": "милиарен камък"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "milestone"
+								}
+							],
+							"desc": {
+								"_xml:lang": "en",
+								"__text": "A stone marking distances along roads"
+							},
+							"_xml:id": "milestone"
+						},
+						{
+							"term": [
+								{
+									"_xml:lang": "bg",
+									"__text": "неизвестен обект"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "unknown object"
+								}
+							],
+							"desc": {
+								"_xml:lang": "en",
+								"__text": "Object type cannot be determined or is not specified"
+							},
+							"_xml:id": "unknown-object"
+						}
+					]
+				}
+			}
+		},
+		"_xmlns": "http://www.tei-c.org/ns/1.0",
+		"_xmlns:xi": "http://www.w3.org/2001/XInclude"
+	}
+}
