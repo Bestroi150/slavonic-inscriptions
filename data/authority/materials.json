@@ -1,0 +1,92 @@
+{
+    "materials": {
+		"text": {
+			"body": {
+				"list": {
+					"item": [
+						{
+							"term": [
+								{
+									"_xml:lang": "bg",
+									"__text": "камък-други"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "stone-other"
+								}
+							],
+							"_xml:id": "st"
+						},
+						{
+							"gloss": {
+								"_xml:lang": "bg",
+								"__text": "гранит"
+							},
+							"term": {
+								"_xml:lang": "en",
+								"__text": "granite"
+							},
+							"_xml:id": "g"
+						},
+						{
+							"gloss": {
+								"_xml:lang": "bg",
+								"__text": "мрамор"
+							},
+							"term": {
+								"_xml:lang": "en",
+								"__text": "marble"
+							},
+							"_xml:id": "m"
+						},
+						{
+							"gloss": {
+								"_xml:lang": "bg",
+								"__text": "пясъчник"
+							},
+							"term": {
+								"_xml:lang": "en",
+								"__text": "sandstone"
+							},
+							"_xml:id": "s"
+						},
+						{
+							"gloss": {
+								"_xml:lang": "bg",
+								"__text": "варовик"
+							},
+							"term": {
+								"_xml:lang": "en",
+								"__text": "limestone"
+							},
+							"_xml:id": "l"
+						},
+						{
+							"gloss": {
+								"_xml:lang": "bg",
+								"__text": "скала"
+							},
+							"term": {
+								"_xml:lang": "en",
+								"__text": "rock"
+							},
+							"_xml:id": "r"
+						},
+						{
+							"gloss": {
+								"_xml:lang": "bg",
+								"__text": "неизвестен"
+							},
+							"term": {
+								"_xml:lang": "en",
+								"__text": "unknown"
+							},
+							"_xml:id": "unknown"
+						}
+					]
+				}
+			}
+		},
+		"_xmlns": "http://www.tei-c.org/ns/1.0"
+	}
+}
