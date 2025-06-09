@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="bg">Кричимски надпис</title><!-- Заглавие -->
+                <title xml:lang="en">Krichim Inscription</title>
+                <editor>
+                    <persName xml:lang="bg">Казимир Попконстантинов</persName>
+                    <persName xml:lang="en">Kazimir Popkonstantinov</persName>
+                    <persName xml:lang="bg">Ото Кронщайнер</persName>
+                    <persName xml:lang="en">Otto Kronsteiner </persName>
+                </editor>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Telamon Project</authority>
+                <date>2025</date>
+                <idno type="filename">13-10_old</idno><!-- номер на надписа -->
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><country>Bulgaria</country> 
+                        <altIdentifier  xml:lang="bg"><repository></repository><!-- Институция-->
+                            <idno/><!-- Инвентарен номер -->
+                        </altIdentifier> 
+                        <altIdentifier xml:lang="en"><repository></repository>
+                            <idno/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents><!-- Жанр на надписа -->
+                        <summary corresp="inscription_type_genres.xml#chr"><!-- добави в @corresp след # съответното id от document-type.xml -->
+                            <seg xml:lang="bg">летописен надпис</seg><!-- с думи -->
+                            <seg xml:lang="en">chronical inscription</seg>
+                        </summary>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material xml:lang="bg" ref="materials.xml#st">камък-други</material><!-- добави в @ref след # съответното id от material.xml; съдържание на елемента - с думи -->  
+                                    <material xml:lang="en" ref="materials.xml#st">stone-other</material>
+                                    <objectType xml:lang="bg" ref="objects.xml#r">скала</objectType>
+                                    <objectType xml:lang="en">rock</objectType>
+                                    <dimensions>
+                                        <height unit="cm" quantity="56">56 см</height>
+                                        <width unit="cm" quantity=""></width>
+                                        <depth unit="cm" quantity="" ></depth>
+                                    </dimensions>
+                                  </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout xml:lang="bg">Оформено надписно поле за текста в горната част на скалата</layout> 
+                                <layout xml:lang="en">Inscriptional field formed in the upper part of the rock</layout> 
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height/><!-- само числова стойност като стойност на атрибута и като съдържание на елемента -->
+                            </handNote>
+                        </handDesc> 
+                        <decoDesc>
+                            <decoNote/>
+                        </decoDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace ref="origloc.xml#IvanKale">До останките от крепостта "Иванково кале" в гората над Кричим</origPlace>
+                            <origPlace ref="https://www.wikidata.org/wiki/Q25477509"><!-- КАТО ИЗМЕРЯ КООРДИНАТИ, ДА ГИ СРАВНЯ-->
+                                <seg xml:lang="bg">До останките от крепостта "Иванково кале" в гората над Кричим</seg>
+                                <seg xml:lang="en">near "Ivankovo kale" fortress in the Krichim's woods</seg>
+                            </origPlace>
+                            <origDate notBefore="1200" notAfter="1299" evidence="reign">
+                                <seg xml:lang="bg">XIII в.</seg>
+                                <seg xml:lang="en">XIII c.</seg>
+                            </origDate>
+                        </origin>
+                        <provenance type="found" when="1942">
+                            <seg xml:lang="bg"><placeName type="ancientFindspot" ref="currentloc.xml#Krichim">До останките от крепостта "Иванково кале" в гората над Кричим</placeName></seg>
+                            <seg xml:lang="en"><placeName type="ancientFindspot" ref="currentloc.xml#Krichim">near "Ivankovo kale" fortress in the Krichim's woods</placeName></seg>
+                        </provenance>
+                        <provenance type="observed">
+                            <seg xml:lang="bg"><placeName ref="currentloc.xml#Krichim">До останките от крепостта "Иванково кале" в гората над Кричим</placeName></seg>
+                            <seg xml:lang="en"><placeName ref="currentloc.xml#Krichim">near "Ivankovo kale" fortress in the Krichim's woods</placeName></seg>
+                        </provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="13-10.jpg"/>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="chu">
+                <ab>
+                    <lb n="1"/> <w lemmaRef="https://histdict.uni-sofia.bg/oldbgdict/oldbg_show/d_04753/">на</w> <w lemmaRef="https://histdict.uni-sofia.bg/oldbgdict/oldbg_show/d_09490/">семъ</w> <w lemmaRef="https://histdict.uni-sofia.bg/oldbgdict/oldbg_show/d_03616/"> ка  
+                    <lb n="2" break="no"/>мен</w> <w lemmaRef="https://histdict.uni-sofia.bg/oldbgdict/oldbg_show/d_09516/">сѣдѣ</w> <persName ref="names.xml#n014">а
+                    <lb n="3" break="no"/>сѣн</persName> <w lemmaRef="https://histdict.uni-sofia.bg/evtdict/evt_show/d_05712">цар</w> <w lemmaRef="https://histdict.uni-sofia.bg/evtdict/evt_show/d_02958">егда</w> <w lemmaRef="https://histdict.uni-sofia.bg/oldbgdict/oldbg_show/d_07916/">прѣѧ</w> 
+                    <lb n="4"/> <placeName ref="places.xml#Pl006">крм</placeName> 
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <head xml:lang="bg">Букви в лигатура:</head><!-- В случай, че има коментари и от друг характер, да се промени съдържанието на елемента или да се добави нов елемент <head> -->
+                    <head xml:lang="en">Letters in ligatures:</head>
+                        <app loc="3"> <note>ар (цар)</note> <note>гдапр (егда прѣѧ)</note> </app>
+                        <app loc="4"> <note>м (крм)</note> </app>
+                </listApp>
+            </div>
+            <div type="translation">
+                <seg xml:lang="bg"> 
+                    На този ка
+                    мък седя А
+                    сен, когато превзе/получи във владение
+                    Кричим.
+                </seg>
+                <seg xml:lang="en"> 
+                    On this stone 
+                    sat A
+                    sen when he conquered/received possession of
+                    Krichim.
+                </seg>
+            </div>
+            <div type="commentary">
+                <p>
+                    <seg xml:lang="bg"><note> Учените не са единодушни кой е цар Асен, споменат в надписа. Според Ив. Гошев това е цар Иван I Асен. Ив. Дуйчев смята, че се касае за Иван II Асен. А. Маргос „предатира надписа към 1254 г., когато цар Михаил II Асен (1246-1256) решава да си възвърне отнетите през 1246 г. български земи, навлиза в Родопската област и освобождава редица крепости, между които и Кричим“ (Смядовски 1993:23). </note> </seg>
+                    <seg xml:lang="en"><note> Scholars disagree on who the Tsar Asen mentioned in the inscription was. According to Iv. Goshev, this is Tsar Ivan I Asen. Iv. Duychev believes that it refers to Ivan II Asen. A. Margos "re-dates the inscription to 1254, when Tsar Michael II Asen (1246-1256) decided to regain the Bulgarian lands taken away in 1246, entered the Rhodope region and liberated a number of fortresses, including Krichim" (Smyadovski 1993:23)</note></seg>
+                </p> 
+            </div>
+            <div type="bibliography"> 
+                <listBibl>
+                    <bibl sameAs="bib:b1">85</bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
