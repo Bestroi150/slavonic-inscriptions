@@ -1,0 +1,7 @@
+streamlit>=1.26.0
+pandas
+pillow
+requests
+plotly
+networkx
+lxml
