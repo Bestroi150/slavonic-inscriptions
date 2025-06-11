@@ -1,18 +1,114 @@
-import streamlit as st
-from pathlib import Path
-from typing import Dict, Any
-from collections import defaultdict
-from io import BytesIO
-from PIL import Image
-import xml.etree.ElementTree as ET
-import pandas as pd
+"""
+Main application file for the TEI XML visualization application.
+"""
 import os
 import base64
+from io import BytesIO
+from pathlib import Path
+import tempfile
+import xml.etree.ElementTree as ET
+
+# Basic data manipulation libraries
+import pandas as pd
+import json
+import numpy as np
+
+# Plotting and visualization libraries
 import plotly.express as px
 import plotly.graph_objects as go
+import pydeck as pdk
+import folium
+from streamlit_folium import st_folium
+from PIL import Image
 import networkx as nx
-import json
-import tempfile
+
+# Streamlit
+import streamlit as st
+
+# Local imports
+from map_view import *
+
+# --- Map Helper Functions ---
+def get_xml_references(xml_string):
+    """Parses the XML string and returns a set of all 'ref' attribute values."""
+    if not xml_string:
+        return set()
+    try:
+        ns = {'tei': 'http://www.tei-c.org/ns/1.0'}
+        cleaned_xml_string = xml_string.strip()
+        root = ET.fromstring(cleaned_xml_string)
+        refs = {elem.attrib['ref'] for elem in root.findall('.//*[@ref]', ns)}
+        return refs
+    except ET.ParseError as e:
+        st.error(f"Error parsing XML file: {e}")
+        return set()
+
+def get_english_place_name(place):
+    """Extracts the English place name from a place object."""
+    if isinstance(place, dict) and 'placeName' in place:
+        for name in place.get('placeName', []):
+            if isinstance(name, dict) and name.get('_xml:lang') == 'en':
+                return name.get('__text')
+    return None
+
+def extract_referenced_places(json_data, source_name, xml_refs, doc_id=None):
+    """
+    Extracts places from a JSON object that are referenced in the XML.
+    Returns a list of dictionaries for map plotting and a list for textual display.
+    """
+    map_points = []
+    text_points = []
+    
+    # Navigate to the list of places in the JSON structure
+    try:
+        places_list = json_data.get(next(iter(json_data)))['body']['listPlace']['place']
+    except (KeyError, TypeError, StopIteration):
+        st.warning(f"Could not find a list of places in '{source_name}.json'. Please check the file structure.")
+        return [], []
+
+    # Define how to check for references from each source file
+    ref_prefixes = {
+        'Origin': 'origloc.xml#',
+        'Findspot': 'findsp.xml#',
+        'Current': 'currentloc.xml#',
+        'General': 'places.xml#'
+    }
+    ref_prefix = ref_prefixes.get(source_name, '')
+
+    for place in places_list:
+        if not isinstance(place, dict):
+            continue
+
+        place_id = place.get('_xml:id')
+        if not place_id:
+            continue
+        
+        ref_string_to_check = f"{ref_prefix}{place_id}"
+
+        if ref_string_to_check in xml_refs:
+            english_name = get_english_place_name(place)
+            if not english_name:
+                continue
+            
+            # Add to the textual list regardless of coordinates
+            text_points.append({'name': english_name, 'id': place_id})
+            
+            # For the map, we need coordinates
+            geo_coords = place.get('note', {}).get('geo')
+            if geo_coords:
+                try:
+                    lat, lon = map(float, str(geo_coords).split(','))           
+                    map_points.append({
+                        'name': english_name,
+                        'lat': lat,
+                        'lon': lon,
+                        'source': source_name,
+                        'document': doc_id
+                    })
+                except (ValueError, TypeError):
+                    continue # Ignore if geo format is incorrect
+                    
+    return map_points, text_points
 
 # Configure Streamlit page
 st.set_page_config(
@@ -80,51 +176,22 @@ def set_font_style(font_name: str, encoded_font: str):
     """
     st.markdown(font_css, unsafe_allow_html=True)
 
-# Add custom fonts (Cyrillic Bulgarian, Roboto, and OpenDyslexic)
+# Add custom fonts (Cyrillic Bulgarian and Roboto)
 st.markdown("""
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
-    @font-face {
-        font-family: 'OpenDyslexic';
-        src: url('static/OpenDyslexic-Regular.otf') format('opentype');
-        font-weight: normal;
-        font-style: normal;
-    }
-    
     /* Default fonts */
     * {
         font-family: 'Roboto', sans-serif;
+        font-size: 16px; /* Default font size */
+        line-height: 1.6; /* Default line height */
     }
     
-    /* Church Slavonic specific elements - these will not be overridden by OpenDyslexic */
+    /* Church Slavonic specific elements */
     .custom-font,
     .apparatus-text,
     .ocs-text {
         font-family: 'CyrillicaBulgarian10U', sans-serif !important;
-    }
-    
-    /* Base dyslexic font class - will be added to body when toggle is active */
-    .dyslexic-font {
-        font-family: 'OpenDyslexic', sans-serif !important;
-    }
-    
-    /* Elements to apply OpenDyslexic to when toggle is active */
-    .dyslexic-font .stMarkdown:not(.custom-font):not(.ocs-text):not(.apparatus-text),
-    .dyslexic-font .stText:not(.custom-font):not(.ocs-text):not(.apparatus-text),
-    .dyslexic-font h1,
-    .dyslexic-font h2,
-    .dyslexic-font h3,
-    .dyslexic-font h4,
-    .dyslexic-font h5,
-    .dyslexic-font h6,
-    .dyslexic-font .element-container:not(.custom-font):not(.ocs-text):not(.apparatus-text),
-    .dyslexic-font p:not(.custom-font):not(.ocs-text):not(.apparatus-text),
-    .dyslexic-font span:not(.custom-font):not(.ocs-text):not(.apparatus-text),
-    .dyslexic-font label,
-    .dyslexic-font button,
-    .dyslexic-font select,
-    .dyslexic-font input {
-        font-family: 'OpenDyslexic', sans-serif !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -200,53 +267,7 @@ def parse_tei(file):
 
 # Removed old XML authority file loading in favor of JSON
 
-def load_authority_file_json(file_path: str) -> Dict[str, Any]:
-    """Load and parse a JSON authority file."""
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-            result = {}
-            
-            # Extract person names and IDs from the JSON structure 
-            if 'persons' in data and isinstance(data['persons'], dict):
-                try:
-                    persons_list = data['persons']['text']['body']['listPerson']['person']
-                    if isinstance(persons_list, list):
-                        for person in persons_list:
-                            person_id = person.get('_xml:id', '')
-                            persName_list = person.get('persName', [])
-                            if isinstance(persName_list, list):
-                                eng_name = next((name['__text'] for name in persName_list 
-                                            if name.get('_xml:lang') == 'en' and '__text' in name), '')
-                                bg_name = next((name['__text'] for name in persName_list
-                                            if name.get('_xml:lang') == 'bg' and '__text' in name), '')
-                                result[person_id] = {'en': eng_name, 'bg': bg_name}
-                except (KeyError, TypeError) as e:
-                    st.error(f"Error parsing persons data structure: {str(e)}")
-                    
-            # Handle materials.json and objects.json similar structure
-            elif ('materials' in data and isinstance(data['materials'], dict)) or \
-                 ('objects' in data and isinstance(data['objects'], dict)):
-                try:
-                    key = 'materials' if 'materials' in data else 'objects'
-                    items_list = data[key]['text']['body']['list']['item']
-                    if isinstance(items_list, list):
-                        for item in items_list:
-                            item_id = item.get('_xml:id', '')
-                            term_list = item.get('term', [])
-                            if isinstance(term_list, list):
-                                eng_term = next((term['__text'] for term in term_list 
-                                            if term.get('_xml:lang') == 'en' and '__text' in term), '')
-                                bg_term = next((term['__text'] for term in term_list
-                                            if term.get('_xml:lang') == 'bg' and '__text' in term), '')
-                                result[item_id] = {'en': eng_term, 'bg': bg_term}
-                except (KeyError, TypeError) as e:
-                    st.error(f"Error parsing {key} data structure: {str(e)}")
-                    
-            return result
-    except Exception as e:
-        st.error(f"Error loading authority file {file_path}: {str(e)}")
-        return {}
+
 
 def load_precoded_xmls(folder_path: str) -> list:
     """Load all XML files from the specified folder."""
@@ -362,51 +383,11 @@ def load_authority_files():
 
 def get_authority_name(ref_id, authority_type, authority_files):
     """Extract English name from authority files based on reference ID"""
-    try:
-        if authority_type == 'persons':
-            # Navigate the JSON structure for persons
-            persons = authority_files['persons']['persons']['text']['body']['listPerson']['person']
-            for person in persons:
-                if person.get('_xml:id') == ref_id:
-                    for name in person['persName']:
-                        if name.get('_xml:lang') == 'en' and '__text' in name:
-                            return name['__text']
-        elif authority_type == 'materials':
-            # Navigate the JSON structure for materials
-            items = authority_files['materials']['materials']['text']['body']['list']['item']
-            for item in items:
-                if item.get('_xml:id') == ref_id:
-                    # Handle both single term and list of terms
-                    if isinstance(item['term'], list):
-                        for term in item['term']:
-                            if term.get('_xml:lang') == 'en' and '__text' in term:
-                                return term['__text']
-                    elif isinstance(item['term'], dict) and item['term'].get('_xml:lang') == 'en' and '__text' in item['term']:
-                        return item['term']['__text']
-        elif authority_type == 'objects':
-            # Navigate the JSON structure for objects
-            items = authority_files['objects']['objects']['text']['body']['list']['item']
-            for item in items:
-                if item.get('_xml:id') == ref_id:
-                    # Handle both single term and list of terms
-                    if isinstance(item['term'], list):
-                        for term in item['term']:
-                            if term.get('_xml:lang') == 'en' and '__text' in term:
-                                return term['__text']
-                    elif isinstance(item['term'], dict) and item['term'].get('_xml:lang') == 'en' and '__text' in item['term']:
-                        return item['term']['__text']
-        return ref_id  # Return the ID if name not found
-    except (KeyError, TypeError) as e:
-        print(f"Error getting {authority_type} name for {ref_id}: {str(e)}")
-        return ref_id
 
+     
 # Load authority files from JSON
-authority_files = {
-    'materials': load_authority_file_json(str(DATA_DIR / 'authority/materials.json')),
-    'objects': load_authority_file_json(str(DATA_DIR / 'authority/objects.json')),
-    'persons': load_authority_file_json(str(DATA_DIR / 'authority/persons.json'))
-}
 
+pass
 # Load pre-coded XMLs
 precoded_xmls = load_precoded_xmls(str(DATA_DIR / 'xmls'))
 
@@ -414,47 +395,6 @@ precoded_xmls = load_precoded_xmls(str(DATA_DIR / 'xmls'))
 
 # Create sidebar
 with st.sidebar:
-    # Add OpenDyslexic toggle at the top of the sidebar
-    use_dyslexic = st.toggle("Use OpenDyslexic Font", help="Enable OpenDyslexic font for better readability")
-    if use_dyslexic:
-        st.markdown("""
-        <style>
-            .stApp {
-                font-family: 'OpenDyslexic', sans-serif !important;
-            }
-            .stApp .stMarkdown:not(.custom-font):not(.ocs-text):not(.apparatus-text),
-            .stApp .stText:not(.custom-font):not(.ocs-text):not(.apparatus-text),
-            .stApp h1:not(.custom-font):not(.ocs-text):not(.apparatus-text),
-            .stApp h2:not(.custom-font):not(.ocs-text):not(.apparatus-text),
-            .stApp h3:not(.custom-font):not(.ocs-text):not(.apparatus-text),
-            .stApp h4:not(.custom-font):not(.ocs-text):not(.apparatus-text),
-            .stApp h5:not(.custom-font):not(.ocs-text):not(.apparatus-text),
-            .stApp h6:not(.custom-font):not(.ocs-text):not(.apparatus-text),
-            .stApp p:not(.custom-font):not(.ocs-text):not(.apparatus-text),
-            .stApp span:not(.custom-font):not(.ocs-text):not(.apparatus-text),
-            .stApp label:not(.custom-font):not(.ocs-text):not(.apparatus-text),
-            .stApp button:not(.custom-font):not(.ocs-text):not(.apparatus-text),
-            .stApp select:not(.custom-font):not(.ocs-text):not(.apparatus-text),
-            .stApp input:not(.custom-font):not(.ocs-text):not(.apparatus-text) {
-                font-family: 'OpenDyslexic', sans-serif !important;
-            }
-                h1, h2, h3, h4, h5, h6 {
-                    font-family: 'OpenDyslexic', sans-serif !important;
-                }
-                .stButton button {
-                    font-family: 'OpenDyslexic', sans-serif !important;
-                }
-                .stSelectbox select {
-                    font-family: 'OpenDyslexic', sans-serif !important;
-                }
-                .stTextInput input {
-                    font-family: 'OpenDyslexic', sans-serif !important;
-                }
-            </style>
-            """,
-            unsafe_allow_html=True
-        )
-
     st.image(str(STATIC_DIR / 'imgs/logo.jpg'), width=300, caption="Old Church Slavonic Inscriptions")
     st.header("Project Information")
     
@@ -712,13 +652,17 @@ def format_leiden_text(elem):
 
         # Abbreviations, expansions, numerals
         elif tag in ('abbr', 'ex', 'num'):
-            text += child.text or ''
-
-        # Symbols
+            text += child.text or ''        # Symbols
         elif tag == 'g':
             type_ = child.attrib.get('type')
-            if type_:
-                text += f'*{type_}*'
+            if type_ == 'cross':
+                text += '♱'  # EAST SYRIAC CROSS
+            elif type_ == 'dipunct':
+                text += '։'  # ARMENIAN FULL STOP (U+0589)
+            elif type_ == 'dot':
+                text += '⸱'  # WORD SEPARATOR MIDDLE DOT
+            elif type_:
+                text += f'*{type_}*'  # Fallback for other types
 
         # Superfluous letters
         elif tag == 'surplus':
@@ -815,13 +759,230 @@ def extract_bibliography(div):
             texts.append(bibl.text.strip())
     return "\n".join(texts)
 
-# Load authority files
-authority_files = {
-    'materials': load_authority_file_json(str(DATA_DIR / 'authority/materials.json')),
-    'objects': load_authority_file_json(str(DATA_DIR / 'authority/objects.json')),
-    'persons': load_authority_file_json(str(DATA_DIR / 'authority/persons.json'))
-}
+def display_monument_images(root, image_data, monument_id):
+    """
+    Displays monument images from TEI facsimile elements in a modern grid.
+    Clicking a thumbnail opens the full-size image in a modal dialog.
 
+    Args:
+        root (ET.Element): The root element of the parsed TEI XML.
+        image_data (dict): A dictionary where keys are image URLs and values
+                           are dictionaries containing image data.
+        monument_id (str): Unique identifier for the monument to create unique session state keys.
+    """
+    facsimile = root.find("tei:facsimile", NS)
+    if not facsimile:
+        return
+
+    graphics = facsimile.findall("tei:graphic", NS)
+    if not graphics:
+        return
+
+    # Use a subheader for a clear visual separation without nesting expanders.
+    st.subheader("Monument Images")
+
+    # --- Thumbnail Grid ---
+    num_cols = 4  # Adjust the number of columns as you see fit
+    cols = st.columns(num_cols)
+
+    for i, graphic in enumerate(graphics):
+        url = graphic.get("url")
+        if not url or url not in image_data:
+            continue
+
+        with cols[i % num_cols]:
+            # Display the thumbnail image
+            st.image(
+                image_data[url]["data"],
+                caption=f"Image {i + 1}",
+                use_container_width=True
+            )
+            # Button to trigger the dialog for the full-size image with unique key
+            dialog_key = f"dialog_image_url_{monument_id}"
+            if st.button("🔍 View", key=f"view_dialog_{monument_id}_{url}_{i}"):
+                st.session_state[dialog_key] = url
+
+    # --- Modal Logic ---
+    # This part will activate when a "View" button is clicked.
+    dialog_key = f"dialog_image_url_{monument_id}"
+    if dialog_key in st.session_state and st.session_state[dialog_key]:
+        url = st.session_state[dialog_key]
+        modal = st.container()
+        modal.image(
+            image_data[url]["data"],
+            caption=f"Full-size view of {url}",
+            use_container_width=True
+        )
+        if modal.button("Close", key=f"close_dialog_{monument_id}_{url}"):
+            # To close the modal, we remove the trigger from session state
+            # and rerun the script.
+            del st.session_state[dialog_key]
+            st.rerun()
+
+
+# Network analysis functions
+def show_network_analysis_tab(all_data, parsed_files, data_dir):
+    """Display network analysis visualization and statistics."""
+    if not all_data or not parsed_files:
+        st.warning("No data loaded. Please upload and process XML files first.")
+        return
+
+    # Network type selection
+    network_type = st.selectbox(
+        "Select Network Analysis Type",
+        ["Material Connections", "Object Type Connections", "Origin Location Connections", "Temporal Connections"]
+    )
+
+    # Create graph
+    G = nx.Graph()
+
+    # Color scheme
+    color_map = {
+        'monument': '#4e79a7',  # blue
+        'material': '#59a14f',  # green
+        'object': '#f28e2b',    # orange
+        'location': '#d62728',  # red
+        'period': '#76b7b2',    # teal
+    }
+
+    # Process each monument
+    for _, monument in pd.DataFrame(all_data).iterrows():
+        mon_id = monument['ID']
+        G.add_node(mon_id, type='monument', color=color_map['monument'])
+
+        # Get corresponding XML data
+        file_data = next((f for f in parsed_files if f["root"].find("tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type='filename']", NS).text.strip() == mon_id), None)
+        
+        if not file_data:
+            continue
+
+        root = file_data['root']
+
+        if network_type == "Material Connections":
+            for elem in root.findall(".//tei:material[@ref]", NS):
+                material_name = elem.text.strip() if elem.text else "Unknown Material"
+                if not G.has_node(material_name):
+                    G.add_node(material_name, type='material', color=color_map['material'])
+                G.add_edge(mon_id, material_name)
+
+        elif network_type == "Object Type Connections":
+            for elem in root.findall(".//tei:objectType[@ref]", NS):
+                obj_name = elem.text.strip() if elem.text else "Unknown Object"
+                if not G.has_node(obj_name):
+                    G.add_node(obj_name, type='object', color=color_map['object'])
+                G.add_edge(mon_id, obj_name)
+
+        elif network_type == "Origin Location Connections":
+            for elem in root.findall(".//tei:origPlace/tei:seg[@xml:lang='en']", NS):
+                if elem.text:
+                    place_name = elem.text.strip()
+                    if not G.has_node(place_name):
+                        G.add_node(place_name, type='location', color=color_map['location'])
+                    G.add_edge(mon_id, place_name)
+
+        elif network_type == "Temporal Connections":
+            for elem in root.findall(".//tei:origDate", NS):
+                period = elem.text.strip() if elem.text else None
+                if not period:
+                    eng_seg = elem.find("tei:seg[@xml:lang='en']", NS)
+                    if eng_seg is not None and eng_seg.text:
+                        period = eng_seg.text.strip()
+                
+                if period:
+                    if not G.has_node(period):
+                        G.add_node(period, type='period', color=color_map['period'])
+                    G.add_edge(mon_id, period)
+
+    if G.number_of_nodes() > 0:
+        # Create visualization
+        pos = nx.spring_layout(G)
+        
+        # Create edges trace
+        edge_x, edge_y = [], []
+        for edge in G.edges():
+            x0, y0 = pos[edge[0]]
+            x1, y1 = pos[edge[1]]
+            edge_x.extend([x0, x1, None])
+            edge_y.extend([y0, y1, None])
+
+        edges_trace = go.Scatter(
+            x=edge_x, y=edge_y,
+            line=dict(width=0.5, color='#888'),
+            hoverinfo='none',
+            mode='lines'
+        )
+
+        # Create nodes trace for each type
+        node_traces = []
+        node_types = set(nx.get_node_attributes(G, 'type').values())
+
+        for node_type in node_types:
+            node_indices = [n for n, attr in G.nodes(data=True) if attr.get('type') == node_type]
+            if node_indices:
+                x = [pos[node][0] for node in node_indices]
+                y = [pos[node][1] for node in node_indices]
+                
+                node_trace = go.Scatter(
+                    x=x, y=y,
+                    mode='markers+text',
+                    name=node_type.capitalize(),
+                    text=[str(node) for node in node_indices],
+                    textposition="top center",
+                    hoverinfo='text',
+                    marker=dict(
+                        size=10,
+                        color=[G.nodes[node].get('color', '#888') for node in node_indices],
+                        line=dict(width=1, color='#fff')
+                    )
+                )
+                node_traces.append(node_trace)
+
+        # Create and display figure
+        fig = go.Figure(
+            data=[edges_trace] + node_traces,
+            layout=go.Layout(
+                showlegend=True,
+                hovermode='closest',
+                margin=dict(b=20, l=5, r=5, t=40),
+                xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+                yaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+                legend=dict(
+                    yanchor="top",
+                    y=0.99,
+                    xanchor="right",
+                    x=0.99
+                ),
+                height=600
+            )
+        )
+
+        st.plotly_chart(fig, use_container_width=True)
+
+        # Display statistics
+        st.subheader("Network Statistics")
+        stats_col1, stats_col2 = st.columns(2)
+        
+        with stats_col1:
+            st.metric("Total Nodes", G.number_of_nodes())
+            st.metric("Total Connections", G.number_of_edges())
+            
+            # Node type distribution
+            st.markdown("**Node Distribution:**")
+            for n_type in sorted(node_types):
+                count = len([n for n, attr in G.nodes(data=True) if attr.get('type') == n_type])
+                st.markdown(f"- {n_type.capitalize()}: {count}")
+
+        with stats_col2:
+            if G.number_of_nodes() > 1:
+                # Centrality Analysis
+                st.markdown("**Most Connected Nodes:**")
+                central_nodes = sorted(nx.degree_centrality(G).items(), key=lambda x: x[1], reverse=True)[:5]
+                for node, score in central_nodes:
+                    node_type = G.nodes[node].get('type', 'unknown')
+                    st.markdown(f"- {node} ({node_type}): {score:.3f}")
+
+    else:
+        st.info(f"No {network_type.lower()} connections found in the current dataset.")
 # Load pre-coded XMLs
 precoded_xmls = load_precoded_xmls(str(DATA_DIR / 'xmls'))
 
@@ -890,9 +1051,8 @@ if uploaded_images:
             continue
 
 # Continue with file processing only if we have files to work with
-if working_files:
-    # Create tabs for visualization, querying, analytics, and network analysis
-    viz_tab, query_tab, analytics_tab, network_tab = st.tabs(["Data Visualization", "Search & Query", "Analytics", "Network Analysis"])
+if working_files:    # Create tabs for visualization, querying, analytics, network analysis, and map
+    viz_tab, query_tab, analytics_tab, network_tab, map_tab = st.tabs(["Data Visualization", "Search & Query", "Analytics", "Network Analysis", "Map View"])
     # Create data structures for analytics, search, and file storage
     all_data = []
     unique_types = set()
@@ -978,7 +1138,7 @@ if working_files:
                 monument_title = f"Monument {mon_id}" if mon_id else "Monument"
 
                 # Editor(s) from titleStmt (English preferred if available).
-                editors = title_stmt.findall("tei:editor/tei:persName", NS) if title_stmt is not None else []
+                editors = title_stmt.findall("tei:editor/tei:persName[@xml:lang='en']", NS) if title_stmt is not None else []
                 editor_names = [ed.text.strip() for ed in editors if ed.text]
                 editor_str = ", ".join(editor_names) if editor_names else "Not available"
 
@@ -1180,8 +1340,7 @@ if working_files:
                         st.markdown(f"- **Location:** {found_info['en']['text']}")
                         if found_info['en']['ref']:
                             st.markdown(f"- **Reference:** {found_info['en']['ref']}")
-                        
-                # Display origin and dating information
+                          # Display origin and dating information
                 if origin_info:
                     st.markdown("##### Origin Information")
                     if 'en' in origin_info:
@@ -1197,6 +1356,9 @@ if working_files:
                 st.markdown("- **Decoration description:** (appears to be blank)")
                 st.subheader("Dating and Location Information")
                 st.markdown(f"- **Category of inscription:** {inscription_category}")
+                
+                # Display facsimile images if available
+                display_monument_images(root, image_data, mon_id)
 
                 # Original Text Section with Old Church Slavonic Font
                 st.subheader("Original Text (Old Church Slavonic)")
@@ -1386,17 +1548,98 @@ if working_files:
                         'file_name': file_name,
                         'matches': file_matches
                     })
-            
-            # Only display results if we found any matches
+              # Only display results if we found any matches
             if results:
                 st.subheader("Search Results")
                 for result in results:
                     with st.expander(f"Results from {result['file_name']}"):
+                        # Show match details
                         for section, content in result['matches']:
                             st.markdown(f"**Found in {section}:**")
                             st.text(content)
-            else:
-                st.info("No matches found for your search criteria.")
+                        
+                        # Add button to view the full document
+                        if st.button("View Full Document", key=f"view_{result['file_name']}"):
+                            st.markdown("---")
+                            st.subheader(f"Full Document: {result['file_name']}")
+                            
+                            # Get the file data for this result
+                            file_data = next((f for f in parsed_files if f['name'] == result['file_name']), None)
+                            if file_data:
+                                root = file_data['root']
+                                
+                                # Display monument title
+                                title = root.find(".//tei:title[@xml:lang='en']", NS)
+                                if title is not None and title.text:
+                                    st.markdown(f"### {title.text}")
+                                
+                                # Display monument information
+                                ms_desc = root.find(".//tei:msDesc", NS)
+                                if ms_desc is not None:
+                                    st.markdown("### Monument Information")
+                                    
+                                    # Display object type and material
+                                    object_type = get_text(ms_desc, ".//tei:objectType", lang="en")
+                                    material = get_text(ms_desc, ".//tei:material", lang="en")
+                                    if object_type:
+                                        st.markdown(f"- **Type:** {object_type}")
+                                    if material:
+                                        st.markdown(f"- **Material:** {material}")
+                                
+                                # Display each section from the document
+                                body = root.find("tei:text/tei:body", NS)
+                                if body is not None:
+                                    for div in body.findall("tei:div", NS):
+                                        div_type = div.get("type")
+                                        if div_type:
+                                            st.markdown(f"### {div_type.title()}")
+                                            if div_type == "edition":
+                                                # Apply styling for edition text
+                                                st.markdown("""
+                                                    <style>
+                                                        .edition-text {
+                                                            background-color: #f5f5f5;
+                                                            padding: 20px;
+                                                            border-radius: 5px;
+                                                            font-size: 24px;
+                                                            line-height: 1.6;
+                                                            margin: 10px 0;
+                                                            font-family: 'CyrillicaBulgarian10U', sans-serif;
+                                                        }
+                                                    </style>
+                                                """, unsafe_allow_html=True)
+                                                formatted_text = format_leiden_text(div)
+                                                formatted_text = "\n".join(line for line in formatted_text.splitlines() if line.strip())
+                                                st.markdown(f'<div class="edition-text">{formatted_text.replace(chr(10), "<br>")}</div>', unsafe_allow_html=True)
+                                            elif div_type == "apparatus":
+                                                # Apply styling for apparatus text
+                                                st.markdown("""
+                                                    <style>
+                                                        .apparatus-text {
+                                                            background-color: #ffffff;
+                                                            padding: 10px;
+                                                            border-radius: 5px;
+                                                            font-size: 18px;
+                                                            line-height: 1.6;
+                                                            font-family: 'CyrillicaBulgarian10U', sans-serif;
+                                                        }
+                                                    </style>
+                                                """, unsafe_allow_html=True)
+                                                apparatus_text = extract_apparatus_english(div)
+                                                if apparatus_text:
+                                                    st.markdown(f'<div class="apparatus-text">{apparatus_text}</div>', unsafe_allow_html=True)
+                                            elif div_type == "translation":
+                                                st.markdown(extract_english_text(div, "seg"))
+                                            elif div_type == "commentary":
+                                                st.markdown(extract_english_text(div, "seg"))
+                                            elif div_type == "bibliography":
+                                                st.markdown(extract_bibliography(div))
+                                
+                                # Display images if available
+                                display_monument_images(root, image_data, result['file_name'])
+                            else:
+                                     st.info("No matches found for your search criteria.")
+
 
     with analytics_tab:
         st.header("Analytics & Visualizations")
@@ -1444,13 +1687,84 @@ if working_files:
    
     with network_tab:
         st.header("Network Analysis")         
-       
         
+        def load_authority_files():
+            """Load all authority files from the data directory"""
+            authority_data = {}
+            auth_dir = DATA_DIR / 'authority'
+            
+            # List of authority files to load
+            files_to_load = {
+                'materials': 'materials.json',
+                'objects': 'objects.json',
+                'persons': 'persons.json',
+                'places': 'places.json',
+                'currentloc': 'currentloc.json',
+                'findspot': 'findspot.json',
+                'origloc': 'origloc.json',
+                'titles': 'titles.json',
+                'relig': 'relig.json',
+                'bibliography': 'bibliography.json'
+            }
+            
+            for key, filename in files_to_load.items():
+                try:
+                    with open(auth_dir / filename, 'r', encoding='utf-8') as f:
+                        authority_data[key] = json.load(f)
+                except Exception as e:
+                    st.warning(f"Could not load {filename}: {e}")
+            
+            return authority_data
+            
+        def get_authority_name(ref_id, auth_type, auth_files):
+            """Get the name/label from an authority file based on the reference ID"""
+            if auth_type not in auth_files:
+                return None
+                
+            auth_data = auth_files[auth_type]
+            
+            # Handle materials.json special structure
+            if auth_type == 'materials':
+                items = auth_data.get('materials', {}).get('text', {}).get('body', {}).get('list', {}).get('item', [])
+                for item in items:
+                    if item.get('_xml:id') == ref_id:
+                        # Get English term
+                        if isinstance(item.get('term'), list):
+                            for term in item['term']:
+                                if term.get('_xml:lang') == 'en':
+                                    return term.get('__text')
+                        elif isinstance(item.get('term'), dict):
+                            if item['term'].get('_xml:lang') == 'en':
+                                return item['term'].get('__text')
+                return ref_id
+
+            # Handle objects.json special structure
+            if auth_type == 'objects':
+                items = auth_data.get('objects', {}).get('text', {}).get('body', {}).get('list', {}).get('item', [])
+                for item in items:
+                    if item.get('_xml:id') == ref_id:
+                        # Get English term
+                        if isinstance(item.get('term'), list):
+                            for term in item['term']:
+                                if term.get('_xml:lang') == 'en':
+                                    return term.get('__text')
+                        elif isinstance(item.get('term'), dict):
+                            if item['term'].get('_xml:lang') == 'en':
+                                return item['term'].get('__text')
+                return ref_id
+
+            # Handle origloc.json structure
+            if auth_type == 'origloc':
+                if isinstance(auth_data, dict):
+                    if ref_id in auth_data:
+                        return auth_data[ref_id].get('name_en', auth_data[ref_id].get('name', ref_id))
+            
+            return ref_id
+
         # Add network type selection
         network_type = st.selectbox(
             "Select Network Analysis Type",
-            ["Find Spot Connections", "Material Connections", "Object Type Connections", 
-             "Person Connections", "Temporal Connections"]
+            ["Origin Location Connections", "Material Connections", "Object Type Connections", "Temporal Connections"]
         )
         
         if all_data:
@@ -1465,12 +1779,46 @@ if working_files:
             
             # Create color mapping for different node types
             color_map = {
-                'monument': '#1f77b4',  # blue for monuments
-                'material': '#2ca02c',  # green for materials
-                'object': '#ff7f0e',    # orange for objects
-                'person': '#d62728'     # red for persons
+                'monument': '#1f77b4',    # blue for monuments
+                'material': '#2ca02c',    # green for materials
+                'object': '#ff7f0e',      # orange for objects
+                'origin': '#d62728',      # red for origin locations
+                'period': '#7f7f7f'       # gray for periods
             }
             
+            # --- Date Clustering Functions ---
+            def cluster_dates(dates):
+                """Group dates that are close to each other"""
+                if not dates:
+                    return []
+                    
+                # Sort dates and initialize clusters
+                sorted_dates = sorted(dates)
+                clusters = []
+                current_cluster = [sorted_dates[0]]
+                
+                # Maximum years difference to be considered in the same cluster
+                MAX_YEAR_DIFF = 10
+                
+                for i in range(1, len(sorted_dates)):
+                    if sorted_dates[i] - sorted_dates[i-1] <= MAX_YEAR_DIFF:
+                        current_cluster.append(sorted_dates[i])
+                    else:
+                        clusters.append(current_cluster)
+                        current_cluster = [sorted_dates[i]]
+                
+                clusters.append(current_cluster)
+                return clusters
+            
+            def format_date_cluster(cluster):
+                """Format a cluster of dates into a readable label"""
+                if len(cluster) == 1:
+                    return str(cluster[0])
+                elif len(cluster) == 2:
+                    return f"{cluster[0]}-{cluster[-1]}"
+                else:
+                    return f"{cluster[0]}-{cluster[-1]} ({len(cluster)} dates)"
+
             # Process each monument based on the selected network type
             for _, monument in df.iterrows():
                 mon_id = monument['ID']
@@ -1488,79 +1836,90 @@ if working_files:
                     root = file_data['root']
                     
                     if network_type == "Material Connections":
-                        # Process materials
+                        # Process materials using abbreviated IDs
                         for material_elem in root.findall(".//tei:material", NS):
-                            material_name = None
                             ref = material_elem.get('ref', '')
-                            if ref:
-                                ref_id = ref.replace('materials.xml#', '')
-                                material_name = get_authority_name(ref_id, 'materials', authority_files)
-                            
-                            if material_name:
-                                if not G.has_node(material_name):
-                                    G.add_node(material_name, type='material', color=color_map['material'], node_type='material')
-                                G.add_edge(mon_id, material_name, type='material')
+                            if ref and 'materials.xml#' in ref:
+                                material_id = ref.replace('materials.xml#', '')
+                                material_name = get_authority_name(material_id, 'materials', authority_files)
+                                
+                                if material_name:
+                                    if not G.has_node(material_name):
+                                        G.add_node(material_name, type='material', color=color_map['material'], node_type='material')
+                                    G.add_edge(mon_id, material_name, type='material')
                     
                     elif network_type == "Object Type Connections":
-                        # Process objects
+                        # Process objects using abbreviated IDs
                         for object_elem in root.findall(".//tei:objectType", NS):
-                            object_name = None
                             ref = object_elem.get('ref', '')
-                            if ref:
-                                ref_id = ref.replace('objects.xml#', '')
-                                object_name = get_authority_name(ref_id, 'objects', authority_files)
-                            
-                            if object_name:
-                                if not G.has_node(object_name):
-                                    G.add_node(object_name, type='object', color=color_map['object'], node_type='object')
-                                G.add_edge(mon_id, object_name, type='object')
+                            if ref and 'objects.xml#' in ref:
+                                object_id = ref.replace('objects.xml#', '')
+                                object_name = get_authority_name(object_id, 'objects', authority_files)
+                                
+                                if object_name:
+                                    if not G.has_node(object_name):
+                                        G.add_node(object_name, type='object', color=color_map['object'], node_type='object')
+                                    G.add_edge(mon_id, object_name, type='object')
                     
-                    elif network_type == "Person Connections":
-                        # Process persons
-                        for person_elem in root.findall(".//tei:persName", NS):
-                            person_name = None
-                            ref = person_elem.get('ref', '')
-                            if ref and 'persons.xml#' in ref:
-                                ref_id = ref.replace('persons.xml#', '')
-                                person_name = get_authority_name(ref_id, 'persons', authority_files)
-                            
-                            if person_name:
-                                if not G.has_node(person_name):
-                                    G.add_node(person_name, type='person', color=color_map['person'], node_type='person')
-                                G.add_edge(mon_id, person_name, type='person')
-                    elif network_type == "Find Spot Connections":
-                            # Process find spots - only use English place names
-                        for place_elem in root.findall(".//tei:seg[@xml:lang='en']/tei:placeName", NS):
-                            place_name = place_elem.text
-                            if place_name:
-                                place_name = place_name.strip()
-                                if not G.has_node(place_name):
-                                    G.add_node(place_name, type='place', color='#9467bd', node_type='place')
-                                G.add_edge(mon_id, place_name, type='place')
+                    elif network_type == "Origin Location Connections":
+                        # Process origin locations
+                        for place_elem in root.findall(".//tei:origPlace[@ref]", NS):
+                            ref = place_elem.get('ref', '')
+                            if ref and 'origloc.xml#' in ref:
+                                place_id = ref.replace('origloc.xml#', '')
+                                place_name = get_authority_name(place_id, 'origloc', authority_files)
+                                
+                                if place_name:
+                                    if not G.has_node(place_name):
+                                        G.add_node(place_name, type='origin', color=color_map['origin'], node_type='origin')
+                                    G.add_edge(mon_id, place_name, type='origin')
                     
                     elif network_type == "Temporal Connections":
-                        # Process dates
+                        # Process dates with clustering
+                        dates = []
                         for date_elem in root.findall(".//tei:origDate", NS):
-                            century = None
-                            for seg in date_elem.findall("tei:seg[@xml:lang='en']", NS):
-                                if seg.text and "c." in seg.text:
-                                    century = seg.text.strip()
-                                    break
+                            # Try to get specific years
+                            not_before = date_elem.get('notBefore', '')
+                            not_after = date_elem.get('notAfter', '')
+                            
+                            if not_before and not_after:
+                                try:
+                                    # If years are the same or close, use the earlier year
+                                    year_before = int(not_before)
+                                    year_after = int(not_after)
+                                    if year_before == year_after:
+                                        dates.append(year_before)
+                                    elif year_after - year_before <= 10:
+                                        # For close dates, use both
+                                        dates.extend([year_before, year_after])
+                                    else:
+                                        # For wider ranges, use the midpoint
+                                        dates.append((year_before + year_after) // 2)
+                                except ValueError:
+                                    continue
+                            
+                            # Check for century information if no specific years
+                            if not dates:
+                                for seg in date_elem.findall("tei:seg[@xml:lang='en']", NS):
+                                    if seg.text and "c." in seg.text:
+                                        century = seg.text.strip()
+                                        if not G.has_node(century):
+                                            G.add_node(century, type='period', color=color_map['period'], node_type='period')
+                                        G.add_edge(mon_id, century, type='period')
                         
-                            if not century:
-                                not_before = date_elem.get('notBefore', '')
-                                not_after = date_elem.get('notAfter', '')
-                                if not_before and not_after:
-                                    century = f"{not_before[:2]}th c."
-                        
-                            if century:
-                                if not G.has_node(century):
-                                    G.add_node(century, type='period', color='#8c564b', node_type='period')
-                                G.add_edge(mon_id, century, type='period')
+                        # Process collected dates if any
+                        if dates:
+                            clusters = cluster_dates(dates)
+                            for cluster in clusters:
+                                cluster_label = format_date_cluster(cluster)
+                                if not G.has_node(cluster_label):
+                                    G.add_node(cluster_label, type='period', color=color_map['period'], node_type='period')
+                                G.add_edge(mon_id, cluster_label, type='period')
             
             # Create the network visualization using plotly
             if nx.number_of_nodes(G) > 0:
                 # Calculate layout
+               
                 pos = nx.spring_layout(G, k=0.3, iterations=50)
                 
                 # Create edges trace
@@ -1648,7 +2007,6 @@ if working_files:
             # Add degree centrality analysis
             if G.number_of_nodes() > 1:
                 st.subheader("Centrality Analysis")
-                
                 central_nodes = sorted(nx.degree_centrality(G).items(), key=lambda x: x[1], reverse=True)[:5]
                 
                 st.markdown("**Most connected nodes:**")
@@ -1657,3 +2015,202 @@ if working_files:
                     st.markdown(f"- {node} ({node_type}): {score:.4f} centrality score")
         else:
             st.info(f"No {network_type.lower()} found between monuments and authority files.")
+            
+    with map_tab:
+        st.header("Interactive Map of Linked Epigraphic Monument Locations")
+
+        # Load authority files directly from the data directory
+        authority_files = {
+            'origloc': DATA_DIR / 'authority' / 'origloc.json',
+            'findspot': DATA_DIR / 'authority' / 'Findspot.json',
+            'currentloc': DATA_DIR / 'authority' / 'currentloc.json',
+            'places': DATA_DIR / 'authority' / 'places.json'
+        }
+        
+        # --- Map Helper Functions ---
+        def create_leaflet_map(df):
+            # Create a map centered at the mean coordinates
+            m = folium.Map(location=[df['lat'].mean(), df['lon'].mean()], zoom_start=5)
+            
+            # Color mapping for sources
+            color_lookup = {
+                'Origin': 'red',
+                'Findspot': 'green',
+                'Current': 'blue',
+                'General': 'orange'
+            }
+            
+            # Add points to the map
+            for idx, row in df.iterrows():
+                color = color_lookup.get(row['source'], 'gray')
+                folium.CircleMarker(
+                    location=[row['lat'], row['lon']],
+                    radius=8,
+                    popup=f"<b>Name:</b> {row['name']}<br/><b>Source:</b> {row['source']}<br/><b>Document:</b> {row['document']}",
+                    color=color,
+                    fill=True,
+                    fillOpacity=0.7
+                ).add_to(m)
+            
+            return m
+
+        def create_pydeck_map(df):
+            # Define colors for each source
+            color_lookup = {
+                'Origin': [255, 0, 0, 160],      # Red
+                'Findspot': [0, 255, 0, 160],    # Green
+                'Current': [0, 0, 255, 160],     # Blue
+                'General': [255, 255, 0, 160]    # Yellow
+            }
+            df['color'] = df['source'].apply(lambda s: color_lookup.get(s, [128, 128, 128, 160]))
+
+            # Center the map on the mean of the coordinates
+            initial_view_state = pdk.ViewState(
+                latitude=df['lat'].mean(),
+                longitude=df['lon'].mean(),
+                zoom=5,
+                pitch=50,
+            )
+
+            # Define the map layer
+            layer = pdk.Layer(
+                'ScatterplotLayer',
+                data=df,
+                get_position='[lon, lat]',
+                get_color='color',
+                get_radius=5000,
+                pickable=True,
+                auto_highlight=True
+            )
+
+            # Define the tooltip with document information
+            tooltip = {
+                "html": "<b>Name:</b> {name}<br/><b>Source:</b> {source}<br/><b>Document:</b> {document}",
+                "style": {
+                    "backgroundColor": "steelblue",
+                    "color": "white",
+                }
+            }
+
+            # Create and return the PyDeck map
+            return pdk.Deck(
+                map_style='mapbox://styles/mapbox/light-v9',
+                initial_view_state=initial_view_state,
+                layers=[layer],
+                tooltip=tooltip
+            )
+
+        # Load authority files
+        json_data = {}
+        for key, file_path in authority_files.items():
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    json_data[key] = json.load(f)
+            except Exception as e:
+                st.warning(f"Could not load {key}.json: {e}")
+                continue
+
+        all_map_points = []
+        all_text_points = {}        # Process each XML file and collect references
+        for file_data in working_files:
+            root = file_data['root']
+            if root is None:
+                continue
+
+            # Get the document ID/name
+            publication_stmt = root.find("tei:teiHeader/tei:fileDesc/tei:publicationStmt", NS)
+            doc_id = get_text(publication_stmt, "tei:idno[@type='filename']")
+            doc_name = doc_id if doc_id else file_data['name']
+
+            # Convert XML tree to string for processing
+            xml_string = ET.tostring(root, encoding='unicode')
+            xml_refs = get_xml_references(xml_string)
+
+            if not xml_refs:
+                continue            # Get the document title for better display
+            title_element = root.find(".//tei:title[@xml:lang='en']", NS)
+            doc_title = title_element.text if title_element is not None and title_element.text else doc_name
+
+            # Extract points from all JSON files
+            for source_name, json_obj in [
+                ('Origin', json_data.get('origloc')),
+                ('Findspot', json_data.get('findspot')),
+                ('Current', json_data.get('currentloc')),
+                ('General', json_data.get('places'))
+            ]:
+                if json_obj:
+                    map_points, text_points = extract_referenced_places(json_obj, source_name, xml_refs, doc_title)
+                    all_map_points.extend(map_points)
+                    
+                    if source_name not in all_text_points:
+                        all_text_points[source_name] = []
+                    
+                    # Add document information to text points
+                    for point in text_points:
+                        point['xml_source'] = doc_title
+                    all_text_points[source_name].extend(text_points)
+
+        # Create the Map Visualization if points were found
+        if all_map_points:
+            df = pd.DataFrame(all_map_points)
+
+            def display_map_visualization(df):
+                """Displays either a 2D or  3D map based on user selection."""
+                if df.empty:
+                    st.warning("No location data available to display on the map.")
+                    return
+                
+                # Add map type selector
+                map_type = st.radio("Select Map Type", ["2D Map", "3D Map"], horizontal=True)
+                
+                # Create and display the selected map type
+                if map_type == "2D Map":
+                    m = create_leaflet_map(df)
+                    if m:
+                        st_folium( m,
+                        center=[ df['lat'].mean(), df['lon'].mean() ],
+                        zoom=5,                        
+                        key="user-map",
+                        returned_objects=[],
+                        use_container_width=True,
+                        height=500,)
+
+                else:  # 3D Map
+                    deck = create_pydeck_map(df)
+                    if deck:
+                        st.pydeck_chart(deck)
+
+            # Add a legend for the map
+            st.markdown("""
+            **Map Legend**
+            - <span style="color:red; font-weight:bold;">Red:</span> Origin Location
+            - <span style="color:green; font-weight:bold;">Green:</span> Findspot Location
+            - <span style="color:blue; font-weight:bold;">Blue:</span> Current Location
+            - <span style="color:orange; font-weight:bold;">Yellow:</span> General Place
+            """, unsafe_allow_html=True)
+
+            # Display the map visualization
+            display_map_visualization(df)
+        else:
+            st.info("No locations with geographic coordinates were found referenced in the XML files.")
+
+        # Display the textual summary
+        st.header("Textual Summary of Linked Places")
+        for source, points in all_text_points.items():
+            with st.expander(f"Linked Places from: {source}", expanded=False):
+                if points:
+                    # Remove duplicates while preserving order
+                    seen = set()
+                    unique_points = []
+                    for point in points:
+                        point_id = point['id']
+                        if point_id not in seen:
+                            seen.add(point_id)
+                            unique_points.append(point)     
+                    for point in unique_points:
+                        if 'xml_source' in point:
+                            st.success(f"**{point['name']}** (ID: `{point['id']}`)\n\nFound in document: {point['xml_source']}")
+                        else:
+                            st.success(f"**{point['name']}** (ID: `{point['id']}`)")
+                else:
+                    st.warning(f"No connections found for this source.")
