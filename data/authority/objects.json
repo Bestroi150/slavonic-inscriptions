@@ -1,6 +1,4 @@
-{
-"objects": {
-	    "text": {
+{"objects": {
 			"body": {
 				"list": {
 					"item": [
@@ -8,126 +6,91 @@
 							"term": [
 								{
 									"_xml:lang": "bg",
-									"__text": "надгробен паметник"
+									"__text": "стена"
 								},
 								{
 									"_xml:lang": "en",
-									"__text": "funerary monument"
+									"__text": "wall"
 								}
 							],
-							"desc": {
-								"_xml:lang": "en",
-								"__text": "A monument commemorating a deceased person"
-							},
-							"_xml:id": "funerary-monument"
+							"_xml:id": "w"
 						},
 						{
 							"term": [
 								{
 									"_xml:lang": "bg",
-									"__text": "вотивен паметник"
+									"__text": "скала"
 								},
 								{
 									"_xml:lang": "en",
-									"__text": "votive monument"
+									"__text": "rock"
 								}
 							],
-							"desc": {
-								"_xml:lang": "en",
-								"__text": "A monument dedicated to a deity or for religious purposes"
-							},
-							"_xml:id": "votive-monument"
+							"_xml:id": "r"
 						},
 						{
-							"term": [
-								{
-									"_xml:lang": "bg",
-									"__text": "посветителен надпис"
-								},
-								{
-									"_xml:lang": "en",
-									"__text": "dedicatory inscription"
-								}
-							],
-							"desc": {
-								"_xml:lang": "en",
-								"__text": "An inscription dedicating something to someone or for a purpose"
+							"gloss": {
+								"_xml:lang": "bg",
+								"__text": "колона"
 							},
-							"_xml:id": "dedicatory-inscription"
+							"term": {
+								"_xml:lang": "en",
+								"__text": "column"
+							},
+							"_xml:id": "col"
 						},
 						{
-							"term": [
-								{
-									"_xml:lang": "bg",
-									"__text": "строителен надпис"
-								},
-								{
-									"_xml:lang": "en",
-									"__text": "building inscription"
-								}
-							],
-							"desc": {
-								"_xml:lang": "en",
-								"__text": "An inscription related to construction or renovation of buildings"
+							"gloss": {
+								"_xml:lang": "bg",
+								"__text": "плоча"
 							},
-							"_xml:id": "building-inscription"
+							"term": {
+								"_xml:lang": "en",
+								"__text": "tablet"
+							},
+							"_xml:id": "tabl"
 						},
 						{
-							"term": [
-								{
-									"_xml:lang": "bg",
-									"__text": "граничен камък"
-								},
-								{
-									"_xml:lang": "en",
-									"__text": "boundary stone"
-								}
-							],
-							"desc": {
-								"_xml:lang": "en",
-								"__text": "A stone marking territorial boundaries"
+							"gloss": {
+								"_xml:lang": "bg"
 							},
-							"_xml:id": "boundary-stone"
+							"term": {
+								"_xml:lang": "en"
+							},
+							"_xml:id": "x"
 						},
 						{
-							"term": [
-								{
-									"_xml:lang": "bg",
-									"__text": "милиарен камък"
-								},
-								{
-									"_xml:lang": "en",
-									"__text": "milestone"
-								}
-							],
-							"desc": {
-								"_xml:lang": "en",
-								"__text": "A stone marking distances along roads"
+							"gloss": {
+								"_xml:lang": "bg"
 							},
-							"_xml:id": "milestone"
+							"term": {
+								"_xml:lang": "en"
+							},
+							"_xml:id": "y"
 						},
 						{
-							"term": [
-								{
-									"_xml:lang": "bg",
-									"__text": "неизвестен обект"
-								},
-								{
-									"_xml:lang": "en",
-									"__text": "unknown object"
-								}
-							],
-							"desc": {
-								"_xml:lang": "en",
-								"__text": "Object type cannot be determined or is not specified"
+							"term": {
+								"_xml:lang": "en"
 							},
-							"_xml:id": "unknown-object"
+							"gloss": {
+								"_xml:lang": "bg"
+							},
+							"_xml:id": "z"
+						},
+						{
+							"gloss": {
+								"_xml:lang": "bg",
+								"__text": "неизвестен"
+							},
+							"term": {
+								"_xml:lang": "en",
+								"__text": "unknown"
+							},
+							"_xml:id": "unknown"
 						}
 					]
 				}
 			}
 		},
-		"_xmlns": "http://www.tei-c.org/ns/1.0",
-		"_xmlns:xi": "http://www.w3.org/2001/XInclude"
+		"_xmlns": "http://www.tei-c.org/ns/1.0"
 	}
-}

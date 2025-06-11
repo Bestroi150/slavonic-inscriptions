@@ -1,0 +1,240 @@
+{"findspot": {
+			"body": {
+				"listPlace": {
+					"place": [
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Шуменска крепост"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Shumen fortress"
+								}
+							],
+							"idno": {
+								"_type": "geonames",
+								"__text": "\"https://www.geonames.org/727233/\""
+							},
+							"note": {
+								"geo": "43.27064, 26.92286"
+							},
+							"_xml:id": "Shumen"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Кърчево, Гърция"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Karchevo"
+								},
+								{
+									"_xml:lang": "el",
+									"__text": "Karydochori"
+								}
+							],
+							"idno": {
+								"_type": "geonames",
+								"__text": "https://www.geonames.org/735965"
+							},
+							"note": {
+								"geo": "41.31403, 23.57951"
+							},
+							"_xml:id": "Karchevo"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Витовница, Сърбия"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Vitovnica, Serbia"
+								}
+							],
+							"idno": {
+								"_type": "geonames",
+								"__text": "https://www.geonames.org/784361/"
+							},
+							"note": {
+								"geo": "44.37923923395706, 21.540487276629495"
+							},
+							"_xml:id": "Vitovnica"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Велико Търново"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Vekiko Tarnovo"
+								}
+							],
+							"idno": {
+								"_type": "geonames",
+								"__text": "https://www.geonames.org/6956486/"
+							},
+							"note": {
+								"geo": "43.08442, 25.65017"
+							},
+							"_xml:id": "Tarnovo"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Асенова крепост"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Asen's Fortress"
+								}
+							],
+							"idno": {
+								"_type": "wikidata",
+								"__text": "https://www.wikidata.org/wiki/Q2991256"
+							},
+							"note": {
+								"geo": "41.986540485952766, 24.873578939914363"
+							},
+							"_xml:id": "AsensFortress"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Рояк"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Royak"
+								}
+							],
+							"idno": {
+								"_type": "geonames",
+								"__text": "https://www.geonames.org/727576/"
+							},
+							"note": {
+								"geo": "43.08333, 27.38333"
+							},
+							"_xml:id": "Royak"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Троица"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Troitsa"
+								}
+							],
+							"idno": {
+								"_type": "geonames",
+								"__text": "https://www.geonames.org/726324/"
+							},
+							"note": {
+								"geo": "43.21667, 26.86667"
+							},
+							"_xml:id": "Troitsa"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "землището на с. Горно Новково"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Gorno Novkovo's area"
+								}
+							],
+							"idno": {
+								"_type": "geonames",
+								"__text": "https://www.geonames.org/731176/"
+							},
+							"note": {
+								"geo": "43.08333, 26.58333"
+							},
+							"_xml:id": "GornoNovkovo"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "До останките от крепостта \"Иванково кале\" в гората над Кричим"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "near \"Ivankovo kale\" fortress in the Krichim's woods"
+								}
+							],
+							"_xml:id": "Krichim"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "землището на с. Невша"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Nevsha's area"
+								}
+							],
+							"idno": {
+								"_type": "geonames",
+								"__text": "https://www.geonames.org/728814/"
+							},
+							"note": {
+								"geo": "43.26667, 27.3"
+							},
+							"_xml:id": "Nevsha"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Църква „Св. Петка“ в с. Балша, Софийско"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "\"St. Petka\" Church in Balsha, Sofia Region"
+								}
+							],
+							"idno": {
+								"_type": "wikidata",
+								"__text": "https://www.wikidata.org/wiki/Q109085484"
+							},
+							"note": {
+								"geo": "42.85068343864137, 23.271023342926785"
+							},
+							"_xml:id": "Balsha"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "неизвестен"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "unknown"
+								}
+							],
+							"_xml:id": "unknown"
+						}
+					]
+				}
+			}
+		},
+		"_xmlns": "http://www.tei-c.org/ns/1.0"
+	}

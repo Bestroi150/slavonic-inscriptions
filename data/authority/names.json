@@ -1,0 +1,218 @@
+{"names": {
+			"body": {
+				"listPerson": {
+					"person": [
+						{
+							"persName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Ладо"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Lado"
+								}
+							],
+							"_xml:id": "n001"
+						},
+						{
+							"persName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Бабуг"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Baboug"
+								}
+							],
+							"_xml:id": "n002"
+						},
+						{
+							"persName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Яков"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Jacob"
+								}
+							],
+							"_xml:id": "n003"
+						},
+						{
+							"persName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Петър"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Peter"
+								}
+							],
+							"_xml:id": "n004"
+						},
+						{
+							"persName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Драго"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Drago"
+								}
+							],
+							"_xml:id": "n005"
+						},
+						{
+							"persName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Драгия"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Dragia"
+								}
+							],
+							"_xml:id": "n006"
+						},
+						{
+							"persName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Алекси(й)"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Alexi(i)"
+								}
+							],
+							"_xml:id": "n007"
+						},
+						{
+							"persName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Никола"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Nicholas"
+								}
+							],
+							"_xml:id": "n008"
+						},
+						{
+							"persName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Андрей"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Andrew"
+								}
+							],
+							"_xml:id": "n009"
+						},
+						{
+							"persName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Сава"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Sava"
+								}
+							],
+							"_xml:id": "n010"
+						},
+						{
+							"persName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Йоаким"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Joachim"
+								}
+							],
+							"_xml:id": "n011"
+						},
+						{
+							"persName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Гаган"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Gagan"
+								}
+							],
+							"_xml:id": "n012"
+						},
+						{
+							"persName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Хинто"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Hinto"
+								}
+							],
+							"_xml:id": "n013"
+						},
+						{
+							"persName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Асен"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Asen"
+								}
+							],
+							"_xml:id": "n014"
+						},
+						{
+							"persName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Врана"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Vrana"
+								}
+							],
+							"_xml:id": "n015"
+						},
+						{
+							"persName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Хинат"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Hinat"
+								}
+							],
+							"_xml:id": "n016"
+						}
+					]
+				}
+			}
+		},
+		"_xmlns": "http://www.tei-c.org/ns/1.0"
+	}

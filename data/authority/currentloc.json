@@ -1,0 +1,205 @@
+{
+    "currentloc": {
+			"body": {
+				"listPlace": {
+					"place": [
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Кричим"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Krichim"
+								}
+							],
+							"idno": {
+								"_type": "geonames",
+								"__text": "https://www.geonames.org/729936/"
+							},
+							"note": {
+								"geo": "42.05, 24.46667"
+							},
+							"_xml:id": "Krichim"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Витовница, Сърбия"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Vitovnica, Serbia"
+								}
+							],
+							"idno": {
+								"_type": "geonames",
+								"__text": "https://www.geonames.org/784361/"
+							},
+							"note": {
+								"geo": "44.37923923395706, 21.540487276629495"
+							},
+							"_xml:id": "Vitovnica"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "неизвестен"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "unknown"
+								}
+							],
+							"_xml:id": "unknown"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Велико Търново"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Veliko Tarnovo"
+								}
+							],
+							"idno": {
+								"_type": "geonames",
+								"__text": "https://www.geonames.org/6956486/"
+							},
+							"note": {
+								"geo": "43.08442, 25.65017",
+								"__text": "p"
+							},
+							"_xml:id": "Tarnovo"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Асенова крепост"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Asen's Fortress"
+								}
+							],
+							"idno": {
+								"_type": "wikidata",
+								"__text": "https://www.wikidata.org/wiki/Q2991256"
+							},
+							"note": {
+								"geo": "41.986987090175624, 24.874716206331854"
+							},
+							"_xml:id": "AsensFortress"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Рояк"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Royak"
+								}
+							],
+							"idno": {
+								"_type": "geonames",
+								"__text": "https://www.geonames.org/727576/"
+							},
+							"note": {
+								"geo": "43.08333, 27.38333"
+							},
+							"_xml:id": "Royak"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Шумен"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Shumen"
+								}
+							],
+							"idno": {
+								"_type": "geonames",
+								"__text": "\"https://www.geonames.org/727233/\""
+							},
+							"note": {
+								"geo": "43.27064, 26.92286"
+							},
+							"_xml:id": "Shumen"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Търговище"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Targovishte"
+								}
+							],
+							"idno": {
+								"_type": "geonames",
+								"__text": "\"https://www.geonames.org/726174/\""
+							},
+							"note": {
+								"geo": "43.2512, 26.57215"
+							},
+							"_xml:id": "Targovishte"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Варна"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Varna"
+								}
+							],
+							"idno": {
+								"_type": "geonames",
+								"__text": "\"https://www.geonames.org/726050/\""
+							},
+							"note": {
+								"geo": "43.21667, 27.91667"
+							},
+							"_xml:id": "Varna"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Църква „Св. Петка“ в с. Балша, Софийско"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "\"St. Petka\" Church in Balsha, Sofia Region"
+								}
+							],
+							"idno": {
+								"_type": "wikidata",
+								"__text": "https://www.wikidata.org/wiki/Q109085484"
+							},
+							"note": {
+								"geo": "42.85068343864137, 23.271023342926785"
+							},
+							"_xml:id": "Balsha"
+						}
+					]
+				}
+			}
+		},
+		"_xmlns": "http://www.tei-c.org/ns/1.0"
+	}

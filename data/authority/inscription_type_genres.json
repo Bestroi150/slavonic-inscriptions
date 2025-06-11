@@ -1,0 +1,89 @@
+{
+	"inscription_type_genres": {
+			"body": {
+				"list": {
+					"item": [
+						{
+							"term": [
+								{
+									"_xml:lang": "bg",
+									"__text": "надгробен надпис"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "funerary inscription"
+								}
+							],
+							"_xml:id": "f"
+						},
+						{
+							"term": [
+								{
+									"_xml:lang": "bg",
+									"__text": "строителен надпис"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "building inscription"
+								}
+							],
+							"_xml:id": "b"
+						},
+						{
+							"term": [
+								{
+									"_xml:lang": "bg",
+									"__text": "летописен надпис"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "chronicle inscription"
+								}
+							],
+							"_xml:id": "chr"
+						},
+						{
+							"term": [
+								{
+									"_xml:lang": "bg",
+									"__text": "надпис с приписков характер"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "attributional inscription"
+								}
+							],
+							"_xml:id": "attr"
+						},
+						{
+							"term": [
+								{
+									"_xml:lang": "bg",
+									"__text": "надпис за собственост"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "ownership inscription"
+								}
+							],
+							"_xml:id": "own"
+						},
+						{
+							"term": [
+								{
+									"_xml:lang": "bg",
+									"__text": "надписи с неустановен характер, случайни надписи"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "varia"
+								}
+							],
+							"_xml:id": "v"
+						}
+					]
+				}
+			}
+		},
+		"_xmlns": "http://www.tei-c.org/ns/1.0"
+	}

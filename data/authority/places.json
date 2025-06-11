@@ -1,0 +1,171 @@
+{"places": {
+			"body": {
+				"listPlace": {
+					"place": [
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Одрин"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Edirne"
+								}
+							],
+							"idno": {
+								"_type": "pleiades",
+								"__text": "https://pleiades.stoa.org/places/501428"
+							},
+							"note": {
+								"geo": "41.676459, 26.562891"
+							},
+							"_xml:id": "Pl001"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Драч"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Durrës"
+								}
+							],
+							"idno": {
+								"_type": "pleiades",
+								"__text": "https://pleiades.stoa.org/places/481818"
+							},
+							"note": {
+								"geo": "41.3163425, 19.447355"
+							},
+							"_xml:id": "Pl002"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Цариград, Константинопол"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Tzarigrad, Constantinople"
+								}
+							],
+							"idno": {
+								"_type": "wikidata",
+								"__text": "https://pleiades.stoa.org/places/520985"
+							},
+							"note": {
+								"geo": "41.005902, 28.9738815"
+							},
+							"_xml:id": "Pl003"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Преслав"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Preslav"
+								}
+							],
+							"idno": {
+								"_type": "geonames",
+								"__text": "https://www.geonames.org/727987/"
+							},
+							"note": {
+								"geo": "43.14831815341907, 26.805040876849322"
+							},
+							"_xml:id": "Pl004"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Търново"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Tarnovo"
+								}
+							],
+							"idno": {
+								"_type": "geonames",
+								"__text": "https://www.geonames.org/725993/"
+							},
+							"note": {
+								"geo": "43.08124, 25.62904"
+							},
+							"_xml:id": "Pl005"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Кричим"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Krichim"
+								}
+							],
+							"_xml:id": "Pl006"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Крицува"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Kritsuva"
+								}
+							],
+							"_xml:id": "Pl007"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg"
+								},
+								{
+									"_xml:lang": "en"
+								}
+							],
+							"_xml:id": "s"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "en"
+								},
+								{
+									"_xml:lang": "bg"
+								}
+							],
+							"_xml:id": "l"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "неизвестен"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "unknown"
+								}
+							],
+							"_xml:id": "unknown"
+						}
+					]
+				}
+			}
+		},
+		"_xmlns": "http://www.tei-c.org/ns/1.0"
+	}

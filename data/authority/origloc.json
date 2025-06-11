@@ -1,0 +1,219 @@
+{"origloc": {
+			"body": {
+				"listPlace": {
+					"place": [
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Шуменска крепост"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Shumen fortress"
+								}
+							],
+							"_xml:id": "Shumen"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Кърчево, Гърция"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Karchevo"
+								},
+								{
+									"_xml:lang": "el",
+									"__text": "Karydochori"
+								}
+							],
+							"idno": {
+								"_type": "geonames",
+								"__text": "https://www.geonames.org/735965"
+							},
+							"note": {
+								"geo": "41.31403, 23.57951"
+							},
+							"_xml:id": "Karchevo"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Орешковица, Сърбия"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Oreshkovica, Serbia"
+								}
+							],
+							"idno": {
+								"_type": "geonames",
+								"__text": "https://www.geonames.org/787418/"
+							},
+							"note": {
+								"geo": "44.3171, 21.32513"
+							},
+							"_xml:id": "Oreshkovica"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Витовница"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Vitovnica"
+								}
+							],
+							"idno": {
+								"_type": "geonames",
+								"__text": "https://www.geonames.org/784361/"
+							},
+							"note": {
+								"geo": "44.3795, 21.51541"
+							},
+							"_xml:id": "Vitovnica"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Търново"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Tarnovo"
+								}
+							],
+							"idno": {
+								"_type": "geonames",
+								"__text": "https://www.geonames.org/735965"
+							},
+							"note": {
+								"geo": "43.08404003141336, 25.653617295502176"
+							},
+							"_xml:id": "Tarnovo"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Асенова крепост"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Asen's Fortress"
+								}
+							],
+							"idno": {
+								"_type": "wikidata",
+								"__text": "https://www.wikidata.org/wiki/Q2991256"
+							},
+							"note": {
+								"geo": "41.986540485952766, 24.873578939914363"
+							},
+							"_xml:id": "AsensFortress"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Рояк"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Royak"
+								}
+							],
+							"idno": {
+								"_type": "geonames",
+								"__text": "https://www.geonames.org/727576/"
+							},
+							"note": {
+								"geo": "43.08333, 27.38333"
+							},
+							"_xml:id": "Royak"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Троица"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Troitsa"
+								}
+							],
+							"idno": {
+								"_type": "geonames",
+								"__text": "https://www.geonames.org/726324/"
+							},
+							"note": {
+								"geo": "43.21667, 26.86667"
+							},
+							"_xml:id": "Troitsa"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Горно Новково"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Gorno Novkovo"
+								}
+							],
+							"_xml:id": "GornoNovkovo"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Царевец, Търново"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Tsarevets, Tarnovo"
+								}
+							],
+							"_xml:id": "Tsarevets"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Иванково кале"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Ivankovo kale"
+								}
+							],
+							"_xml:id": "IvanKale"
+						},
+						{
+							"placeName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "неизвестен"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "unknown"
+								}
+							],
+							"_xml:id": "unknown"
+						}
+					]
+				}
+			}
+		},
+		"_xmlns": "http://www.tei-c.org/ns/1.0"
+	}

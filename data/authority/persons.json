@@ -1,6 +1,4 @@
-{
-"persons": {
-		"text": {
+{"persons": {
 			"body": {
 				"listPerson": {
 					"person": [
@@ -15,6 +13,10 @@
 									"__text": "Kaloyan"
 								}
 							],
+							"idno": {
+								"_type": "viaf",
+								"__text": "http://viaf.org/viaf/67257260"
+							},
 							"_xml:id": "Kalo"
 						},
 						{
@@ -28,7 +30,24 @@
 									"__text": "Ioan Asen II"
 								}
 							],
+							"idno": {
+								"_type": "viaf",
+								"__text": "http://viaf.org/viaf/262476027"
+							},
 							"_xml:id": "IA2"
+						},
+						{
+							"persName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Алексий"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Aleksii"
+								}
+							],
+							"_xml:id": "Aleksii"
 						},
 						{
 							"persName": [
@@ -41,6 +60,10 @@
 									"__text": "Ioan Asen I"
 								}
 							],
+							"idno": {
+								"_type": "viaf",
+								"__text": "http://viaf.org/viaf/66146937743413830587"
+							},
 							"_xml:id": "IA1"
 						},
 						{
@@ -54,6 +77,10 @@
 									"__text": "Theodore Komnenos Doukas"
 								}
 							],
+							"idno": {
+								"_type": "wikidata",
+								"__text": "https://www.wikidata.org/wiki/Q371668"
+							},
 							"_xml:id": "TheoK"
 						},
 						{
@@ -84,6 +111,10 @@
 									"__text": "Konstantin Tih Asen"
 								}
 							],
+							"idno": {
+								"_type": "wikidata",
+								"__text": "https://www.wikidata.org/wiki/Q462917"
+							},
 							"_xml:id": "KTihA"
 						},
 						{
@@ -97,7 +128,28 @@
 									"__text": "Irene Doukaina Laskarina"
 								}
 							],
+							"idno": {
+								"_type": "wikidata",
+								"__text": "https://www.wikidata.org/wiki/Q3622795"
+							},
 							"_xml:id": "Iri"
+						},
+						{
+							"persName": [
+								{
+									"_xml:lang": "bg",
+									"__text": "Йоаким II Търновски"
+								},
+								{
+									"_xml:lang": "en",
+									"__text": "Joachim II of Tarnovo"
+								}
+							],
+							"idno": {
+								"_type": "wikidata",
+								"__text": "https://www.wikidata.org/wiki/Q12281990"
+							},
+							"_xml:id": "Joachim2"
 						},
 						{
 							"persName": [
@@ -140,4 +192,3 @@
 		},
 		"_xmlns": "http://www.tei-c.org/ns/1.0"
 	}
-}

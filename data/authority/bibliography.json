@@ -1,0 +1,3188 @@
+{
+	"bibliography": {
+			"body": {
+				"listBibl": {
+					"biblStruct": [
+						{
+							"monogr": {
+								"author": [
+									{
+										"surname": [
+											{
+												"_xml:lang": "bg",
+												"__text": "Popkonstantinov"
+											},
+											{
+												"_xml:lang": "en",
+												"__text": "Popkonstantinov"
+											}
+										],
+										"forename": [
+											{
+												"_xml:lang": "bg",
+												"__text": "Kazimir"
+											},
+											{
+												"_xml:lang": "en",
+												"__text": "Kazimir"
+											}
+										]
+									},
+									{
+										"surname": [
+											{
+												"_xml:lang": "bg",
+												"__text": "Kronsteiner"
+											},
+											{
+												"_xml:lang": "en",
+												"__text": "Kronsteiner"
+											}
+										],
+										"forename": [
+											{
+												"_xml:lang": "bg",
+												"__text": "Otto"
+											},
+											{
+												"_xml:lang": "en",
+												"__text": "Otto"
+											}
+										]
+									}
+								],
+								"title": [
+									{
+										"_level": "m",
+										"_xml:lang": "bg",
+										"__text": "Altbulgarische Inschriften"
+									},
+									{
+										"_level": "m",
+										"_xml:lang": "en",
+										"__text": "Altbulgarische Inschriften"
+									}
+								],
+								"imprint": {
+									"biblScope": {
+										"_unit": "volume",
+										"__text": "II"
+									},
+									"pubPlace": [
+										{
+											"settlement": "Wien",
+											"country": "Österreich",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Wien",
+											"country": "Austria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1997"
+								}
+							},
+							"_xml:id": "b1"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Смядовски"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Smyadovski"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Стефан"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Stefan"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "m",
+										"_xml:lang": "bg",
+										"__text": "Българска кирилска епиграфика (IХ-ХV в.)"
+									},
+									{
+										"_level": "m",
+										"_xml:lang": "en",
+										"__text": "Bulgarian cyrillic epighraphy (IX-XV)"
+									}
+								],
+								"imprint": {
+									"pubPlace": [
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Sofia",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1993"
+								}
+							},
+							"_xml:id": "b2"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Ангелов"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Angelov"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Никола"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Nikola"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "m",
+										"_xml:lang": "bg",
+										"__text": "Царевград Търнов"
+									},
+									{
+										"_level": "m",
+										"_xml:lang": "en",
+										"__text": "Tsarevgrad Tarnov"
+									}
+								],
+								"imprint": {
+									"biblScope": {
+										"_unit": "volume",
+										"__text": "3"
+									},
+									"pubPlace": [
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Sofia",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1980"
+								}
+							},
+							"_xml:id": "b3"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Томович"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Tomovich"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Гордана"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Gordana"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "m",
+										"_xml:lang": "bg",
+										"__text": "Морфологиjа ħириличког натписа на Балкану"
+									},
+									{
+										"_level": "m",
+										"_xml:lang": "en",
+										"__text": "Morfologija ćiriličkih natpisa na Balkanu"
+									}
+								],
+								"imprint": {
+									"pubPlace": [
+										{
+											"settlement": "Белград",
+											"country": "Сърбия",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Belgrade",
+											"country": "Serbia",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1974"
+								}
+							},
+							"_xml:id": "b4"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Хаджиев"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Коста"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Коста"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Kosta"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "m",
+										"_xml:lang": "bg",
+										"__text": "Кирилски епиграфски паметници от църквата в с. Балша, Софийско. – В: Нумизматика, сфрагистика и епиграфика, 225–236."
+									},
+									{
+										"_level": "m",
+										"_xml:lang": "en",
+										"__text": "Tsarevgrad Tarnov"
+									}
+								],
+								"imprint": {
+									"biblScope": {
+										"_unit": "volume"
+									},
+									"pubPlace": [
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Sofia",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "2003"
+								}
+							},
+							"_xml:id": "b5"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Михаилов"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Mihailov"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Георги"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Georgius"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "m",
+										"_xml:lang": "bg",
+										"__text": "Inscriptiones Graecae in Bulgaria repertae"
+									},
+									{
+										"_level": "m",
+										"_xml:lang": "en",
+										"__text": "Inscriptiones Graecae in Bulgaria repertae"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume",
+											"__text": "I"
+										},
+										{
+											"_unit": "volume",
+											"__text": "II"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Serdicae",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1958"
+								}
+							},
+							"_xml:id": "b3"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Михаилов"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Mihailov"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Георги"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Georgius"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "m",
+										"_xml:lang": "bg",
+										"__text": "Inscriptiones Graecae in Bulgaria repertae"
+									},
+									{
+										"_level": "m",
+										"_xml:lang": "en",
+										"__text": "Inscriptiones Graecae in Bulgaria repertae"
+									}
+								],
+								"imprint": {
+									"biblScope": {
+										"_unit": "volume",
+										"__text": "III.1"
+									},
+									"pubPlace": [
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Serdicae",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1961"
+								}
+							},
+							"_xml:id": "b3_1"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Михаилов"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Mihailov"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Георги"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Georgius"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "m",
+										"_xml:lang": "bg",
+										"__text": "Inscriptiones Graecae in Bulgaria repertae"
+									},
+									{
+										"_level": "m",
+										"_xml:lang": "en",
+										"__text": "Inscriptiones Graecae in Bulgaria repertae"
+									}
+								],
+								"imprint": {
+									"biblScope": {
+										"_unit": "volume",
+										"__text": "III.2"
+									},
+									"pubPlace": [
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Serdicae",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1964"
+								}
+							},
+							"_xml:id": "b3_2"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Михаилов"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Mihailov"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Георги"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Georgius"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "m",
+										"_xml:lang": "bg",
+										"__text": "Inscriptiones Graecae in Bulgaria repertae"
+									},
+									{
+										"_level": "m",
+										"_xml:lang": "en",
+										"__text": "Inscriptiones Graecae in Bulgaria repertae"
+									}
+								],
+								"imprint": {
+									"biblScope": {
+										"_unit": "volume",
+										"__text": "IV"
+									},
+									"pubPlace": [
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Serdicae",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1966"
+								}
+							},
+							"_xml:id": "b4"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Михаилов"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Mihailov"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Георги"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Georgius"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "m",
+										"_xml:lang": "bg",
+										"__text": "Inscriptiones Graecae in Bulgaria repertae"
+									},
+									{
+										"_level": "m",
+										"_xml:lang": "en",
+										"__text": "Inscriptiones Graecae in Bulgaria repertae"
+									}
+								],
+								"imprint": {
+									"biblScope": {
+										"_unit": "volume",
+										"__text": "V"
+									},
+									"pubPlace": [
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Serdicae",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1997"
+								}
+							},
+							"_xml:id": "b5"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Михаилов"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Mihailov"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Георги"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Georgi"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "j",
+										"_xml:lang": "bg",
+										"__text": "Годишник на Софийския  университет, Историко-филологически факултет"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Гръцките епиграми от българските земи"
+									},
+									{
+										"_level": "j",
+										"_xml:lang": "en",
+										"__text": "Годишник на Софийския  университет, Историко-филологически факултет"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Гръцките епиграми от българските земи"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume",
+											"__text": "39"
+										},
+										{
+											"_unit": "page",
+											"__text": "1-70"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Sofia",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1943"
+								}
+							},
+							"_xml:id": "b43"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Бешевлиев"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Бешевлиев"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Веселин"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Веселин"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "m",
+										"_xml:lang": "bg",
+										"__text": "Епиграфски приноси"
+									},
+									{
+										"_level": "m",
+										"_xml:lang": "en",
+										"__text": "Епиграфски приноси"
+									}
+								],
+								"imprint": {
+									"biblScope": {
+										"_unit": "volume"
+									},
+									"pubPlace": [
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1952"
+								}
+							},
+							"_xml:id": "BeshevlievPrinosi"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Михаилов"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Mihailov"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Георги"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Georgi"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "j",
+										"_xml:lang": "bg",
+										"__text": "Годишник на Софийския  университет, Историко-филологически факултет"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Гръцките епиграми от българските земи"
+									},
+									{
+										"_level": "j",
+										"_xml:lang": "en",
+										"__text": "Годишник на Софийския  университет, Историко-филологически факултет"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Гръцките епиграми от българските земи"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume",
+											"__text": "40"
+										},
+										{
+											"_unit": "page",
+											"__text": "1-70"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Sofia",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1944"
+								}
+							},
+							"_xml:id": "b44"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Bormann"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Bormann"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Eugen"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Eugen"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "j",
+										"_xml:lang": "bg",
+										"__text": "Archaeologisch-epigraphische\nMittheilungen aus Oesterreich-Ungarn"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Inschriften aus Philippopel."
+									},
+									{
+										"_level": "j",
+										"_xml:lang": "en",
+										"__text": "Archaeologisch-epigraphische\nMittheilungen aus Oesterreich-Ungarn"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Inschriften aus Philippopel."
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume",
+											"__text": "19"
+										},
+										{
+											"_unit": "page",
+											"__text": "230–236"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "Wien",
+											"country": "Austria",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Wien",
+											"country": "Austria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1896"
+								}
+							},
+							"_xml:id": "bor"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Kalinka"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Kalinka"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Ernst"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Ernst"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Antike Denkmäler in Bulgarien"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Antike Denkmäler in Bulgarien"
+									},
+									{
+										"_level": "s",
+										"_xml:lang": "bg",
+										"__text": "Schriften der Balkankommission. Antiquarische Abteilung"
+									},
+									{
+										"_level": "s",
+										"_xml:lang": "en",
+										"__text": "Schriften der Balkankommission. Antiquarische Abteilung"
+									}
+								],
+								"imprint": {
+									"biblScope": {
+										"_unit": "volume",
+										"__text": "IV"
+									},
+									"pubPlace": [
+										{
+											"settlement": "Wien",
+											"country": "Austria",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Wien",
+											"country": "Austria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1906"
+								}
+							},
+							"_xml:id": "kal"
+						},
+						{
+							"monogr": {
+								"author": [
+									{
+										"surname": [
+											{
+												"_xml:lang": "bg",
+												"__text": "Dumont"
+											},
+											{
+												"_xml:lang": "en",
+												"__text": "Dumont"
+											}
+										],
+										"forename": [
+											{
+												"_xml:lang": "bg",
+												"__text": "Albert"
+											},
+											{
+												"_xml:lang": "en",
+												"__text": "Albert"
+											}
+										]
+									},
+									{
+										"surname": [
+											{
+												"_xml:lang": "bg",
+												"__text": "Dumont"
+											},
+											{
+												"_xml:lang": "en",
+												"__text": "Dumont"
+											}
+										],
+										"forename": [
+											{
+												"_xml:lang": "bg",
+												"__text": "Albert"
+											},
+											{
+												"_xml:lang": "en",
+												"__text": "Albert"
+											}
+										]
+									}
+								],
+								"title": [
+									{
+										"_level": "m",
+										"_xml:lang": "bg",
+										"__text": "Mélanges d'archéologie et d'épigraphie"
+									},
+									{
+										"_level": "m",
+										"_xml:lang": "en",
+										"__text": "Mélanges d'archéologie et d'épigraphie"
+									}
+								],
+								"imprint": {
+									"biblScope": {
+										"_unit": "volume"
+									},
+									"pubPlace": [
+										{
+											"settlement": "Paris",
+											"country": "France",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Paris",
+											"country": "France",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1892"
+								}
+							},
+							"_xml:id": "dumont"
+						},
+						{
+							"monogr": {
+								"author": [
+									{
+										"surname": [
+											{
+												"_xml:lang": "bg",
+												"__text": "Robert"
+											},
+											{
+												"_xml:lang": "en",
+												"__text": "Robert"
+											}
+										],
+										"forename": [
+											{
+												"_xml:lang": "bg",
+												"__text": "Jeanne"
+											},
+											{
+												"_xml:lang": "en",
+												"__text": "Jeanne"
+											}
+										]
+									},
+									{
+										"surname": [
+											{
+												"_xml:lang": "bg",
+												"__text": "Robert"
+											},
+											{
+												"_xml:lang": "en",
+												"__text": "Robert"
+											}
+										],
+										"forename": [
+											{
+												"_xml:lang": "bg",
+												"__text": "Louis"
+											},
+											{
+												"_xml:lang": "en",
+												"__text": "Louis"
+											}
+										]
+									}
+								],
+								"title": [
+									{
+										"_level": "s",
+										"_xml:lang": "bg",
+										"__text": "Revue des Études Grecques"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Bulletin Épigraphique"
+									},
+									{
+										"_level": "s",
+										"_xml:lang": "en",
+										"__text": "Revue des Études Grecques"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Bulletin Épigraphique"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume"
+										},
+										{
+											"_unit": "page"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "Paris",
+											"country": "France",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Paris",
+											"country": "France",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1938-1984"
+								}
+							},
+							"_xml:id": "RobertBE"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Woodhead"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Woodhead"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "A.G."
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "A.G."
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "s",
+										"_xml:lang": "bg",
+										"__text": "Supplementum Epigraphicum Graecum"
+									},
+									{
+										"_level": "s",
+										"_xml:lang": "en",
+										"__text": "Supplementum Epigraphicum Graecum"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume",
+											"__text": "15"
+										},
+										{
+											"_unit": "page",
+											"__text": "148"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "Amsterdam",
+											"country": "Netherland",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Amsterdam",
+											"country": "Netherland",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1958"
+								}
+							},
+							"_xml:id": "SEG15"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Кацаров"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Кацаров"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Гаврил"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Гаврил"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Антични паметници от България"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Антични паметници от България"
+									},
+									{
+										"_level": "s",
+										"_xml:lang": "bg",
+										"__text": "Годишник на Народната библиотека в Пловдив"
+									},
+									{
+										"_level": "s",
+										"_xml:lang": "en",
+										"__text": "Годишник на Народната библиотека в Пловдив"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume"
+										},
+										{
+											"_unit": "page",
+											"__text": "197-206"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1923"
+								}
+							},
+							"_xml:id": "kacarov"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Tacheva-Hitova"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Tacheva-Hitova"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Margarita"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Margarita"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Eastern Cults in Moesia Inferior and Thracia (5th Century BC – 4th Century AD)"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Eastern Cults in Moesia Inferior and Thracia (5th Century BC – 4th Century AD)"
+									},
+									{
+										"_level": "s",
+										"_xml:lang": "bg",
+										"__text": "Études préliminaires aux religions orientales dans l’Empire romain"
+									},
+									{
+										"_level": "s",
+										"_xml:lang": "en",
+										"__text": "Études préliminaires aux religions orientales dans l’Empire romain"
+									}
+								],
+								"imprint": {
+									"biblScope": {
+										"_unit": "volume",
+										"__text": "95"
+									},
+									"pubPlace": [
+										{
+											"settlement": "Leiden",
+											"country": "Germany",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Leiden",
+											"country": "Germany",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1983"
+								}
+							},
+							"_xml:id": "tacheva"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Velkov"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Velkov"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Velizar"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Velizar"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Hagiographic Data on the History of Thrace in the IV c. (Passio SS Maximi, Theodoti et Asclepiodotae)"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Hagiographic Data on the History of Thrace in the IV c. (Passio SS Maximi, Theodoti et Asclepiodotae)"
+									},
+									{
+										"_level": "s",
+										"_xml:lang": "bg",
+										"__text": "Roman Cities in Bulgaria. Collected Studies"
+									},
+									{
+										"_level": "s",
+										"_xml:lang": "en",
+										"__text": "Roman Cities in Bulgaria. Collected Studies"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume"
+										},
+										{
+											"_unit": "page",
+											"__text": "137-149"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "Amsterdam",
+											"country": "Netherlands",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Amsterdam",
+											"country": "Netherlands",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1980"
+								}
+							},
+							"_xml:id": "Velkov"
+						},
+						{
+							"monogr": {
+								"author": [
+									{
+										"surname": [
+											{
+												"_xml:lang": "bg",
+												"__text": "Gerasimova"
+											},
+											{
+												"_xml:lang": "en",
+												"__text": "Gerasimova"
+											}
+										],
+										"forename": [
+											{
+												"_xml:lang": "bg",
+												"__text": "Vasilka"
+											},
+											{
+												"_xml:lang": "en",
+												"__text": "Vasilka"
+											}
+										]
+									},
+									{
+										"surname": [
+											{
+												"_xml:lang": "bg",
+												"__text": "Hollenstein"
+											},
+											{
+												"_xml:lang": "en",
+												"__text": "Hollenstein"
+											}
+										],
+										"forename": [
+											{
+												"_xml:lang": "bg",
+												"__text": "Lorenz"
+											},
+											{
+												"_xml:lang": "en",
+												"__text": "Lorenz"
+											}
+										]
+									}
+								],
+								"title": [
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Drei unpublizierte Meilensteine aus Bulgarien"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Drei unpublizierte Meilensteine aus Bulgarien"
+									},
+									{
+										"_level": "s",
+										"_xml:lang": "bg",
+										"__text": "Herzig, H. E. / Frei-Stolba, R. (eds.). Labor omnibus unus. Gerold Walser zum 70. Geburtstag dargebracht von Freunden, Kollegen und Schülern"
+									},
+									{
+										"_level": "s",
+										"_xml:lang": "en",
+										"__text": "Herzig, H. E. / Frei-Stolba, R. (eds.). Labor omnibus unus. Gerold Walser zum 70. Geburtstag dargebracht von Freunden, Kollegen und Schülern"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume",
+											"__text": "Historia Einzelschriften 60"
+										},
+										{
+											"_unit": "page",
+											"__text": "45-58"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "Stuttgart",
+											"country": "Germany",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Stuttgart",
+											"country": "Germany",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1989"
+								}
+							},
+							"_xml:id": "gerasimova"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Добруски"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Dobruský"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Вацлав"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Václav"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "m",
+										"_xml:lang": "bg",
+										"__text": "Материали по археологията на България. – Сборник за народни умотворения, наука и книжнина"
+									},
+									{
+										"_level": "m",
+										"_xml:lang": "en",
+										"__text": "Материали по археологията на България. – Сборник за народни умотворения, наука и книжнина"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume",
+											"__text": "XVIII"
+										},
+										{
+											"_unit": "page",
+											"__text": "704-812"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Sofia",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1901"
+								}
+							},
+							"_xml:id": "dobr18"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Добруски"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Dobruský"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Вацлав"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Václav"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Материали по археологията на България. – Сборник за народни умотворения, наука и книжнина"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Materials"
+									},
+									{
+										"_level": "j",
+										"_xml:lang": "bg",
+										"__text": "Сборник за народни умотворения, наука и книжнина"
+									},
+									{
+										"_level": "j",
+										"_xml:lang": "en",
+										"__text": "Сборник за народни умотворения, наука и книжнина"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume",
+											"__text": "XIII"
+										},
+										{
+											"_unit": "page",
+											"__text": "398-442"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Sofia",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1896"
+								}
+							},
+							"_xml:id": "dobr13"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Добруский"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Добруский"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Вацлав"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Вацлав"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "j",
+										"_xml:lang": "bg",
+										"__text": "Третий годишен отчет на Областната реална гимназия в Пловдив за учебната 1883/84 година."
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "За римский път и за някои римски старини в провинция Тракия."
+									},
+									{
+										"_level": "j",
+										"_xml:lang": "en",
+										"__text": "Третий годишен отчет на Областната реална гимназия в Пловдив за учебната 1883/84 година."
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "За римский път и за някои римски старини в провинция Тракия."
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume"
+										},
+										{
+											"_unit": "page",
+											"__text": "1-18"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "Пловдив",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Plovdiv",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1884"
+								}
+							},
+							"_xml:id": "Dobruski"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Добруски"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Добруски"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Вацлав"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Вацлав"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "j",
+										"_xml:lang": "bg",
+										"__text": "Периодическо списание"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Няколко древни надписи намерени в България"
+									},
+									{
+										"_level": "j",
+										"_xml:lang": "en",
+										"__text": "Периодическо списание"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Няколко древни надписи намерени в България"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume",
+											"__text": "5/23-24"
+										},
+										{
+											"_unit": "page"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1888"
+								}
+							},
+							"_xml:id": "Dobruski88"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Шкорпил"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Шкорпил"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Карел"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Карел"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "j",
+										"_xml:lang": "bg",
+										"__text": "Записки Императорскаго Одесскаго Общества Исторiи и Древностей"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Древнiя надписи, найденныя въ Болгарiи"
+									},
+									{
+										"_level": "j",
+										"_xml:lang": "en",
+										"__text": "Записки Императорскаго Одесскаго Общества Исторiи и Древностей"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Древнiя надписи, найденныя въ Болгарiи"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume",
+											"__text": "22"
+										},
+										{
+											"_unit": "page",
+											"__text": "16–22"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "Одесса",
+											"country": "Россия",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Одесса",
+											"country": "Россия",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1900"
+								}
+							},
+							"_xml:id": "skodesa"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Шаранков"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Sharankov"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Николай"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Nicolay"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "j",
+										"_xml:lang": "bg",
+										"__text": "Studia Classica Serdicensia"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Notes on Greek Inscriptions from Bulgaria"
+									},
+									{
+										"_level": "j",
+										"_xml:lang": "en",
+										"__text": "Studia Classica Serdicensia"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Notes on Greek Inscriptions from Bulgaria"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume",
+											"__text": "V"
+										},
+										{
+											"_unit": "page",
+											"__text": "305-361"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Sofia",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "2016"
+								}
+							},
+							"_xml:id": "NSharankov"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Sharankov"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Sharankov"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Nicolay"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Nicolay"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "j",
+										"_xml:lang": "bg",
+										"__text": "Archaeologia Bulgarica"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Statue-bases with Honorific Inscriptions from Philippopolis"
+									},
+									{
+										"_level": "j",
+										"_xml:lang": "en",
+										"__text": "Archaeologia Bulgarica"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Statue-bases with Honorific Inscriptions from Philippopolis"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume",
+											"__text": "9/2"
+										},
+										{
+											"_unit": "page",
+											"__text": "55-71"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "Sofia",
+											"country": "Bulgaria",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Sofia",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "2005"
+								}
+							},
+							"_xml:id": "NSh05"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Sharankov"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Sharankov"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Nicolay"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Nicolay"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "j",
+										"_xml:lang": "bg",
+										"__text": "Archaeologia Bulgarica"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Five Official Inscriptions from Heraclea Sintica Including a Record of the Complete cursus honorum of D. Terentius Gentianus"
+									},
+									{
+										"_level": "j",
+										"_xml:lang": "en",
+										"__text": "Archaeologia Bulgarica"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Five Official Inscriptions from Heraclea Sintica Including a Record of the Complete cursus honorum of D. Terentius Gentianus"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume",
+											"__text": "XXV/3"
+										},
+										{
+											"_unit": "page",
+											"__text": "1-43"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "Sofia",
+											"country": "Bulgaria",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Sofia",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "2021"
+								}
+							},
+							"_xml:id": "NShPetNadpisaHeraclea"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Шаранков"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Sharankov"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Николай"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Nicolay"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "j",
+										"_xml:lang": "bg",
+										"__text": "Societas Classica"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Virdii, Munatii, Antii. Знатните римски родове във Филипопол и провинция Тракия"
+									},
+									{
+										"_level": "j",
+										"_xml:lang": "en",
+										"__text": "Societas Classica"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Virdii, Munatii, Antii. Знатните римски родове във Филипопол и провинция Тракия"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume"
+										},
+										{
+											"_unit": "page",
+											"__text": "191-192"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Sofia",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "2006"
+								}
+							},
+							"_xml:id": "Sharankov"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Шаранков"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Sharankov"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Николай"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Nicolay"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "s",
+										"_xml:lang": "bg",
+										"__text": "Известия на Археологическия институт"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Пет филипополски надписа в чест на император Максимин Тракиец и сина му цезар Максим (235-238)"
+									},
+									{
+										"_level": "s",
+										"_xml:lang": "en",
+										"__text": "Известия на Археологическия институт"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Пет филипополски надписа в чест на император Максимин Тракиец и сина му цезар Максим (235-238)"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume",
+											"__text": "39"
+										},
+										{
+											"_unit": "page",
+											"__text": "231-242"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Sofia",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "2006"
+								}
+							},
+							"_xml:id": "SharankovPhil"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Sharankov"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Sharankov"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Nicolay"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Nicolay"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "j",
+										"_xml:lang": "bg",
+										"__text": "Archaeologia Bulgarica"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "The inscriptions of the Roman colony of Deultum in Thrace"
+									},
+									{
+										"_level": "j",
+										"_xml:lang": "en",
+										"__text": "Archaeologia Bulgarica"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "The inscriptions of the Roman colony of Deultum in Thrace"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume",
+											"__text": "21/3"
+										},
+										{
+											"_unit": "page",
+											"__text": "37-64"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "Sofia",
+											"country": "Bulgaria",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Sofia",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "2017"
+								}
+							},
+							"_xml:id": "SharankovDeultum"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Шаранков"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Sharankov"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Николай"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Nicolay"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "s",
+										"_xml:lang": "bg",
+										"__text": "Археологически открития и разкопки през 2015"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Надписи от Августа Траяна"
+									},
+									{
+										"_level": "s",
+										"_xml:lang": "en",
+										"__text": "Археологически открития и разкопки през 2015"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Надписи от Августа Траяна"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume",
+											"__text": "LV"
+										},
+										{
+											"_unit": "page",
+											"__text": "791-793"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Sofia",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "2016"
+								}
+							},
+							"_xml:id": "Sh2015"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Шаранков"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Sharankov"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Николай"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Nicolay"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "s",
+										"_xml:lang": "bg",
+										"__text": "Годишник на Археологически музей Пловдив"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Бележки и допълнения към няколко надписа от Филипопол"
+									},
+									{
+										"_level": "s",
+										"_xml:lang": "en",
+										"__text": "Годишник на Археологически музей Пловдив"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Бележки и допълнения към няколко надписа от Филипопол"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume",
+											"__text": "IX/2"
+										},
+										{
+											"_unit": "page",
+											"__text": "146-159"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "Пловдив",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Plovdiv",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "2004"
+								}
+							},
+							"_xml:id": "Sh2004"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Slavova"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Slavova"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Mirena"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Mirena"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "s",
+										"_xml:lang": "bg",
+										"__text": "Opuscula Atheniensia"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Mystery clubs in Bulgarian lands in Antiquity - Greek epigraphical evidence"
+									},
+									{
+										"_level": "s",
+										"_xml:lang": "en",
+										"__text": "Opuscula Atheniensia"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Mystery clubs in Bulgarian lands in Antiquity - Greek epigraphical evidence"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume",
+											"__text": "27"
+										},
+										{
+											"_unit": "page",
+											"__text": "137-149"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "Athens",
+											"country": "Greece",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Athens",
+											"country": "Greece",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "2002"
+								}
+							},
+							"_xml:id": "MSlavova"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Велков"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Velkov"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Иван"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Ivan"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "j",
+										"_xml:lang": "bg",
+										"__text": "Годишник на Народния музей за 1922-1925 г."
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Антични паметници из България"
+									},
+									{
+										"_level": "j",
+										"_xml:lang": "en",
+										"__text": "Годишник на Народния музей за 1922-1925 г."
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Антични паметници из България"
+									}
+								],
+								"imprint": {
+									"biblScope": {
+										"_unit": "page",
+										"__text": "127-159"
+									},
+									"pubPlace": [
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Sofia",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1926"
+								}
+							},
+							"_xml:id": "IVelkov"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Велков"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Велков"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Велизар"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Велизар"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "s",
+										"_xml:lang": "bg",
+										"__text": "Кабиле"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Надписи от Кабиле"
+									},
+									{
+										"_level": "s",
+										"_xml:lang": "en",
+										"__text": "Кабиле"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Надписи от Кабиле"
+									}
+								],
+								"imprint": {
+									"biblScope": {
+										"_unit": "volume",
+										"__text": "2"
+									},
+									"pubPlace": [
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Sofia",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1991"
+								}
+							},
+							"_xml:id": "VVelkov"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Геров"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Геров"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Борис"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Борис"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "j",
+										"_xml:lang": "bg",
+										"__text": "Годишник на музеите в Пловдив"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Един нов документ за готските нашествия при Галиен и за историята на Пловдив"
+									},
+									{
+										"_level": "j",
+										"_xml:lang": "en",
+										"__text": "Годишник на музеите в Пловдив"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Един нов документ за готските нашествия при Галиен и за историята на Пловдив"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume",
+											"__text": "4"
+										},
+										{
+											"_unit": "page",
+											"__text": "23-39"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "Пловдив",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Plovdiv",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1965"
+								}
+							},
+							"_xml:id": "GerovPl"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Gerov"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Gerov"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Boris"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Boris"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "j",
+										"_xml:lang": "bg",
+										"__text": "Athenaeum"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "La carriera militare di Marciano, generale di Gallieno"
+									},
+									{
+										"_level": "j",
+										"_xml:lang": "en",
+										"__text": "Athenaeum"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "La carriera militare di Marciano, generale di Gallieno"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume",
+											"__text": "43/3-4"
+										},
+										{
+											"_unit": "page",
+											"__text": "333-354"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "Pavia",
+											"country": "Italy",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Pavia",
+											"country": "Italy",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1965"
+								}
+							},
+							"_xml:id": "GerovPav"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Иванов"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Иванов"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Теофил"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Теофил"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "j",
+										"_xml:lang": "bg",
+										"__text": "Археология"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Новооткрит старохристиянски некропол при с. Горна Бешовица, Врачанско"
+									},
+									{
+										"_level": "j",
+										"_xml:lang": "en",
+										"__text": "Археология"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Новооткрит старохристиянски некропол при с. Горна Бешовица, Врачанско"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume",
+											"__text": "IV/2"
+										},
+										{
+											"_unit": "page",
+											"__text": "38-48"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Sofia",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1962"
+								}
+							},
+							"_xml:id": "Ivanov"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Николов"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Николов"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Богдан"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Богдан"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "j",
+										"_xml:lang": "bg",
+										"__text": "Известия на Археологическия институт"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Антични паметници от Врачанско"
+									},
+									{
+										"_level": "j",
+										"_xml:lang": "en",
+										"__text": "Известия на Археологическия институт"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Антични паметници от Врачанско"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume",
+											"__text": "30"
+										},
+										{
+											"_unit": "page",
+											"__text": "216-235"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Sofia",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1967"
+								}
+							},
+							"_xml:id": "Nikolov"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Димитров"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Димитров"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Димитър П."
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Димитър П."
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "j",
+										"_xml:lang": "bg",
+										"__text": "Известия на Българското историческо дружество"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Към историята на Августа-Траяна"
+									},
+									{
+										"_level": "j",
+										"_xml:lang": "en",
+										"__text": "Bulletin de la Société Historique à Sofia"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Zur Geschichte der Stadt Augusta Traiana"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume",
+											"__text": "11-12"
+										},
+										{
+											"_unit": "page"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Sofia",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1931-1932"
+								}
+							},
+							"_xml:id": "DPDimitrov"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Дремсизова-Нелчинова"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Дремсизова-Нелчинова"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Цветана"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Цветана"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "j",
+										"_xml:lang": "bg",
+										"__text": "Studia in memoriam G. Mihailov (Thracia antiqua)"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Находки от крепостта край Мездра"
+									},
+									{
+										"_level": "j",
+										"_xml:lang": "en",
+										"__text": "Studia in memoriam G. Mihailov (Thracia antiqua)"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Находки от крепостта край Мездра"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume",
+											"__text": "10"
+										},
+										{
+											"_unit": "page",
+											"__text": "254-255, № 2"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "София",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Sofia",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1999"
+								}
+							},
+							"_xml:id": "Dremsizova"
+						},
+						{
+							"monogr": {
+								"author": {
+									"surname": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Ботушарова"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Ботушарова"
+										}
+									],
+									"forename": [
+										{
+											"_xml:lang": "bg",
+											"__text": "Лилия"
+										},
+										{
+											"_xml:lang": "en",
+											"__text": "Лилия"
+										}
+									]
+								},
+								"title": [
+									{
+										"_level": "j",
+										"_xml:lang": "bg",
+										"__text": "Годишник на Народния археологически музей Пловдив"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "bg",
+										"__text": "Оброчни релефи на Аполон от Тракия"
+									},
+									{
+										"_level": "j",
+										"_xml:lang": "en",
+										"__text": "Annuaire du Musée national archéologique Plovdiv"
+									},
+									{
+										"_level": "a",
+										"_xml:lang": "en",
+										"__text": "Оброчни релефи на Аполон от Тракия"
+									}
+								],
+								"imprint": {
+									"biblScope": [
+										{
+											"_unit": "volume",
+											"__text": "3"
+										},
+										{
+											"_unit": "page",
+											"__text": "145-153"
+										}
+									],
+									"pubPlace": [
+										{
+											"settlement": "Пловдив",
+											"country": "България",
+											"_xml:lang": "bg"
+										},
+										{
+											"settlement": "Plovdiv",
+											"country": "Bulgaria",
+											"_xml:lang": "en"
+										}
+									],
+									"date": "1959"
+								}
+							},
+							"_xml:id": "botusharova"
+						}
+					]
+				}
+			}
+		},
+		"_xmlns": "http://www.tei-c.org/ns/1.0"
+	}
