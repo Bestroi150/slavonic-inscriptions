@@ -1,7 +1,6 @@
 {
     "materials": {
-		"text": {
-			"body": {
+		"body": {
 				"list": {
 					"item": [
 						{
@@ -89,4 +88,3 @@
 		},
 		"_xmlns": "http://www.tei-c.org/ns/1.0"
 	}
-}
