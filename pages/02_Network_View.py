@@ -163,7 +163,7 @@ def parse_tei(path: Path) -> dict:
 # 3. Streamlit UI
 ###############################################################################
 
-st.title("📜 TEI-EpiDoc Network Explorer")
+st.title("📜 Epigraphic Network Explorer")
 
 # --- Sidebar upload / directory selection -----------------------------------
 st.sidebar.header("Data input")
