@@ -32,8 +32,11 @@ import streamlit.web.bootstrap as bootstrap
 
 # Local imports
 from map_view import *
+from bibliography import load_bibliography
 
-# --- Map Helper Functions ---
+# ...
+
+
 def get_xml_references(xml_string):
     """Parses the XML string and returns a set of all 'ref' attribute values."""
     if not xml_string:
@@ -397,7 +400,15 @@ pass
 precoded_xmls = load_precoded_xmls(str(DATA_DIR / 'xmls'))
 
 # Set default renderer for Plotly
+# path to your TEI listBibl file
+BIBLIO_XML = DATA_DIR / 'bibliography.xml'
+biblio_refs = {}
+if BIBLIO_XML.exists():
+    biblio_refs = load_bibliography(str(BIBLIO_XML))
+else:
+    st.warning(f"Could not find bibliography file at {BIBLIO_XML}")
 
+# --- Map Helper Functions ---
   
 # Create sidebar
 with st.sidebar:
@@ -756,15 +767,39 @@ def extract_apparatus_english(div):
 
 def extract_bibliography(div):
     """
-    Extract and join text from each <bibl> element.
+    For each <bibl>, if it has @sameAs="bib:ID", lookup the full reference
+    in biblio_refs; then, if the element has inner text (the page),
+    append ", p.<page>".
+    Otherwise fall back to plain <bibl> text.
     """
     texts = []
     if div is None:
         return ""
+
     for bibl in div.findall(".//tei:bibl", NS):
-        if bibl.text:
-            texts.append(bibl.text.strip())
+        same = bibl.get('sameAs', '')
+        page = (bibl.text or "").strip()
+        entry = None
+
+        # if it's a bib reference, look it up
+        if same.startswith('bib:'):
+            ref_id = same.split(':', 1)[1]
+            entry = biblio_refs.get(ref_id)
+
+        # if we found a lookup entry, use it
+        if entry:
+            # append page if present
+            if page:
+                texts.append(f"{entry}, p.{page}")
+            else:
+                texts.append(entry)
+        else:
+            # fallback: just output whatever is inside <bibl>
+            if page:
+                texts.append(page)
+
     return "\n".join(texts)
+
 
 def display_monument_images(root, image_data, monument_id):
     """
