@@ -23,7 +23,12 @@ from PIL import Image
 import networkx as nx
 
 # Streamlit
+from lxml import etree
+from pyvis.network import Network
+import streamlit.components.v1 as components
 import streamlit as st
+from streamlit import session_state
+import streamlit.web.bootstrap as bootstrap
 
 # Local imports
 from map_view import *
@@ -393,6 +398,7 @@ precoded_xmls = load_precoded_xmls(str(DATA_DIR / 'xmls'))
 
 # Set default renderer for Plotly
 
+  
 # Create sidebar
 with st.sidebar:
     st.image(str(STATIC_DIR / 'imgs/logo.jpg'), width=300, caption="Old Church Slavonic Inscriptions")
@@ -409,7 +415,8 @@ with st.sidebar:
     
     **Developed by**:
     Kristiyan Simeonov, Sofia University
-    """)
+    """)    # Add navigation buttons
+   
 
 def safe_find_text(elem, xpath, default="", lang=None):
     """
@@ -821,169 +828,35 @@ def display_monument_images(root, image_data, monument_id):
 
 
 # Network analysis functions
-def show_network_analysis_tab(all_data, parsed_files, data_dir):
-    """Display network analysis visualization and statistics."""
+def prepare_network_data(all_data, parsed_files):
+    """Prepare network data for visualization in the Network View page."""
     if not all_data or not parsed_files:
         st.warning("No data loaded. Please upload and process XML files first.")
         return
 
-    # Network type selection
-    network_type = st.selectbox(
-        "Select Network Analysis Type",
-        ["Material Connections", "Object Type Connections", "Origin Location Connections", "Temporal Connections"]
-    )
+    # Store the processed data in session state for the network visualization page
+    network_data = []
+    df = pd.DataFrame(all_data)
+    for _, row in df.iterrows():
+        # Store all the data we will need for network visualization
+        node_data = {
+            "inscription": row["Title"] if row.get("Title") else row["ID"],
+            "decade": row.get("Date", "Unknown"),
+            "material_": row.get("Material", "Unknown"),
+            "object": row.get("Type", "Unknown"),
+            "origloc": row.get("Origin", "Unknown")
+        }
+        network_data.append(node_data)
+    
+    # Store data in session state for the network visualization page
+    st.session_state['network_data'] = pd.DataFrame(network_data)
+    st.session_state['processed_files'] = parsed_files
+
+    # Show instructions to use the Network View page
+    st.info("Network visualization is now available in the Network View page! 🔗\n\nClick on 'Network View' in the sidebar to explore interactive network visualizations of your data.")
 
     # Create graph
-    G = nx.Graph()
-
-    # Color scheme
-    color_map = {
-        'monument': '#4e79a7',  # blue
-        'material': '#59a14f',  # green
-        'object': '#f28e2b',    # orange
-        'location': '#d62728',  # red
-        'period': '#76b7b2',    # teal
-    }
-
-    # Process each monument
-    for _, monument in pd.DataFrame(all_data).iterrows():
-        mon_id = monument['ID']
-        G.add_node(mon_id, type='monument', color=color_map['monument'])
-
-        # Get corresponding XML data
-        file_data = next((f for f in parsed_files if f["root"].find("tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type='filename']", NS).text.strip() == mon_id), None)
-        
-        if not file_data:
-            continue
-
-        root = file_data['root']
-
-        if network_type == "Material Connections":
-            for elem in root.findall(".//tei:material[@ref]", NS):
-                material_name = elem.text.strip() if elem.text else "Unknown Material"
-                if not G.has_node(material_name):
-                    G.add_node(material_name, type='material', color=color_map['material'])
-                G.add_edge(mon_id, material_name)
-
-        elif network_type == "Object Type Connections":
-            for elem in root.findall(".//tei:objectType[@ref]", NS):
-                obj_name = elem.text.strip() if elem.text else "Unknown Object"
-                if not G.has_node(obj_name):
-                    G.add_node(obj_name, type='object', color=color_map['object'])
-                G.add_edge(mon_id, obj_name)
-
-        elif network_type == "Origin Location Connections":
-            for elem in root.findall(".//tei:origPlace/tei:seg[@xml:lang='en']", NS):
-                if elem.text:
-                    place_name = elem.text.strip()
-                    if not G.has_node(place_name):
-                        G.add_node(place_name, type='location', color=color_map['location'])
-                    G.add_edge(mon_id, place_name)
-
-        elif network_type == "Temporal Connections":
-            for elem in root.findall(".//tei:origDate", NS):
-                period = elem.text.strip() if elem.text else None
-                if not period:
-                    eng_seg = elem.find("tei:seg[@xml:lang='en']", NS)
-                    if eng_seg is not None and eng_seg.text:
-                        period = eng_seg.text.strip()
-                
-                if period:
-                    if not G.has_node(period):
-                        G.add_node(period, type='period', color=color_map['period'])
-                    G.add_edge(mon_id, period)
-
-    if G.number_of_nodes() > 0:
-        # Create visualization
-        pos = nx.spring_layout(G)
-        
-        # Create edges trace
-        edge_x, edge_y = [], []
-        for edge in G.edges():
-            x0, y0 = pos[edge[0]]
-            x1, y1 = pos[edge[1]]
-            edge_x.extend([x0, x1, None])
-            edge_y.extend([y0, y1, None])
-
-        edges_trace = go.Scatter(
-            x=edge_x, y=edge_y,
-            line=dict(width=0.5, color='#888'),
-            hoverinfo='none',
-            mode='lines'
-        )
-
-        # Create nodes trace for each type
-        node_traces = []
-        node_types = set(nx.get_node_attributes(G, 'type').values())
-
-        for node_type in node_types:
-            node_indices = [n for n, attr in G.nodes(data=True) if attr.get('type') == node_type]
-            if node_indices:
-                x = [pos[node][0] for node in node_indices]
-                y = [pos[node][1] for node in node_indices]
-                
-                node_trace = go.Scatter(
-                    x=x, y=y,
-                    mode='markers+text',
-                    name=node_type.capitalize(),
-                    text=[str(node) for node in node_indices],
-                    textposition="top center",
-                    hoverinfo='text',
-                    marker=dict(
-                        size=10,
-                        color=[G.nodes[node].get('color', '#888') for node in node_indices],
-                        line=dict(width=1, color='#fff')
-                    )
-                )
-                node_traces.append(node_trace)
-
-        # Create and display figure
-        fig = go.Figure(
-            data=[edges_trace] + node_traces,
-            layout=go.Layout(
-                showlegend=True,
-                hovermode='closest',
-                margin=dict(b=20, l=5, r=5, t=40),
-                xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
-                yaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
-                legend=dict(
-                    yanchor="top",
-                    y=0.99,
-                    xanchor="right",
-                    x=0.99
-                ),
-                height=600
-            )
-        )
-
-        st.plotly_chart(fig, use_container_width=True)
-
-        # Display statistics
-        st.subheader("Network Statistics")
-        stats_col1, stats_col2 = st.columns(2)
-        
-        with stats_col1:
-            st.metric("Total Nodes", G.number_of_nodes())
-            st.metric("Total Connections", G.number_of_edges())
-            
-            # Node type distribution
-            st.markdown("**Node Distribution:**")
-            for n_type in sorted(node_types):
-                count = len([n for n, attr in G.nodes(data=True) if attr.get('type') == n_type])
-                st.markdown(f"- {n_type.capitalize()}: {count}")
-
-        with stats_col2:
-            if G.number_of_nodes() > 1:
-                # Centrality Analysis
-                st.markdown("**Most Connected Nodes:**")
-                central_nodes = sorted(nx.degree_centrality(G).items(), key=lambda x: x[1], reverse=True)[:5]
-                for node, score in central_nodes:
-                    node_type = G.nodes[node].get('type', 'unknown')
-                    st.markdown(f"- {node} ({node_type}): {score:.3f}")
-
-    else:
-        st.info(f"No {network_type.lower()} connections found in the current dataset.")
-# Load pre-coded XMLs
+  
 precoded_xmls = load_precoded_xmls(str(DATA_DIR / 'xmls'))
 
 st.title("TEI Monument Visualization (Plain Text Versions)")
@@ -1051,8 +924,10 @@ if uploaded_images:
             continue
 
 # Continue with file processing only if we have files to work with
-if working_files:    # Create tabs for visualization, querying, analytics, network analysis, and map
-    viz_tab, query_tab, analytics_tab, network_tab, map_tab = st.tabs(["Data Visualization", "Search & Query", "Analytics", "Network Analysis", "Map View"])
+if working_files:
+    # Create tabs for visualization, querying, analytics, and map view
+    viz_tab, query_tab, analytics_tab, map_tab = st.tabs(["Data Visualization", "Search & Query", "Analytics", "Map View"])
+    
     # Create data structures for analytics, search, and file storage
     all_data = []
     unique_types = set()
@@ -1084,25 +959,12 @@ if working_files:    # Create tabs for visualization, querying, analytics, netwo
                     category = get_text(summary, ".//tei:seg", lang="en")
                     if category:
                         unique_categories.add(category.lower())
-            ms_desc = root.find(".//tei:msDesc", NS)
-            if ms_desc is not None:
-                # Collect monument type
-                object_type = get_text(ms_desc, ".//tei:objectType", lang="en")
-                if object_type:
-                    unique_types.add(object_type.lower())
-                
-                # Collect material
-                material = get_text(ms_desc, ".//tei:material", lang="en")
-                if material:
-                    unique_materials.add(material.lower())
-                
-                # Collect category
-                summary = ms_desc.find(".//tei:summary", NS)
-                if summary is not None:
-                    category = get_text(summary, ".//tei:seg", lang="en")
-                    if category:
-                        unique_categories.add(category.lower())
     
+    # Prepare network data after processing all files
+    if all_data:
+        prepare_network_data(all_data, parsed_files)
+    
+    # --- Data Visualization Tab ---
     with viz_tab:
         st.header("Monument Documents")
         st.info("Click on each monument to view its details")
@@ -1683,339 +1545,7 @@ if working_files:    # Create tabs for visualization, querying, analytics, netwo
             st.subheader("Raw Data")
             st.dataframe(df)        
         else:
-            st.write("No data available for visualization. Please upload some XML files first.")    
-   
-    with network_tab:
-        st.header("Network Analysis")         
-        
-        def load_authority_files():
-            """Load all authority files from the data directory"""
-            authority_data = {}
-            auth_dir = DATA_DIR / 'authority'
-            
-            # List of authority files to load
-            files_to_load = {
-                'materials': 'materials.json',
-                'objects': 'objects.json',
-                'persons': 'persons.json',
-                'places': 'places.json',
-                'currentloc': 'currentloc.json',
-                'findspot': 'findspot.json',
-                'origloc': 'origloc.json',
-                'titles': 'titles.json',
-                'relig': 'relig.json',
-                'bibliography': 'bibliography.json'
-            }
-            
-            for key, filename in files_to_load.items():
-                try:
-                    with open(auth_dir / filename, 'r', encoding='utf-8') as f:
-                        authority_data[key] = json.load(f)
-                except Exception as e:
-                    st.warning(f"Could not load {filename}: {e}")
-            
-            return authority_data
-            
-        def get_authority_name(ref_id, auth_type, auth_files):
-            """Get the name/label from an authority file based on the reference ID"""
-            if auth_type not in auth_files:
-                return None
-                
-            auth_data = auth_files[auth_type]
-            
-            # Handle materials.json special structure
-            if auth_type == 'materials':
-                items = auth_data.get('materials', {}).get('text', {}).get('body', {}).get('list', {}).get('item', [])
-                for item in items:
-                    if item.get('_xml:id') == ref_id:
-                        # Get English term
-                        if isinstance(item.get('term'), list):
-                            for term in item['term']:
-                                if term.get('_xml:lang') == 'en':
-                                    return term.get('__text')
-                        elif isinstance(item.get('term'), dict):
-                            if item['term'].get('_xml:lang') == 'en':
-                                return item['term'].get('__text')
-                return ref_id
-
-            # Handle objects.json special structure
-            if auth_type == 'objects':
-                items = auth_data.get('objects', {}).get('text', {}).get('body', {}).get('list', {}).get('item', [])
-                for item in items:
-                    if item.get('_xml:id') == ref_id:
-                        # Get English term
-                        if isinstance(item.get('term'), list):
-                            for term in item['term']:
-                                if term.get('_xml:lang') == 'en':
-                                    return term.get('__text')
-                        elif isinstance(item.get('term'), dict):
-                            if item['term'].get('_xml:lang') == 'en':
-                                return item['term'].get('__text')
-                return ref_id
-
-            # Handle origloc.json structure
-            if auth_type == 'origloc':
-                if isinstance(auth_data, dict):
-                    if ref_id in auth_data:
-                        return auth_data[ref_id].get('name_en', auth_data[ref_id].get('name', ref_id))
-            
-            return ref_id
-
-        # Add network type selection
-        network_type = st.selectbox(
-            "Select Network Analysis Type",
-            ["Origin Location Connections", "Material Connections", "Object Type Connections", "Temporal Connections"]
-        )
-        
-        if all_data:
-            # Load authority files from JSON
-            authority_files = load_authority_files()
-            
-            # Convert data to DataFrame if not already done
-            df = pd.DataFrame(all_data)
-            
-            # Create a graph with references to authority files
-            G = nx.Graph()
-            
-            # Create color mapping for different node types
-            color_map = {
-                'monument': '#1f77b4',    # blue for monuments
-                'material': '#2ca02c',    # green for materials
-                'object': '#ff7f0e',      # orange for objects
-                'origin': '#d62728',      # red for origin locations
-                'period': '#7f7f7f'       # gray for periods
-            }
-            
-            # --- Date Clustering Functions ---
-            def cluster_dates(dates):
-                """Group dates that are close to each other"""
-                if not dates:
-                    return []
-                    
-                # Sort dates and initialize clusters
-                sorted_dates = sorted(dates)
-                clusters = []
-                current_cluster = [sorted_dates[0]]
-                
-                # Maximum years difference to be considered in the same cluster
-                MAX_YEAR_DIFF = 10
-                
-                for i in range(1, len(sorted_dates)):
-                    if sorted_dates[i] - sorted_dates[i-1] <= MAX_YEAR_DIFF:
-                        current_cluster.append(sorted_dates[i])
-                    else:
-                        clusters.append(current_cluster)
-                        current_cluster = [sorted_dates[i]]
-                
-                clusters.append(current_cluster)
-                return clusters
-            
-            def format_date_cluster(cluster):
-                """Format a cluster of dates into a readable label"""
-                if len(cluster) == 1:
-                    return str(cluster[0])
-                elif len(cluster) == 2:
-                    return f"{cluster[0]}-{cluster[-1]}"
-                else:
-                    return f"{cluster[0]}-{cluster[-1]} ({len(cluster)} dates)"
-
-            # Process each monument based on the selected network type
-            for _, monument in df.iterrows():
-                mon_id = monument['ID']
-                # Add monument node
-                G.add_node(mon_id, 
-                          type='monument',
-                          title=monument['Title'],
-                          color=color_map['monument'],
-                          node_type='monument')
-                
-                # Get original file data to access references
-                file_data = next((f for f in parsed_files if get_text(f['root'].find("tei:teiHeader/tei:fileDesc/tei:publicationStmt", NS), "tei:idno[@type='filename']") == mon_id), None)
-                
-                if file_data:
-                    root = file_data['root']
-                    
-                    if network_type == "Material Connections":
-                        # Process materials using abbreviated IDs
-                        for material_elem in root.findall(".//tei:material", NS):
-                            ref = material_elem.get('ref', '')
-                            if ref and 'materials.xml#' in ref:
-                                material_id = ref.replace('materials.xml#', '')
-                                material_name = get_authority_name(material_id, 'materials', authority_files)
-                                
-                                if material_name:
-                                    if not G.has_node(material_name):
-                                        G.add_node(material_name, type='material', color=color_map['material'], node_type='material')
-                                    G.add_edge(mon_id, material_name, type='material')
-                    
-                    elif network_type == "Object Type Connections":
-                        # Process objects using abbreviated IDs
-                        for object_elem in root.findall(".//tei:objectType", NS):
-                            ref = object_elem.get('ref', '')
-                            if ref and 'objects.xml#' in ref:
-                                object_id = ref.replace('objects.xml#', '')
-                                object_name = get_authority_name(object_id, 'objects', authority_files)
-                                
-                                if object_name:
-                                    if not G.has_node(object_name):
-                                        G.add_node(object_name, type='object', color=color_map['object'], node_type='object')
-                                    G.add_edge(mon_id, object_name, type='object')
-                    
-                    elif network_type == "Origin Location Connections":
-                        # Process origin locations
-                        for place_elem in root.findall(".//tei:origPlace[@ref]", NS):
-                            ref = place_elem.get('ref', '')
-                            if ref and 'origloc.xml#' in ref:
-                                place_id = ref.replace('origloc.xml#', '')
-                                place_name = get_authority_name(place_id, 'origloc', authority_files)
-                                
-                                if place_name:
-                                    if not G.has_node(place_name):
-                                        G.add_node(place_name, type='origin', color=color_map['origin'], node_type='origin')
-                                    G.add_edge(mon_id, place_name, type='origin')
-                    
-                    elif network_type == "Temporal Connections":
-                        # Process dates with clustering
-                        dates = []
-                        for date_elem in root.findall(".//tei:origDate", NS):
-                            # Try to get specific years
-                            not_before = date_elem.get('notBefore', '')
-                            not_after = date_elem.get('notAfter', '')
-                            
-                            if not_before and not_after:
-                                try:
-                                    # If years are the same or close, use the earlier year
-                                    year_before = int(not_before)
-                                    year_after = int(not_after)
-                                    if year_before == year_after:
-                                        dates.append(year_before)
-                                    elif year_after - year_before <= 10:
-                                        # For close dates, use both
-                                        dates.extend([year_before, year_after])
-                                    else:
-                                        # For wider ranges, use the midpoint
-                                        dates.append((year_before + year_after) // 2)
-                                except ValueError:
-                                    continue
-                            
-                            # Check for century information if no specific years
-                            if not dates:
-                                for seg in date_elem.findall("tei:seg[@xml:lang='en']", NS):
-                                    if seg.text and "c." in seg.text:
-                                        century = seg.text.strip()
-                                        if not G.has_node(century):
-                                            G.add_node(century, type='period', color=color_map['period'], node_type='period')
-                                        G.add_edge(mon_id, century, type='period')
-                        
-                        # Process collected dates if any
-                        if dates:
-                            clusters = cluster_dates(dates)
-                            for cluster in clusters:
-                                cluster_label = format_date_cluster(cluster)
-                                if not G.has_node(cluster_label):
-                                    G.add_node(cluster_label, type='period', color=color_map['period'], node_type='period')
-                                G.add_edge(mon_id, cluster_label, type='period')
-            
-            # Create the network visualization using plotly
-            if nx.number_of_nodes(G) > 0:
-                # Calculate layout
-               
-                pos = nx.spring_layout(G, k=0.3, iterations=50)
-                
-                # Create edges trace
-                edge_x = []
-                edge_y = []
-                for edge in G.edges():
-                    x0, y0 = pos[edge[0]]
-                    x1, y1 = pos[edge[1]]
-                    edge_x.extend([x0, x1, None])
-                    edge_y.extend([y0, y1, None])
-                
-                edges_trace = go.Scatter(
-                    x=edge_x, y=edge_y,
-                    line=dict(width=0.5, color='#888'),
-                    hoverinfo='none',
-                    mode='lines')
-                
-                # Create nodes trace for each node type
-                node_traces = []
-                node_types = set(nx.get_node_attributes(G, 'type').values())
-                
-                for node_type in node_types:
-                    nodes = [n for n, attr in G.nodes(data=True) if attr.get('type') == node_type]
-                    if nodes:
-                        x = [pos[node][0] for node in nodes]
-                        y = [pos[node][1] for node in nodes]
-                        
-                        # Get the color for this node type
-                        if node_type in color_map:
-                            node_color = color_map[node_type]
-                        elif node_type == 'place':
-                            node_color = '#9467bd'  # purple for places
-                        elif node_type == 'period':
-                            node_color = '#8c564b'  # brown for periods
-                        else:
-                            node_color = '#e377c2'  # pink for others
-                        
-                        node_trace = go.Scatter(
-                            x=x, y=y,
-                            mode='markers+text',
-                            hoverinfo='text',
-                            marker=dict(
-                                size=15,
-                                color=node_color,
-                                line=dict(width=1, color='#000')
-                            ),
-                            text=[node for node in nodes],
-                            textposition="bottom center",
-                            name=node_type.capitalize(),
-                            textfont=dict(
-                                size=10,
-                            )
-                        )
-                        node_traces.append(node_trace)
-            
-            # Create the figure
-            fig = go.Figure(data=[edges_trace] + node_traces,
-                          layout=go.Layout(
-                              showlegend=True,
-                              hovermode='closest',
-                              margin=dict(b=0, l=0, r=0, t=0),
-                              xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
-                              yaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
-                              legend=dict(
-                                  yanchor="top",
-                                  y=0.99,
-                                  xanchor="left",
-                                  x=0.01,
-                                  bgcolor="rgba(255, 255, 255, 0.5)"
-                              ),
-                              height=700
-                          ))
-            
-            st.plotly_chart(fig, use_container_width=True)
-            
-            # Display statistics
-            st.subheader("Network Statistics")
-            st.markdown(f"- **Total nodes:** {G.number_of_nodes()}")
-            st.markdown(f"- **Total connections:** {G.number_of_edges()}")
-            st.markdown("- **Node types:**")
-            for node_type in sorted(node_types):
-                count = len([n for n, attr in G.nodes(data=True) if attr.get('type') == node_type])
-                st.markdown(f"  - {node_type.capitalize()}: {count}")
-            
-            # Add degree centrality analysis
-            if G.number_of_nodes() > 1:
-                st.subheader("Centrality Analysis")
-                central_nodes = sorted(nx.degree_centrality(G).items(), key=lambda x: x[1], reverse=True)[:5]
-                
-                st.markdown("**Most connected nodes:**")
-                for node, score in central_nodes:
-                    node_type = G.nodes[node].get('type', 'unknown')
-                    st.markdown(f"- {node} ({node_type}): {score:.4f} centrality score")
-        else:
-            st.info(f"No {network_type.lower()} found between monuments and authority files.")
-            
+            st.write("No data available for visualization. Please upload some XML files first.")  
     with map_tab:
         st.header("Interactive Map of Linked Epigraphic Monument Locations")
 
@@ -2156,6 +1686,7 @@ if working_files:    # Create tabs for visualization, querying, analytics, netwo
 
             def display_map_visualization(df):
                 """Displays either a 2D or  3D map based on user selection."""
+
                 if df.empty:
                     st.warning("No location data available to display on the map.")
                     return
