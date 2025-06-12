@@ -1,9 +1,12 @@
 streamlit>=1.45.0
+streamlit-extras>=0.3.0
 pandas
-pillow
-requests
+lxml
 plotly
 networkx
-lxml
 pydeck
 streamlit-folium
+Pillow
+requests
+pyvis
+folium
