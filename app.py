@@ -591,17 +591,19 @@ def format_leiden_text(elem):
 
          # Abbreviation expansions (handles multiple abbr–ex pairs)
         elif tag == 'expan':
-            # collect all <abbr> and <ex> children
             abbrs = child.findall('tei:abbr', NS)
             exs   = child.findall('tei:ex',   NS)
-            # zip them in order and output abbr(text)(expansion[text]? if low-cert)
             for abbr_el, ex_el in zip(abbrs, exs):
                 abbr_text = abbr_el.text or ''
-                exp_text  = ex_el.text   or ''
-                cert      = ex_el.attrib.get('cert')
-                # '?' suffix only if cert="low"
-                suffix    = '?' if cert == 'low' else ''
-                text += f"{abbr_text}({exp_text}{suffix})"
+                exp_text  = ex_el.text or ''
+                # only add parentheses if there's actually expansion text
+                if exp_text:
+                    cert   = ex_el.attrib.get('cert')
+                    suffix = '?' if cert == 'low' else ''
+                    text += f"{abbr_text}({exp_text}{suffix})"
+                else:
+                    text += abbr_text
+
 
         # Gaps
         elif tag == 'gap':
