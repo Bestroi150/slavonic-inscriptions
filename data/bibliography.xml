@@ -1,1090 +1,179 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?oxygen RNGSchema="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="xml"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title>Bibliography</title>
-            </titleStmt>
-            <publicationStmt><p></p></publicationStmt> 
-            <sourceDesc><p></p></sourceDesc>
-        </fileDesc>
-    </teiHeader>
-    <text>
-        <body>
-            <listBibl>
-                <biblStruct xml:id="b1">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Popkonstantinov</surname>
-                            <surname xml:lang="en">Popkonstantinov</surname>
-                            <forename xml:lang="bg">Kazimir</forename>
-                            <forename xml:lang="en">Kazimir</forename>
-                        </author>
-                        <author>
-                            <surname xml:lang="bg">Kronsteiner</surname>
-                            <surname xml:lang="en">Kronsteiner</surname>
-                            <forename xml:lang="bg">Otto</forename>
-                            <forename xml:lang="en">Otto</forename> 
-                        </author>
-                        <title level="m" xml:lang="bg">Altbulgarische Inschriften</title>
-                        <title level="m" xml:lang="en">Altbulgarische Inschriften</title>
-                                <imprint>
-                                    <biblScope unit="volume">II</biblScope>
-                                    <pubPlace xml:lang="bg">
-                                        <settlement>Wien</settlement>
-                                        <country>Österreich</country>
-                                    </pubPlace>
-                                    <pubPlace xml:lang="en">
-                                        <settlement>Wien</settlement>
-                                        <country>Austria</country>
-                                    </pubPlace>
-                                    <date>1997</date>
-                                </imprint></monogr>
-                </biblStruct>
-                <biblStruct xml:id="b2">
-                    <monogr>
-                        <author>        
-                       <surname xml:lang="bg">Смядовски</surname>
-                            <surname xml:lang="en">Smyadovski</surname>
-                            <forename xml:lang="bg">Стефан</forename>
-                            <forename xml:lang="en">Stefan</forename>
-                        </author>
-                        <title level="m" xml:lang="bg">Българска кирилска епиграфика (IХ-ХV в.)</title>
-                        <title level="m" xml:lang="en">Bulgarian cyrillic epighraphy (IX-XV)</title>
-                        <imprint>
-                           <pubPlace xml:lang="bg">
-                                <settlement>София</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Sofia</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <date>1993</date>
-                        </imprint>
-                    </monogr>
-                </biblStruct>
-                <biblStruct xml:id="b3">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Ангелов</surname>
-                            <surname xml:lang="en">Angelov</surname>
-                            <forename xml:lang="bg">Никола</forename>
-                            <forename xml:lang="en">Nikola</forename>
-                        </author>
-                        <title level="m" xml:lang="bg">Царевград Търнов</title>
-                        <title level="m" xml:lang="en">Tsarevgrad Tarnov</title>
-                                <imprint>
-                                    <biblScope unit="volume">3</biblScope>
-                                    <pubPlace xml:lang="bg">
-                                        <settlement>София</settlement>
-                                        <country>България</country>
-                                    </pubPlace>
-                                    <pubPlace xml:lang="en">
-                                        <settlement>Sofia</settlement>
-                                        <country>Bulgaria</country>
-                                    </pubPlace>
-                                    <date>1980</date>
-                                </imprint></monogr>
-                </biblStruct>
-                <biblStruct xml:id="b4">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Томович</surname>
-                            <surname xml:lang="en">Tomovich</surname>
-                            <forename xml:lang="bg">Гордана</forename>
-                            <forename xml:lang="en">Gordana</forename>
-                        </author>
-                        <title level="m" xml:lang="bg">Морфологиjа ħириличког натписа на Балкану</title>
-                        <title level="m" xml:lang="en">Morfologija ćiriličkih natpisa na Balkanu</title>
-                                <imprint>
-                                    <pubPlace xml:lang="bg">
-                                        <settlement>Белград</settlement>
-                                        <country>Сърбия</country>
-                                    </pubPlace>
-                                    <pubPlace xml:lang="en">
-                                        <settlement>Belgrade</settlement>
-                                        <country>Serbia</country>
-                                    </pubPlace>
-                                    <date>1974</date>
-                                </imprint></monogr>
-                </biblStruct>
-                <biblStruct xml:id="b5">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Хаджиев</surname>
-                            <surname xml:lang="en">Коста</surname>
-                            <forename xml:lang="bg">Коста</forename>
-                            <forename xml:lang="en">Kosta</forename>
-                        </author>
-                        <title level="m" xml:lang="bg">Кирилски епиграфски паметници от църквата в с. Балша, Софийско. – В: Нумизматика, сфрагистика и епиграфика, 225–236.</title>
-                        <title level="m" xml:lang="en">Tsarevgrad Tarnov</title>
-                                <imprint>
-                                    <biblScope unit="volume"></biblScope>
-                                    <pubPlace xml:lang="bg">
-                                        <settlement>София</settlement>
-                                        <country>България</country>
-                                    </pubPlace>
-                                    <pubPlace xml:lang="en">
-                                        <settlement>Sofia</settlement>
-                                        <country>Bulgaria</country>
-                                    </pubPlace>
-                                    <date>2003</date>
-                                </imprint></monogr>
-                </biblStruct>
- <!-- ДОТУК. Предстои още много. Това е само за проверка-->            
-                <biblStruct xml:id="b3">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Михаилов</surname><surname xml:lang="en">Mihailov</surname>
-                            <forename xml:lang="bg">Георги</forename><forename xml:lang="en">Georgius</forename>
-                        </author>
-                        <title level="m" xml:lang="bg">Inscriptiones Graecae in Bulgaria repertae</title>
-                        <title level="m" xml:lang="en">Inscriptiones Graecae in Bulgaria repertae</title>
-                        <imprint>
-                            <biblScope unit="volume">I</biblScope>
-                            <biblScope unit="volume">II</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>София</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Serdicae</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <date>1958</date>
-                        </imprint></monogr>
-                </biblStruct>
-                <biblStruct xml:id="b3_1">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Михаилов</surname><surname xml:lang="en">Mihailov</surname>
-                            <forename xml:lang="bg">Георги</forename><forename xml:lang="en">Georgius</forename>
-                        </author>
-                        <title level="m" xml:lang="bg">Inscriptiones Graecae in Bulgaria repertae</title>
-                        <title level="m" xml:lang="en">Inscriptiones Graecae in Bulgaria repertae</title>
-                        <imprint>
-                            <biblScope unit="volume">III.1</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>София</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Serdicae</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <date>1961</date>
-                        </imprint></monogr></biblStruct>
-                    <biblStruct xml:id="b3_2">
-                        <monogr>
-                            <author>
-                                <surname xml:lang="bg">Михаилов</surname><surname xml:lang="en">Mihailov</surname>
-                                <forename xml:lang="bg">Георги</forename><forename xml:lang="en">Georgius</forename>
-                            </author>
-                            <title level="m" xml:lang="bg">Inscriptiones Graecae in Bulgaria repertae</title>
-                            <title level="m" xml:lang="en">Inscriptiones Graecae in Bulgaria repertae</title>
-                            <imprint>
-                                <biblScope unit="volume">III.2</biblScope>
-                                <pubPlace xml:lang="bg">
-                                    <settlement>София</settlement>
-                                    <country>България</country>
-                                </pubPlace>
-                                <pubPlace xml:lang="en">
-                                    <settlement>Serdicae</settlement>
-                                    <country>Bulgaria</country>
-                                </pubPlace>
-                                <date>1964</date>
-                            </imprint></monogr> 
-                </biblStruct>
-                <biblStruct xml:id="b4">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Михаилов</surname><surname xml:lang="en">Mihailov</surname>
-                            <forename xml:lang="bg">Георги</forename><forename xml:lang="en">Georgius</forename>
-                        </author>
-                        <title level="m" xml:lang="bg">Inscriptiones Graecae in Bulgaria repertae</title>
-                        <title level="m" xml:lang="en">Inscriptiones Graecae in Bulgaria repertae</title>
-                        <imprint>
-                            <biblScope unit="volume">IV</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>София</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Serdicae</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <date>1966</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                <biblStruct xml:id="b5">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Михаилов</surname><surname xml:lang="en">Mihailov</surname>
-                            <forename xml:lang="bg">Георги</forename><forename xml:lang="en">Georgius</forename>
-                        </author>
-                        <title level="m" xml:lang="bg">Inscriptiones Graecae in Bulgaria repertae</title>
-                        <title level="m" xml:lang="en">Inscriptiones Graecae in Bulgaria repertae</title>
-                        <imprint>
-                            <biblScope unit="volume">V</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>София</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Serdicae</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <date>1997</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                <biblStruct xml:id="b43">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Михаилов</surname><surname xml:lang="en">Mihailov</surname>
-                            <forename xml:lang="bg">Георги</forename><forename xml:lang="en">Georgi</forename>
-                        </author>
-                        <title level="j" xml:lang="bg">Годишник на Софийския  университет, Историко-филологически факултет</title>
-                        <title level="a" xml:lang="bg">Гръцките епиграми от българските земи</title>
-                        <title level="j" xml:lang="en">Годишник на Софийския  университет, Историко-филологически факултет</title>
-                        <title level="a" xml:lang="en">Гръцките епиграми от българските земи</title>
-                        <imprint>
-                            <biblScope unit="volume">39</biblScope>
-                            <biblScope unit="page">1-70</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>София</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Sofia</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <date>1943</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                <biblStruct xml:id="BeshevlievPrinosi">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Бешевлиев</surname><surname xml:lang="en">Бешевлиев</surname>
-                            <forename xml:lang="bg">Веселин</forename><forename xml:lang="en">Веселин</forename>
-                        </author>
-                        <title level="m" xml:lang="bg">Епиграфски приноси</title>
-                        <title level="m" xml:lang="en">Епиграфски приноси</title>
-                        <imprint>
-                            <biblScope unit="volume"></biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>София</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>София</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <date>1952</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                <biblStruct xml:id="b44">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Михаилов</surname><surname xml:lang="en">Mihailov</surname>
-                            <forename xml:lang="bg">Георги</forename><forename xml:lang="en">Georgi</forename>
-                        </author>
-                        <title level="j" xml:lang="bg">Годишник на Софийския  университет, Историко-филологически факултет</title>
-                        <title level="a" xml:lang="bg">Гръцките епиграми от българските земи</title>
-                        <title level="j" xml:lang="en">Годишник на Софийския  университет, Историко-филологически факултет</title>
-                        <title level="a" xml:lang="en">Гръцките епиграми от българските земи</title>
-                        <imprint>
-                            <biblScope unit="volume">40</biblScope>
-                            <biblScope unit="page">1-70</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>София</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Sofia</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <date>1944</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                <biblStruct xml:id="bor">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Bormann</surname><surname xml:lang="en">Bormann</surname>
-                            <forename xml:lang="bg">Eugen</forename><forename xml:lang="en">Eugen</forename>
-                        </author>
-                        <title level="j" xml:lang="bg">Archaeologisch-epigraphische
-Mittheilungen aus Oesterreich-Ungarn
-</title>
-                        <title level="a" xml:lang="bg">Inschriften aus Philippopel.</title>
-                        <title level="j" xml:lang="en">Archaeologisch-epigraphische
-Mittheilungen aus Oesterreich-Ungarn
-</title>
-                        <title level="a" xml:lang="en">Inschriften aus Philippopel.</title>
-                        <imprint>
-                            <biblScope unit="volume">19</biblScope>
-                            <biblScope unit="page">230–236</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>Wien</settlement>
-                                <country>Austria</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Wien</settlement>
-                                <country>Austria</country>
-                            </pubPlace>
-                            <date>1896</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                <biblStruct xml:id="kal">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Kalinka</surname><surname xml:lang="en">Kalinka</surname>
-                            <forename xml:lang="bg">Ernst</forename><forename xml:lang="en">Ernst</forename>
-                        </author>
-                        <title level="a" xml:lang="bg">Antike Denkmäler in Bulgarien</title>
-                        <title level="a" xml:lang="en">Antike Denkmäler in Bulgarien</title>
-                        <title level="s" xml:lang="bg">Schriften der Balkankommission. Antiquarische Abteilung</title>
-                        <title level="s" xml:lang="en">Schriften der Balkankommission. Antiquarische Abteilung</title>
-                        <imprint>
-                            <biblScope unit="volume">IV</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>Wien</settlement>
-                                <country>Austria</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Wien</settlement>
-                                <country>Austria</country>
-                            </pubPlace>
-                            <date>1906</date>
-                        </imprint></monogr></biblStruct>
-                        <biblStruct xml:id="dumont">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Dumont</surname><surname xml:lang="en">Dumont</surname>
-                            <forename xml:lang="bg">Albert</forename><forename xml:lang="en">Albert</forename>
-                        </author>
-                        <author>
-                            <surname xml:lang="bg">Dumont</surname><surname xml:lang="en">Dumont</surname>
-                            <forename xml:lang="bg">Albert</forename><forename xml:lang="en">Albert</forename>
-                        </author>
-                        <title level="m" xml:lang="bg">Mélanges d'archéologie et d'épigraphie</title>
-                        <title level="m" xml:lang="en">Mélanges d'archéologie et d'épigraphie</title>
-                        <imprint>
-                            <biblScope unit="volume"></biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>Paris</settlement>
-                                <country>France</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Paris</settlement>
-                                <country>France</country>
-                            </pubPlace>
-                            <date>1892</date>
-                        </imprint></monogr></biblStruct>
-                <biblStruct xml:id="RobertBE">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Robert</surname><surname xml:lang="en">Robert</surname>
-                            <forename xml:lang="bg">Jeanne</forename><forename xml:lang="en">Jeanne </forename>
-                        </author>
-                        <author>
-                            <surname xml:lang="bg">Robert</surname><surname xml:lang="en">Robert</surname>
-                            <forename xml:lang="bg">Louis</forename><forename xml:lang="en">Louis</forename>
-                        </author>
-                        <title level="s" xml:lang="bg">Revue des Études Grecques</title>
-                        <title level="a" xml:lang="bg">Bulletin Épigraphique</title>
-                        <title level="s" xml:lang="en">Revue des Études Grecques</title>
-                        <title level="a" xml:lang="en">Bulletin Épigraphique</title>
-                        <imprint>
-                            <biblScope unit="volume"></biblScope>
-                            <biblScope unit="page"></biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>Paris</settlement>
-                                <country>France</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Paris</settlement>
-                                <country>France</country>
-                            </pubPlace>
-                            <date>1938-1984</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                <biblStruct xml:id="SEG15">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Woodhead</surname><surname xml:lang="en">Woodhead</surname>
-                            <forename xml:lang="bg">A.G.</forename><forename xml:lang="en">A.G.</forename>
-                        </author>
-                        <title level="s" xml:lang="bg">Supplementum Epigraphicum Graecum</title>
-                        <title level="s" xml:lang="en">Supplementum Epigraphicum Graecum</title>
-                        <imprint>
-                            <biblScope unit="volume">15</biblScope>
-                            <biblScope unit="page">148</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>Amsterdam</settlement>
-                                <country>Netherland</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Amsterdam</settlement>
-                                <country>Netherland</country>
-                            </pubPlace>
-                            <date>1958</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                        <biblStruct xml:id="kacarov">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Кацаров</surname><surname xml:lang="en">Кацаров</surname>
-                            <forename xml:lang="bg">Гаврил</forename><forename xml:lang="en">Гаврил</forename>
-                        </author>
-                        <title level="a" xml:lang="bg">Антични паметници от България</title>
-                        <title level="a" xml:lang="en">Антични паметници от България</title>
-                        <title level="s" xml:lang="bg">Годишник на Народната библиотека в Пловдив</title>
-                        <title level="s" xml:lang="en">Годишник на Народната библиотека в Пловдив</title>
-                        <imprint>
-                            <biblScope unit="volume"></biblScope>
-                            <biblScope unit="page">197-206</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>София</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>София</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <date>1923</date>
-                        </imprint></monogr></biblStruct>
-                        <biblStruct xml:id="tacheva">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Tacheva-Hitova</surname><surname xml:lang="en">Tacheva-Hitova</surname>
-                            <forename xml:lang="bg">Margarita</forename><forename xml:lang="en">Margarita</forename>
-                        </author>
-                        <title level="a" xml:lang="bg">Eastern Cults in Moesia Inferior and Thracia (5th Century BC – 4th Century AD)</title>
-                        <title level="a" xml:lang="en">Eastern Cults in Moesia Inferior and Thracia (5th Century BC – 4th Century AD)</title>
-                        <title level="s" xml:lang="bg">Études préliminaires aux religions orientales dans l’Empire romain</title>
-                        <title level="s" xml:lang="en">Études préliminaires aux religions orientales dans l’Empire romain</title>
-                        <imprint>
-                            <biblScope unit="volume">95</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>Leiden</settlement>
-                                <country>Germany</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Leiden</settlement>
-                                <country>Germany</country>
-                            </pubPlace>
-                            <date>1983</date>
-                        </imprint></monogr></biblStruct>
-                        <biblStruct xml:id="Velkov">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Velkov</surname>
-                            <surname xml:lang="en">Velkov</surname>
-                            <forename xml:lang="bg">Velizar</forename><forename xml:lang="en">Velizar</forename>
-                        </author>
-                        <title level="a" xml:lang="bg">Hagiographic Data on the History of Thrace in the IV c. (Passio SS Maximi, Theodoti et Asclepiodotae)</title>
-                        <title level="a" xml:lang="en">Hagiographic Data on the History of Thrace in the IV c. (Passio SS Maximi, Theodoti et Asclepiodotae)</title>
-                        <title level="s" xml:lang="bg">Roman Cities in Bulgaria. Collected Studies</title>
-                        <title level="s" xml:lang="en">Roman Cities in Bulgaria. Collected Studies</title>
-                        <imprint>
-                            <biblScope unit="volume"></biblScope>
-                            <biblScope unit="page">137-149</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>Amsterdam</settlement>
-                                <country>Netherlands</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Amsterdam</settlement>
-                                <country>Netherlands</country>
-                            </pubPlace>
-                            <date>1980</date>
-                        </imprint></monogr></biblStruct>
-                        <biblStruct xml:id="gerasimova">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Gerasimova</surname><surname xml:lang="en">Gerasimova</surname>
-                            <forename xml:lang="bg">Vasilka</forename><forename xml:lang="en">Vasilka</forename>
-                        </author>
-                        <author>
-                            <surname xml:lang="bg">Hollenstein</surname><surname xml:lang="en">Hollenstein</surname>
-                            <forename xml:lang="bg">Lorenz</forename><forename xml:lang="en">Lorenz</forename>
-                        </author>
-                        <title level="a" xml:lang="bg">Drei unpublizierte Meilensteine aus Bulgarien</title>
-                        <title level="a" xml:lang="en">Drei unpublizierte Meilensteine aus Bulgarien</title>
-                        <title level="s" xml:lang="bg">Herzig, H. E. / Frei-Stolba, R. (eds.). Labor omnibus unus. Gerold Walser zum 70. Geburtstag dargebracht von Freunden, Kollegen und Schülern</title>
-                        <title level="s" xml:lang="en">Herzig, H. E. / Frei-Stolba, R. (eds.). Labor omnibus unus. Gerold Walser zum 70. Geburtstag dargebracht von Freunden, Kollegen und Schülern</title>
-                        <imprint>
-                            <biblScope unit="volume">Historia Einzelschriften 60</biblScope>
-                            <biblScope unit="page">45-58</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>Stuttgart</settlement>
-                                <country>Germany</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Stuttgart</settlement>
-                                <country>Germany</country>
-                            </pubPlace>
-                            <date>1989</date>
-                        </imprint></monogr></biblStruct>
-                <biblStruct xml:id="dobr18">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Добруски</surname><surname xml:lang="en">Dobruský</surname>
-                            <forename xml:lang="bg">Вацлав</forename><forename xml:lang="en">Václav</forename>
-                        </author>
-                        <title level="m" xml:lang="bg">Материали по археологията на България. – Сборник за народни умотворения, наука и книжнина</title>
-                        <title level="m" xml:lang="en">Материали по археологията на България. – Сборник за народни умотворения, наука и книжнина</title>
-                        <imprint>
-                            <biblScope unit="volume">XVIII</biblScope>
-                            <biblScope unit="page">704-812</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>София</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Sofia</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <date>1901</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                <biblStruct xml:id="dobr13">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Добруски</surname><surname xml:lang="en">Dobruský</surname>
-                            <forename xml:lang="bg">Вацлав</forename><forename xml:lang="en">Václav</forename>
-                        </author>
-                        <title level="a" xml:lang="bg">Материали по археологията на България. – Сборник за народни умотворения, наука и книжнина</title>
-                        <title level="a" xml:lang="en">Materials</title>
-                        <title level="j" xml:lang="bg">Сборник за народни умотворения, наука и книжнина</title>
-                        <title level="j" xml:lang="en">Сборник за народни умотворения, наука и книжнина</title>
-                        <imprint>
-                            <biblScope unit="volume">XIII</biblScope>
-                            <biblScope unit="page">398-442</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>София</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Sofia</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <date>1896</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                <biblStruct xml:id="Dobruski">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Добруский</surname><surname xml:lang="en">Добруский</surname>
-                            <forename xml:lang="bg">Вацлав</forename><forename xml:lang="en">Вацлав</forename>
-                        </author>
-                        <title level="j" xml:lang="bg">Третий годишен отчет на Областната реална гимназия в Пловдив за учебната 1883/84 година.</title>
-                        <title level="a" xml:lang="bg">За римский път и за някои римски старини в провинция Тракия.</title>
-                        <title level="j" xml:lang="en">Третий годишен отчет на Областната реална гимназия в Пловдив за учебната 1883/84 година.</title>
-                        <title level="a" xml:lang="en">За римский път и за някои римски старини в провинция Тракия.</title>
-                        <imprint>
-                            <biblScope unit="volume"></biblScope>
-                            <biblScope unit="page">1-18</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>Пловдив</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Plovdiv</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <date>1884</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                 <biblStruct xml:id="Dobruski88">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Добруски</surname><surname xml:lang="en">Добруски</surname>
-                            <forename xml:lang="bg">Вацлав</forename><forename xml:lang="en">Вацлав</forename>
-                        </author>
-                        <title level="j" xml:lang="bg">Периодическо списание</title>
-                        <title level="a" xml:lang="bg">Няколко древни надписи намерени в България</title>
-                        <title level="j" xml:lang="en">Периодическо списание</title>
-                        <title level="a" xml:lang="en">Няколко древни надписи намерени в България</title>
-                        <imprint>
-                            <biblScope unit="volume">5/23-24</biblScope>
-                            <biblScope unit="page"></biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>София</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>София</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <date>1888</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                
-                <biblStruct xml:id="skodesa">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Шкорпил</surname><surname xml:lang="en">Шкорпил</surname>
-                            <forename xml:lang="bg">Карел</forename><forename xml:lang="en">Карел</forename>
-                        </author>
-                        <title level="j" xml:lang="bg">Записки Императорскаго Одесскаго Общества Исторiи и Древностей</title>
-                        <title level="a" xml:lang="bg">Древнiя надписи, найденныя въ Болгарiи</title>
-                        <title level="j" xml:lang="en">Записки Императорскаго Одесскаго Общества Исторiи и Древностей</title>
-                        <title level="a" xml:lang="en">Древнiя надписи, найденныя въ Болгарiи</title>
-                        <imprint>
-                            <biblScope unit="volume">22</biblScope>
-                            <biblScope unit="page">16–22</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>Одесса</settlement>
-                                <country>Россия</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Одесса</settlement>
-                                <country>Россия</country>
-                            </pubPlace>
-                            <date>1900</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                <biblStruct xml:id="NSharankov">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Шаранков</surname><surname xml:lang="en">Sharankov</surname>
-                            <forename xml:lang="bg">Николай</forename><forename xml:lang="en">Nicolay</forename>
-                        </author>
-                        <title level="j" xml:lang="bg">Studia Classica Serdicensia</title>
-                        <title level="a" xml:lang="bg">Notes on Greek Inscriptions from Bulgaria</title>
-                        <title level="j" xml:lang="en">Studia Classica Serdicensia</title>
-                        <title level="a" xml:lang="en">Notes on Greek Inscriptions from Bulgaria</title>
-                        <imprint>
-                            <biblScope unit="volume">V</biblScope>
-                            <biblScope unit="page">305-361</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>София</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Sofia</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <date>2016</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                 <biblStruct xml:id="NSh05">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Sharankov</surname>
-                            <surname xml:lang="en">Sharankov</surname>
-                            <forename xml:lang="bg">Nicolay</forename>
-                            <forename xml:lang="en">Nicolay</forename>
-                        </author>
-                        <title level="j" xml:lang="bg">Archaeologia Bulgarica</title>
-                        <title level="a" xml:lang="bg">Statue-bases with Honorific Inscriptions from Philippopolis</title>
-                        <title level="j" xml:lang="en">Archaeologia Bulgarica</title>
-                        <title level="a" xml:lang="en">Statue-bases with Honorific Inscriptions from Philippopolis</title>
-                        <imprint>
-                            <biblScope unit="volume">9/2</biblScope>
-                            <biblScope unit="page">55-71</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>Sofia</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Sofia</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <date>2005</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                <biblStruct xml:id="NShPetNadpisaHeraclea">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Sharankov</surname>
-                            <surname xml:lang="en">Sharankov</surname>
-                            <forename xml:lang="bg">Nicolay</forename>
-                            <forename xml:lang="en">Nicolay</forename>
-                        </author>
-                        <title level="j" xml:lang="bg">Archaeologia Bulgarica</title>
-                        <title level="a" xml:lang="bg">Five Official Inscriptions from Heraclea Sintica Including a Record of the Complete cursus honorum of D. Terentius Gentianus</title>
-                        <title level="j" xml:lang="en">Archaeologia Bulgarica</title>
-                        <title level="a" xml:lang="en">Five Official Inscriptions from Heraclea Sintica Including a Record of the Complete cursus honorum of D. Terentius Gentianus</title>
-                        <imprint>
-                            <biblScope unit="volume">XXV/3</biblScope>
-                            <biblScope unit="page">1-43</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>Sofia</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Sofia</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <date>2021</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                <biblStruct xml:id="Sharankov">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Шаранков</surname><surname xml:lang="en">Sharankov</surname>
-                            <forename xml:lang="bg">Николай</forename><forename xml:lang="en">Nicolay</forename>
-                        </author>
-                        <title level="j" xml:lang="bg">Societas Classica</title>
-                        <title level="a" xml:lang="bg">Virdii, Munatii, Antii. Знатните римски родове във Филипопол и провинция Тракия</title>
-                        <title level="j" xml:lang="en">Societas Classica</title>
-                        <title level="a" xml:lang="en">Virdii, Munatii, Antii. Знатните римски родове във Филипопол и провинция Тракия</title>
-                        <imprint>
-                            <biblScope unit="volume"></biblScope>
-                            <biblScope unit="page">191-192</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>София</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Sofia</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <date>2006</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                 <biblStruct xml:id="SharankovPhil">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Шаранков</surname><surname xml:lang="en">Sharankov</surname>
-                            <forename xml:lang="bg">Николай</forename><forename xml:lang="en">Nicolay</forename>
-                        </author>
-                        <title level="s" xml:lang="bg">Известия на Археологическия институт</title>
-                        <title level="a" xml:lang="bg">Пет филипополски надписа в чест на император Максимин Тракиец и сина му цезар Максим (235-238)</title>
-                        <title level="s" xml:lang="en">Известия на Археологическия институт</title>
-                        <title level="a" xml:lang="en">Пет филипополски надписа в чест на император Максимин Тракиец и сина му цезар Максим (235-238)</title>
-                        <imprint>
-                            <biblScope unit="volume">39</biblScope>
-                            <biblScope unit="page">231-242</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>София</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Sofia</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <date>2006</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                <biblStruct xml:id="SharankovDeultum">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Sharankov</surname>
-                            <surname xml:lang="en">Sharankov</surname>
-                            <forename xml:lang="bg">Nicolay</forename>
-                            <forename xml:lang="en">Nicolay</forename>
-                        </author>
-                        <title level="j" xml:lang="bg">Archaeologia Bulgarica</title>
-                        <title level="a" xml:lang="bg">The inscriptions of the Roman colony of Deultum in Thrace</title>
-                        <title level="j" xml:lang="en">Archaeologia Bulgarica</title>
-                        <title level="a" xml:lang="en">The inscriptions of the Roman colony of Deultum in Thrace</title>
-                        <imprint>
-                            <biblScope unit="volume">21/3</biblScope>
-                            <biblScope unit="page">37-64</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>Sofia</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Sofia</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <date>2017</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                <biblStruct xml:id="Sh2015">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Шаранков</surname><surname xml:lang="en">Sharankov</surname>
-                            <forename xml:lang="bg">Николай</forename><forename xml:lang="en">Nicolay</forename>
-                        </author>
-                        <title level="s" xml:lang="bg">Археологически открития и разкопки през 2015</title>
-                        <title level="a" xml:lang="bg">Надписи от Августа Траяна</title>
-                        <title level="s" xml:lang="en">Археологически открития и разкопки през 2015</title>
-                        <title level="a" xml:lang="en">Надписи от Августа Траяна</title>
-                        <imprint>
-                            <biblScope unit="volume">LV</biblScope>
-                            <biblScope unit="page">791-793</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>София</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Sofia</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <date>2016</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                <biblStruct xml:id="Sh2004">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Шаранков</surname><surname xml:lang="en">Sharankov</surname>
-                            <forename xml:lang="bg">Николай</forename><forename xml:lang="en">Nicolay</forename>
-                        </author>
-                        <title level="s" xml:lang="bg">Годишник на Археологически музей Пловдив</title>
-                        <title level="a" xml:lang="bg">Бележки и допълнения към няколко надписа от Филипопол</title>
-                        <title level="s" xml:lang="en">Годишник на Археологически музей Пловдив</title>
-                        <title level="a" xml:lang="en">Бележки и допълнения към няколко надписа от Филипопол</title>
-                        <imprint>
-                            <biblScope unit="volume">IX/2</biblScope>
-                            <biblScope unit="page">146-159</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>Пловдив</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Plovdiv</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <date>2004</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                <biblStruct xml:id="MSlavova">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Slavova</surname><surname xml:lang="en">Slavova</surname>
-                            <forename xml:lang="bg">Mirena</forename><forename xml:lang="en">Mirena</forename>
-                        </author>
-                        <title level="s" xml:lang="bg">Opuscula Atheniensia</title>
-                        <title level="a" xml:lang="bg">Mystery clubs in Bulgarian lands in Antiquity - Greek epigraphical evidence</title>
-                        <title level="s" xml:lang="en">Opuscula Atheniensia</title>
-                        <title level="a" xml:lang="en">Mystery clubs in Bulgarian lands in Antiquity - Greek epigraphical evidence</title>
-                        <imprint>
-                            <biblScope unit="volume">27</biblScope>
-                            <biblScope unit="page">137-149</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>Athens</settlement>
-                                <country>Greece</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Athens</settlement>
-                                <country>Greece</country>
-                            </pubPlace>
-                            <date>2002</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                 <biblStruct xml:id="IVelkov">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Велков</surname><surname xml:lang="en">Velkov</surname>
-                            <forename xml:lang="bg">Иван</forename><forename xml:lang="en">Ivan</forename>
-                        </author>
-                        <title level="j" xml:lang="bg">Годишник на Народния музей за 1922-1925 г.</title>
-                        <title level="a" xml:lang="bg">Антични паметници из България</title>
-                        <title level="j" xml:lang="en">Годишник на Народния музей за 1922-1925 г.</title>
-                        <title level="a" xml:lang="en">Антични паметници из България</title>
-                        <imprint>
-                            <biblScope unit="page">127-159</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>София</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Sofia</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <date>1926</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                <biblStruct xml:id="VVelkov">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Велков</surname><surname xml:lang="en">Велков</surname>
-                            <forename xml:lang="bg">Велизар</forename><forename xml:lang="en">Велизар</forename>
-                        </author>
-                        <title level="s" xml:lang="bg">Кабиле</title>
-                        <title level="a" xml:lang="bg">Надписи от Кабиле</title>
-                        <title level="s" xml:lang="en">Кабиле</title>
-                        <title level="a" xml:lang="en">Надписи от Кабиле</title>
-                        <imprint>
-                            <biblScope unit="volume">2</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>София</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Sofia</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <date>1991</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                <biblStruct xml:id="GerovPl">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Геров</surname><surname xml:lang="en">Геров</surname>
-                            <forename xml:lang="bg">Борис</forename><forename xml:lang="en">Борис</forename>
-                        </author>
-                        <title level="j" xml:lang="bg">Годишник на музеите в Пловдив</title>
-                        <title level="a" xml:lang="bg">Един нов документ за готските нашествия при Галиен и за историята на Пловдив</title>
-                        <title level="j" xml:lang="en">Годишник на музеите в Пловдив</title>
-                        <title level="a" xml:lang="en">Един нов документ за готските нашествия при Галиен и за историята на Пловдив</title>
-                        <imprint>
-                            <biblScope unit="volume">4</biblScope>
-                            <biblScope unit="page">23-39</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>Пловдив</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Plovdiv</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <date>1965</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                <biblStruct xml:id="GerovPav">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Gerov</surname><surname xml:lang="en">Gerov</surname>
-                            <forename xml:lang="bg">Boris</forename><forename xml:lang="en">Boris</forename>
-                        </author>
-                        <title level="j" xml:lang="bg">Athenaeum</title>
-                        <title level="a" xml:lang="bg">La carriera militare di Marciano, generale di Gallieno</title>
-                        <title level="j" xml:lang="en">Athenaeum</title>
-                        <title level="a" xml:lang="en">La carriera militare di Marciano, generale di Gallieno</title>
-                        <imprint>
-                            <biblScope unit="volume">43/3-4</biblScope>
-                            <biblScope unit="page">333-354</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>Pavia</settlement>
-                                <country>Italy</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Pavia</settlement>
-                                <country>Italy</country>
-                            </pubPlace>
-                            <date>1965</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                <biblStruct xml:id="Ivanov">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Иванов</surname><surname xml:lang="en">Иванов</surname>
-                            <forename xml:lang="bg">Теофил</forename><forename xml:lang="en">Теофил</forename>
-                        </author>
-                        <title level="j" xml:lang="bg">Археология</title>
-                        <title level="a" xml:lang="bg">Новооткрит старохристиянски некропол при с. Горна Бешовица, Врачанско</title>
-                        <title level="j" xml:lang="en">Археология</title>
-                        <title level="a" xml:lang="en">Новооткрит старохристиянски некропол при с. Горна Бешовица, Врачанско</title>
-                        <imprint>
-                            <biblScope unit="volume">IV/2</biblScope>
-                            <biblScope unit="page">38-48</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>София</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Sofia</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <date>1962</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                <biblStruct xml:id="Nikolov">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Николов</surname><surname xml:lang="en">Николов</surname>
-                            <forename xml:lang="bg">Богдан</forename><forename xml:lang="en">Богдан</forename>
-                        </author>
-                        <title level="j" xml:lang="bg">Известия на Археологическия институт</title>
-                        <title level="a" xml:lang="bg">Антични паметници от Врачанско</title>
-                        <title level="j" xml:lang="en">Известия на Археологическия институт</title>
-                        <title level="a" xml:lang="en">Антични паметници от Врачанско</title>
-                        <imprint>
-                            <biblScope unit="volume">30</biblScope>
-                            <biblScope unit="page">216-235</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>София</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Sofia</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <date>1967</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                <biblStruct xml:id="DPDimitrov">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Димитров</surname><surname xml:lang="en">Димитров</surname>
-                            <forename xml:lang="bg">Димитър П.</forename>
-                            <forename xml:lang="en">Димитър П.</forename>
-                        </author>
-                        <title level="j" xml:lang="bg">Известия на Българското историческо дружество</title>
-                        <title level="a" xml:lang="bg">Към историята на Августа-Траяна</title>
-                        <title level="j" xml:lang="en">Bulletin de la Société Historique à Sofia</title>
-                        <title level="a" xml:lang="en">Zur Geschichte der Stadt Augusta Traiana</title>
-                        <imprint>
-                            <biblScope unit="volume">11-12</biblScope>
-                            <biblScope unit="page"></biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>София</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Sofia</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <date>1931-1932</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                <biblStruct xml:id="Dremsizova">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Дремсизова-Нелчинова</surname><surname xml:lang="en"> Дремсизова-Нелчинова</surname>
-                            <forename xml:lang="bg">Цветана</forename><forename xml:lang="en">Цветана</forename>
-                        </author>
-                        <title level="j" xml:lang="bg">Studia in memoriam G. Mihailov (Thracia antiqua)</title>
-                        <title level="a" xml:lang="bg">Находки от крепостта край Мездра</title>
-                        <title level="j" xml:lang="en">Studia in memoriam G. Mihailov (Thracia antiqua)</title>
-                        <title level="a" xml:lang="en">Находки от крепостта край Мездра</title>
-                        <imprint>
-                            <biblScope unit="volume">10</biblScope>
-                            <biblScope unit="page">254-255, № 2</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>София</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Sofia</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <date>1999</date>
-                        </imprint></monogr> 
-                </biblStruct>
-                <biblStruct xml:id="botusharova">
-                    <monogr>
-                        <author>
-                            <surname xml:lang="bg">Ботушарова</surname><surname xml:lang="en">Ботушарова</surname>
-                            <forename xml:lang="bg">Лилия</forename><forename xml:lang="en">Лилия</forename>
-                        </author>
-                        <title level="j" xml:lang="bg">Годишник на Народния археологически музей Пловдив</title>
-                        <title level="a" xml:lang="bg">Оброчни релефи на Аполон от Тракия</title>
-                        <title level="j" xml:lang="en">Annuaire du Musée national archéologique Plovdiv</title>
-                        <title level="a" xml:lang="en">Оброчни релефи на Аполон от Тракия</title>
-                        <imprint>
-                            <biblScope unit="volume">3</biblScope>
-                            <biblScope unit="page">145-153</biblScope>
-                            <pubPlace xml:lang="bg">
-                                <settlement>Пловдив</settlement>
-                                <country>България</country>
-                            </pubPlace>
-                            <pubPlace xml:lang="en">
-                                <settlement>Plovdiv</settlement>
-                                <country>Bulgaria</country>
-                            </pubPlace>
-                            <date>1959</date>
-                        </imprint></monogr> 
-                </biblStruct>
-            </listBibl>
-        </body>
-    </text>
+<teiHeader>
+<fileDesc>
+<titleStmt>
+<title>Bibliography</title>
+</titleStmt>
+<publicationStmt>
+<p/>
+</publicationStmt>
+<sourceDesc>
+<p/>
+</sourceDesc>
+</fileDesc>
+</teiHeader>
+<text>
+<body>
+<listBibl>
+<biblStruct xml:id="b1">
+<monogr>
+<author>
+<surname xml:lang="bg">Popkonstantinov</surname>
+<surname xml:lang="en">Popkonstantinov</surname>
+<forename xml:lang="bg">Kazimir</forename>
+<forename xml:lang="en">Kazimir</forename>
+</author>
+<author>
+<surname xml:lang="bg">Kronsteiner</surname>
+<surname xml:lang="en">Kronsteiner</surname>
+<forename xml:lang="bg">Otto</forename>
+<forename xml:lang="en">Otto</forename>
+</author>
+<title level="m" xml:lang="bg">Altbulgarische Inschriften</title>
+<title level="m" xml:lang="en">Altbulgarische Inschriften</title>
+<imprint>
+<biblScope unit="volume">II</biblScope>
+<pubPlace xml:lang="bg">
+<settlement>Wien</settlement>
+<country>Österreich</country>
+</pubPlace>
+<pubPlace xml:lang="en">
+<settlement>Wien</settlement>
+<country>Austria</country>
+</pubPlace>
+<date>1997</date>
+</imprint>
+</monogr>
+</biblStruct>
+<biblStruct xml:id="b2">
+<monogr>
+<author>
+<surname xml:lang="bg">Смядовски</surname>
+<surname xml:lang="en">Smyadovski</surname>
+<forename xml:lang="bg">Стефан</forename>
+<forename xml:lang="en">Stefan</forename>
+</author>
+<title level="m" xml:lang="bg">Българска кирилска епиграфика (IХ-ХV в.)</title>
+<title level="m" xml:lang="en">Bulgarian cyrillic epighraphy (IX-XV)</title>
+<imprint>
+<pubPlace xml:lang="bg">
+<settlement>София</settlement>
+<country>България</country>
+</pubPlace>
+<pubPlace xml:lang="en">
+<settlement>Sofia</settlement>
+<country>Bulgaria</country>
+</pubPlace>
+<date>1993</date>
+</imprint>
+</monogr>
+</biblStruct>
+<biblStruct xml:id="b3">
+<monogr>
+<author>
+<surname xml:lang="bg">Ангелов</surname>
+<surname xml:lang="en">Angelov</surname>
+<forename xml:lang="bg">Никола</forename>
+<forename xml:lang="en">Nikola</forename>
+</author>
+<title level="m" xml:lang="bg">Царевград Търнов</title>
+<title level="m" xml:lang="en">Tsarevgrad Tarnov</title>
+<imprint>
+<biblScope unit="volume">3</biblScope>
+<pubPlace xml:lang="bg">
+<settlement>София</settlement>
+<country>България</country>
+</pubPlace>
+<pubPlace xml:lang="en">
+<settlement>Sofia</settlement>
+<country>Bulgaria</country>
+</pubPlace>
+<date>1980</date>
+</imprint>
+</monogr>
+</biblStruct>
+<biblStruct xml:id="b4">
+<monogr>
+<author>
+<surname xml:lang="bg">Томович</surname>
+<surname xml:lang="en">Tomovich</surname>
+<forename xml:lang="bg">Гордана</forename>
+<forename xml:lang="en">Gordana</forename>
+</author>
+<title level="m" xml:lang="bg">Морфологиjа ħириличког натписа на Балкану</title>
+<title level="m" xml:lang="en">Morfologija ćiriličkih natpisa na Balkanu</title>
+<imprint>
+<pubPlace xml:lang="bg">
+<settlement>Белград</settlement>
+<country>Сърбия</country>
+</pubPlace>
+<pubPlace xml:lang="en">
+<settlement>Belgrade</settlement>
+<country>Serbia</country>
+</pubPlace>
+<date>1974</date>
+</imprint>
+</monogr>
+</biblStruct>
+<biblStruct xml:id="b5">
+<monogr>
+<author>
+<surname xml:lang="bg">Хаджиев</surname>
+<surname xml:lang="en">Hadjiev</surname>
+<forename xml:lang="bg">Коста</forename>
+<forename xml:lang="en">Kosta</forename>
+</author>
+<title level="m" xml:lang="bg">Кирилски епиграфски паметници от църквата в с. Балша, Софийско. – В: Нумизматика, сфрагистика и епиграфика, 225–236.</title>
+<title level="m" xml:lang="en"> СТР. 225-236</title>
+<imprint>
+<biblScope unit="volume"/>
+<pubPlace xml:lang="bg">
+<settlement>София</settlement>
+<country>България</country>
+</pubPlace>
+<pubPlace xml:lang="en">
+<settlement>Sofia</settlement>
+<country>Bulgaria</country>
+</pubPlace>
+<date>2003</date>
+</imprint>
+</monogr>
+</biblStruct>
+<biblStruct xml:id="b6">
+<monogr>
+<!--  КАК ОТБЕЛЯЗВАМ СТАТИИ В СПИСАНИЯ? А ТУК Е ЦИТИРАНО ПО КНИГА НА ОВЧАРОВ, СЪБРАЛА НЕГОВИ ТРУДОВЕ -->
+<author>
+<surname xml:lang="bg">Овчаров</surname>
+<surname xml:lang="en">Ovcharov</surname>
+<forename xml:lang="bg">Николай</forename>
+<forename xml:lang="en">Nikolay</forename>
+</author>
+<author>
+<surname xml:lang="bg">Хаджиев</surname>
+<surname xml:lang="en">Hadjiev</surname>
+<forename xml:lang="bg">Коста</forename>
+<forename xml:lang="en">Kosta</forename>
+</author>
+<title level="m" xml:lang="bg">Новооткритият Висарионов надпис от Велико Търново и събитията в България през 40-те години на XIII в. – В: Векове, 1991, 1–2, цит. по Исторически приноси към старобългарската и старославянската епиграфика и книжовност. София: АИ „Марин Дринов“, 2006, с. 7–12</title>
+<title level="m" xml:lang="en"> СТР. 7-12</title>
+<imprint>
+<biblScope unit="volume"/>
+<pubPlace xml:lang="bg">
+<settlement>София</settlement>
+<country>България</country>
+</pubPlace>
+<pubPlace xml:lang="en">
+<settlement>Sofia</settlement>
+<country>Bulgaria</country>
+</pubPlace>
+<date>2003</date>
+</imprint>
+</monogr>
+</biblStruct>
+Овчаров, Хаджиев 2006: Овчаров, Николай, Хаджиев, Коста. .
+<!--  ДОТУК. Предстои още много. Това е само за проверка -->
+</listBibl>
+</body>
+</text>
 </TEI>
