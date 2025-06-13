@@ -1,179 +1,170 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?oxygen RNGSchema="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="xml"?>
-<teiHeader>
-<fileDesc>
-<titleStmt>
-<title>Bibliography</title>
-</titleStmt>
-<publicationStmt>
-<p/>
-</publicationStmt>
-<sourceDesc>
-<p/>
-</sourceDesc>
-</fileDesc>
-</teiHeader>
-<text>
-<body>
-<listBibl>
-<biblStruct xml:id="b1">
-<monogr>
-<author>
-<surname xml:lang="bg">Popkonstantinov</surname>
-<surname xml:lang="en">Popkonstantinov</surname>
-<forename xml:lang="bg">Kazimir</forename>
-<forename xml:lang="en">Kazimir</forename>
-</author>
-<author>
-<surname xml:lang="bg">Kronsteiner</surname>
-<surname xml:lang="en">Kronsteiner</surname>
-<forename xml:lang="bg">Otto</forename>
-<forename xml:lang="en">Otto</forename>
-</author>
-<title level="m" xml:lang="bg">Altbulgarische Inschriften</title>
-<title level="m" xml:lang="en">Altbulgarische Inschriften</title>
-<imprint>
-<biblScope unit="volume">II</biblScope>
-<pubPlace xml:lang="bg">
-<settlement>Wien</settlement>
-<country>Österreich</country>
-</pubPlace>
-<pubPlace xml:lang="en">
-<settlement>Wien</settlement>
-<country>Austria</country>
-</pubPlace>
-<date>1997</date>
-</imprint>
-</monogr>
-</biblStruct>
-<biblStruct xml:id="b2">
-<monogr>
-<author>
-<surname xml:lang="bg">Смядовски</surname>
-<surname xml:lang="en">Smyadovski</surname>
-<forename xml:lang="bg">Стефан</forename>
-<forename xml:lang="en">Stefan</forename>
-</author>
-<title level="m" xml:lang="bg">Българска кирилска епиграфика (IХ-ХV в.)</title>
-<title level="m" xml:lang="en">Bulgarian cyrillic epighraphy (IX-XV)</title>
-<imprint>
-<pubPlace xml:lang="bg">
-<settlement>София</settlement>
-<country>България</country>
-</pubPlace>
-<pubPlace xml:lang="en">
-<settlement>Sofia</settlement>
-<country>Bulgaria</country>
-</pubPlace>
-<date>1993</date>
-</imprint>
-</monogr>
-</biblStruct>
-<biblStruct xml:id="b3">
-<monogr>
-<author>
-<surname xml:lang="bg">Ангелов</surname>
-<surname xml:lang="en">Angelov</surname>
-<forename xml:lang="bg">Никола</forename>
-<forename xml:lang="en">Nikola</forename>
-</author>
-<title level="m" xml:lang="bg">Царевград Търнов</title>
-<title level="m" xml:lang="en">Tsarevgrad Tarnov</title>
-<imprint>
-<biblScope unit="volume">3</biblScope>
-<pubPlace xml:lang="bg">
-<settlement>София</settlement>
-<country>България</country>
-</pubPlace>
-<pubPlace xml:lang="en">
-<settlement>Sofia</settlement>
-<country>Bulgaria</country>
-</pubPlace>
-<date>1980</date>
-</imprint>
-</monogr>
-</biblStruct>
-<biblStruct xml:id="b4">
-<monogr>
-<author>
-<surname xml:lang="bg">Томович</surname>
-<surname xml:lang="en">Tomovich</surname>
-<forename xml:lang="bg">Гордана</forename>
-<forename xml:lang="en">Gordana</forename>
-</author>
-<title level="m" xml:lang="bg">Морфологиjа ħириличког натписа на Балкану</title>
-<title level="m" xml:lang="en">Morfologija ćiriličkih natpisa na Balkanu</title>
-<imprint>
-<pubPlace xml:lang="bg">
-<settlement>Белград</settlement>
-<country>Сърбия</country>
-</pubPlace>
-<pubPlace xml:lang="en">
-<settlement>Belgrade</settlement>
-<country>Serbia</country>
-</pubPlace>
-<date>1974</date>
-</imprint>
-</monogr>
-</biblStruct>
-<biblStruct xml:id="b5">
-<monogr>
-<author>
-<surname xml:lang="bg">Хаджиев</surname>
-<surname xml:lang="en">Hadjiev</surname>
-<forename xml:lang="bg">Коста</forename>
-<forename xml:lang="en">Kosta</forename>
-</author>
-<title level="m" xml:lang="bg">Кирилски епиграфски паметници от църквата в с. Балша, Софийско. – В: Нумизматика, сфрагистика и епиграфика, 225–236.</title>
-<title level="m" xml:lang="en"> СТР. 225-236</title>
-<imprint>
-<biblScope unit="volume"/>
-<pubPlace xml:lang="bg">
-<settlement>София</settlement>
-<country>България</country>
-</pubPlace>
-<pubPlace xml:lang="en">
-<settlement>Sofia</settlement>
-<country>Bulgaria</country>
-</pubPlace>
-<date>2003</date>
-</imprint>
-</monogr>
-</biblStruct>
-<biblStruct xml:id="b6">
-<monogr>
-<!--  КАК ОТБЕЛЯЗВАМ СТАТИИ В СПИСАНИЯ? А ТУК Е ЦИТИРАНО ПО КНИГА НА ОВЧАРОВ, СЪБРАЛА НЕГОВИ ТРУДОВЕ -->
-<author>
-<surname xml:lang="bg">Овчаров</surname>
-<surname xml:lang="en">Ovcharov</surname>
-<forename xml:lang="bg">Николай</forename>
-<forename xml:lang="en">Nikolay</forename>
-</author>
-<author>
-<surname xml:lang="bg">Хаджиев</surname>
-<surname xml:lang="en">Hadjiev</surname>
-<forename xml:lang="bg">Коста</forename>
-<forename xml:lang="en">Kosta</forename>
-</author>
-<title level="m" xml:lang="bg">Новооткритият Висарионов надпис от Велико Търново и събитията в България през 40-те години на XIII в. – В: Векове, 1991, 1–2, цит. по Исторически приноси към старобългарската и старославянската епиграфика и книжовност. София: АИ „Марин Дринов“, 2006, с. 7–12</title>
-<title level="m" xml:lang="en"> СТР. 7-12</title>
-<imprint>
-<biblScope unit="volume"/>
-<pubPlace xml:lang="bg">
-<settlement>София</settlement>
-<country>България</country>
-</pubPlace>
-<pubPlace xml:lang="en">
-<settlement>Sofia</settlement>
-<country>Bulgaria</country>
-</pubPlace>
-<date>2003</date>
-</imprint>
-</monogr>
-</biblStruct>
-Овчаров, Хаджиев 2006: Овчаров, Николай, Хаджиев, Коста. .
-<!--  ДОТУК. Предстои още много. Това е само за проверка -->
-</listBibl>
-</body>
-</text>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Bibliography</title>
+            </titleStmt>
+            <publicationStmt><p></p></publicationStmt> 
+            <sourceDesc><p></p></sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <listBibl>
+                <biblStruct xml:id="b1">
+                    <monogr>
+                        <author>
+                            <surname xml:lang="bg">Popkonstantinov</surname>
+                            <surname xml:lang="en">Popkonstantinov</surname>
+                            <forename xml:lang="bg">Kazimir</forename>
+                            <forename xml:lang="en">Kazimir</forename>
+                        </author>
+                        <author>
+                            <surname xml:lang="bg">Kronsteiner</surname>
+                            <surname xml:lang="en">Kronsteiner</surname>
+                            <forename xml:lang="bg">Otto</forename>
+                            <forename xml:lang="en">Otto</forename> 
+                        </author>
+                        <title level="m" xml:lang="bg">Altbulgarische Inschriften</title>
+                        <title level="m" xml:lang="en">Altbulgarische Inschriften</title>
+                                <imprint>
+                                    <biblScope unit="volume">II</biblScope>
+                                    <pubPlace xml:lang="bg">
+                                        <settlement>Wien</settlement>
+                                        <country>Österreich</country>
+                                    </pubPlace>
+                                    <pubPlace xml:lang="en">
+                                        <settlement>Wien</settlement>
+                                        <country>Austria</country>
+                                    </pubPlace>
+                                    <date>1997</date>
+                                </imprint></monogr>
+                </biblStruct>
+                <biblStruct xml:id="b2">
+                    <monogr>
+                        <author>        
+                       <surname xml:lang="bg">Смядовски</surname>
+                            <surname xml:lang="en">Smyadovski</surname>
+                            <forename xml:lang="bg">Стефан</forename>
+                            <forename xml:lang="en">Stefan</forename>
+                        </author>
+                        <title level="m" xml:lang="bg">Българска кирилска епиграфика (IХ-ХV в.)</title>
+                        <title level="m" xml:lang="en">Bulgarian cyrillic epighraphy (IX-XV)</title>
+                        <imprint>
+                           <pubPlace xml:lang="bg">
+                                <settlement>София</settlement>
+                                <country>България</country>
+                            </pubPlace>
+                            <pubPlace xml:lang="en">
+                                <settlement>Sofia</settlement>
+                                <country>Bulgaria</country>
+                            </pubPlace>
+                            <date>1993</date>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <biblStruct xml:id="b3">
+                    <monogr>
+                        <author>
+                            <surname xml:lang="bg">Ангелов</surname>
+                            <surname xml:lang="en">Angelov</surname>
+                            <forename xml:lang="bg">Никола</forename>
+                            <forename xml:lang="en">Nikola</forename>
+                        </author>
+                        <title level="m" xml:lang="bg">Царевград Търнов</title>
+                        <title level="m" xml:lang="en">Tsarevgrad Tarnov</title>
+                                <imprint>
+                                    <biblScope unit="volume">3</biblScope>
+                                    <pubPlace xml:lang="bg">
+                                        <settlement>София</settlement>
+                                        <country>България</country>
+                                    </pubPlace>
+                                    <pubPlace xml:lang="en">
+                                        <settlement>Sofia</settlement>
+                                        <country>Bulgaria</country>
+                                    </pubPlace>
+                                    <date>1980</date>
+                                </imprint></monogr>
+                </biblStruct>
+                <biblStruct xml:id="b4">
+                    <monogr>
+                        <author>
+                            <surname xml:lang="bg">Томович</surname>
+                            <surname xml:lang="en">Tomovich</surname>
+                            <forename xml:lang="bg">Гордана</forename>
+                            <forename xml:lang="en">Gordana</forename>
+                        </author>
+                        <title level="m" xml:lang="bg">Морфологиjа ħириличког натписа на Балкану</title>
+                        <title level="m" xml:lang="en">Morfologija ćiriličkih natpisa na Balkanu</title>
+                                <imprint>
+                                    <pubPlace xml:lang="bg">
+                                        <settlement>Белград</settlement>
+                                        <country>Сърбия</country>
+                                    </pubPlace>
+                                    <pubPlace xml:lang="en">
+                                        <settlement>Belgrade</settlement>
+                                        <country>Serbia</country>
+                                    </pubPlace>
+                                    <date>1974</date>
+                                </imprint></monogr>
+                </biblStruct>
+                <biblStruct xml:id="b5">
+                    <monogr>
+                        <author>
+                            <surname xml:lang="bg">Хаджиев</surname>
+                            <surname xml:lang="en">Hadjiev</surname>
+                            <forename xml:lang="bg">Коста</forename>
+                            <forename xml:lang="en">Kosta</forename>
+                        </author>
+                        <title level="m" xml:lang="bg">Кирилски епиграфски паметници от църквата в с. Балша, Софийско. – В: Нумизматика, сфрагистика и епиграфика, 225–236.</title>
+                        <title level="m" xml:lang="en"> СТР. 225-236</title>
+                                <imprint>
+                                    <biblScope unit="volume"></biblScope>
+                                    <pubPlace xml:lang="bg">
+                                        <settlement>София</settlement>
+                                        <country>България</country>
+                                    </pubPlace>
+                                    <pubPlace xml:lang="en">
+                                        <settlement>Sofia</settlement>
+                                        <country>Bulgaria</country>
+                                    </pubPlace>
+                                    <date>2003</date>
+                                </imprint></monogr>
+                </biblStruct>
+                <biblStruct xml:id="b6">
+                    <monogr><!-- КАК ОТБЕЛЯЗВАМ СТАТИИ В СПИСАНИЯ? А ТУК Е ЦИТИРАНО ПО КНИГА НА ОВЧАРОВ, СЪБРАЛА НЕГОВИ ТРУДОВЕ-->    
+                        <author>
+                            <surname xml:lang="bg">Овчаров</surname>
+                            <surname xml:lang="en">Ovcharov</surname>
+                            <forename xml:lang="bg">Николай</forename>
+                            <forename xml:lang="en">Nikolay</forename>
+                        </author>
+                        <author>
+                            <surname xml:lang="bg">Хаджиев</surname>
+                            <surname xml:lang="en">Hadjiev</surname>
+                            <forename xml:lang="bg">Коста</forename>
+                            <forename xml:lang="en">Kosta</forename>
+                        </author>
+                        <title level="m" xml:lang="bg">Новооткритият Висарионов надпис от Велико Търново и събитията в България през 40-те години на XIII в. – В: Векове, 1991, 1–2, цит. по Исторически приноси към старобългарската и старославянската епиграфика и книжовност. София: АИ „Марин Дринов“, 2006, с. 7–12</title>
+                        <title level="m" xml:lang="en"> СТР. 7-12</title>
+                                <imprint>
+                                    <biblScope unit="volume"></biblScope>
+                                    <pubPlace xml:lang="bg">
+                                        <settlement>София</settlement>
+                                        <country>България</country>
+                                    </pubPlace>
+                                    <pubPlace xml:lang="en">
+                                        <settlement>Sofia</settlement>
+                                        <country>Bulgaria</country>
+                                    </pubPlace>
+                                    <date>2003</date>
+                                </imprint></monogr>
+                </biblStruct>
+          
+                <!-- ДОТУК. Предстои още много. Това е само за проверка-->            
+            </listBibl>
+        </body>
+    </text>
 </TEI>
