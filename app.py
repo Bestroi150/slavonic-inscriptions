@@ -567,17 +567,14 @@ def format_leiden_text(elem):
         # Unclear letters
         elif tag == 'unclear':
             for ch in (child.text or ''):
-                text += f'{ch}\u0323'
-
-        # Original letters
+                text += f'{ch}\u0323'        # Original letters
         elif tag == 'orig':
-            text += f'={child.text or ""}='
-
-        # Supplied text
+            text += f'<span class="orig-text">{child.text or ""}</span>'        # Supplied text
         elif tag == 'supplied':
             reason = child.attrib.get('reason')
             cert = child.attrib.get('cert')
-            sup = child.text or ''
+            # Recursively process the content (including nested elements like <g>)
+            sup = format_leiden_text(child)
             if reason == 'lost':
                 text += f'[{sup}{"?" if cert == "low" else ""}]'
             elif reason == 'undefined':
@@ -602,10 +599,7 @@ def format_leiden_text(elem):
                     suffix = '?' if cert == 'low' else ''
                     text += f"{abbr_text}({exp_text}{suffix})"
                 else:
-                    text += abbr_text
-
-
-        # Gaps
+                    text += abbr_text        # Gaps
         elif tag == 'gap':
             # Ellipsis
             if child.attrib.get('reason') == 'ellipsis':
@@ -615,10 +609,25 @@ def format_leiden_text(elem):
                 qty = child.attrib.get('quantity') or ''
                 extent = child.attrib.get('extent')
                 precision = child.attrib.get('precision')
+                cert = child.attrib.get('cert')
+                at_least = child.attrib.get('atLeast')
+                at_most = child.attrib.get('atMost')
 
                 if unit == 'character':
                     if extent == 'unknown':
                         text += '[.?]'
+                    elif at_least and at_most:
+                        # Handle range gaps like atLeast="2" atMost="3"
+                        cert_marker = '?' if cert == 'low' else ''
+                        text += f'[{at_least}-{at_most}{cert_marker}]'
+                    elif at_least:
+                        # Handle minimum gaps like atLeast="2"
+                        cert_marker = '?' if cert == 'low' else ''
+                        text += f'[{at_least}+{cert_marker}]'
+                    elif at_most:
+                        # Handle maximum gaps like atMost="3"
+                        cert_marker = '?' if cert == 'low' else ''
+                        text += f'[≤{at_most}{cert_marker}]'
                     elif precision == 'low':
                         text += f'[.{qty}]'
                     else:
@@ -829,11 +838,11 @@ def display_monument_images(root, image_data, monument_id):
         monument_id (str): Unique identifier for the monument to create unique session state keys.
     """
     facsimile = root.find("tei:facsimile", NS)
-    if not facsimile:
+    if facsimile is None:
         return
 
     graphics = facsimile.findall("tei:graphic", NS)
-    if not graphics:
+    if graphics is None:
         return
 
     # Use a subheader for a clear visual separation without nesting expanders.
@@ -1076,16 +1085,18 @@ if working_files:
                 dimensions = support.find("tei:dimensions", NS) if support is not None else None
                 # In case dimensions are in layoutDesc instead of dimensions
                 layout_desc = object_desc.find("tei:layoutDesc/tei:layout", NS) if object_desc is not None else None
-                
-                # Try to get dimensions from either dimensions or layout elements
+                  # Try to get dimensions from either dimensions or layout elements
                 height = ""
                 width = ""
                 depth = ""
+                diameter = ""
                 
                 if dimensions is not None:
                     height_elem = dimensions.find("tei:height", NS)
                     width_elem = dimensions.find("tei:width", NS)
                     depth_elem = dimensions.find("tei:depth", NS)
+                    # Look for diameter using dim element with type="diameter"
+                    diameter_elem = dimensions.find("tei:dim[@type='diameter']", NS)
                       # Extract text safely from elements
                     if height_elem is not None:
                         height_text = height_elem.text
@@ -1098,13 +1109,18 @@ if working_files:
                     if depth_elem is not None:
                         depth_text = depth_elem.text
                         depth = depth_text.strip() if depth_text is not None else ""
-                
-                # If dimensions not found in dimensions element, try layout
-                if not any([height, width, depth]) and layout_desc is not None:
+                    
+                    if diameter_elem is not None:
+                        diameter_text = diameter_elem.text
+                        diameter = diameter_text.strip() if diameter_text is not None else ""
+                  # If dimensions not found in dimensions element, try layout
+                if not any([height, width, depth, diameter]) and layout_desc is not None:
                     # Look for lenght/length (handle both spellings), width, height in layout
                     height_elem = layout_desc.find("tei:lenght|tei:length", NS)
                     width_elem = layout_desc.find("tei:width", NS)
                     depth_elem = layout_desc.find("tei:depth", NS)
+                    # Also look for diameter in layout
+                    diameter_elem = layout_desc.find("tei:dim[@type='diameter']", NS)
                     
                     # Extract text safely from layout elements
                     if height_elem is not None:
@@ -1119,6 +1135,10 @@ if working_files:
                     if depth_elem is not None:
                         depth_text = depth_elem.text
                         depth = depth_text.strip() if depth_text is not None else ""
+                    
+                    if diameter_elem is not None:
+                        diameter_text = diameter_elem.text
+                        diameter = diameter_text.strip() if diameter_text is not None else ""
 
                 # Letter size from hand description - extract safely
                 hand_desc = phys_desc.find("tei:handDesc", NS) if phys_desc is not None else None
@@ -1260,10 +1280,26 @@ if working_files:
                         st.markdown(f"- **Location:** {origin_info['en']}")
                     if 'ref' in origin_info:
                         st.markdown(f"- **Reference:** {origin_info['ref']}")
-                
-                # Display basic information
+                  # Display basic information
                 st.markdown(f"- **Institution and Inventory:** {institution} No {inventory}")
-                st.markdown(f"- **Dimensions:** Height {height} cm, width {width} cm, depth {depth} cm")
+                
+                # Build dimensions string dynamically based on available values
+                dimensions_parts = []
+                if height:
+                    dimensions_parts.append(f"Height {height} cm")
+                if width:
+                    dimensions_parts.append(f"width {width} cm")
+                if depth:
+                    dimensions_parts.append(f"depth {depth} cm")
+                if diameter:
+                    dimensions_parts.append(f"diameter {diameter} cm")
+                
+                if dimensions_parts:
+                    dimensions_str = ", ".join(dimensions_parts)
+                    st.markdown(f"- **Dimensions:** {dimensions_str}")
+                else:
+                    st.markdown("- **Dimensions:** Not available")
+                
                 st.markdown(f"- **Letter size:** Height {letter_size} cm")
                 st.markdown(f"- **Layout description:** {layout if layout else 'Not available'}")
                 st.markdown("- **Decoration description:** (appears to be blank)")
@@ -1271,9 +1307,7 @@ if working_files:
                 st.markdown(f"- **Category of inscription:** {inscription_category}")
                 
                 # Display facsimile images if available
-                display_monument_images(root, image_data, mon_id)
-
-                # Original Text Section with Old Church Slavonic Font
+                display_monument_images(root, image_data, mon_id)                # Original Text Section with Old Church Slavonic Font
                 st.subheader("Original Text (Old Church Slavonic)")
                 st.markdown("""
                 <style>
@@ -1284,6 +1318,12 @@ if working_files:
                         font-size: 24px;
                         line-height: 1.6;
                         margin: 10px 0;
+                    }
+                    .orig-text {
+                        font-style: italic;
+                        background: #fff4e5;
+                        font-family: 'CyrillicaBulgarian10U';
+                        font-size: 24px;
                     }
                 </style>
                 """, unsafe_allow_html=True)
