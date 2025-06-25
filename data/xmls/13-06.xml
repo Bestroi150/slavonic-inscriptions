@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="bg">Надпис от с. Рояк, Провадийско</title><!-- Заглавие -->
+                <title xml:lang="en">Inscription from Royak, near Provadia</title>
+                <editor>
+                    <persName xml:lang="bg">Казимир Попконстантинов</persName>
+                    <persName xml:lang="en">Kazimir Popkonstantinov</persName>
+                    <persName xml:lang="bg">Ото Кронщайнер</persName>
+                    <persName xml:lang="en">Otto Kronsteiner </persName>
+                </editor> 
+            </titleStmt>            
+            <publicationStmt>
+                <authority>Telamon Project</authority>
+                <date>2025</date>
+                <idno type="filename">13-06</idno><!-- номер на надписа -->
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><country>Bulgaria</country> 
+                        <altIdentifier  xml:lang="bg">
+                            <settlement></settlement>
+                            <repository ref=""></repository><!-- Институция Не знам в коя институция-->
+                            <idno/><!-- Инвентарен номер -->
+                        </altIdentifier>
+                        <altIdentifier xml:lang="en">
+                            <repository ref=""></repository>
+                            <idno></idno>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents><!-- Жанр на надписа -->
+                        <summary corresp="inscription_type_genres.xml#b"><!-- добави в @corresp след # съответното id от document-type.xml -->
+                            <seg xml:lang="bg">строителен надпис</seg><!-- с думи -->
+                            <seg xml:lang="en">building inscription</seg>
+                        </summary>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material xml:lang="bg" ref="materials.xml#st">камък-други</material><!-- добави в @ref след # съответното id от material.xml; съдържание на елемента - с думи -->  
+                                    <material xml:lang="en" ref="materials.xml#st">stone-other</material>
+                                    <objectType xml:lang="bg" ref="objects.xml#w">стена</objectType>
+                                    <objectType xml:lang="en">wall</objectType>
+                                    <dimensions>
+                                        <height unit="cm" quantity="68">68</height>
+                                        <width unit="cm" quantity=""></width>
+                                        <depth unit="cm" quantity="" ></depth>
+                                    </dimensions>
+                                    <objectType/>
+                                </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout></layout> 
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height/>
+                            </handNote>
+                        </handDesc> 
+                        <decoDesc>
+                            <decoNote/>
+                        </decoDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace ref="origloc.xml#Royak">
+                                <seg xml:lang="bg">Скален манастир при с. Рояк, Провадийско</seg>
+                                <seg xml:lang="en">Cave monastery of Royak village, near Provadia</seg>
+                            </origPlace>
+                            <origDate value="1252" evidence="internal-date">
+                                <seg xml:lang="bg">1252</seg>
+                                <seg xml:lang="en">1252</seg>
+                            </origDate>
+                        </origin>
+                        <provenance type="found" when="">
+                            <seg xml:lang="bg"><placeName type="ancientFindspot" ref="Findspot.xml#Royak">Скален манастир при с. Рояк, Провадийско</placeName></seg>
+                            <seg xml:lang="en"><placeName type="ancientFindspot" ref="Findspot.xml#Royak">Cave monastery of Royak village, near Provadia</placeName></seg>
+                        </provenance>
+                        <provenance type="observed">
+                            <seg xml:lang="bg"><placeName ref="currentloc.xml#Royak">Скален манастир при с. Рояк, Провадийско</placeName></seg>
+                            <seg xml:lang="en"><placeName ref="currentloc.xml#Royak">Cave monastery of Royak village, near Provadia</placeName></seg>
+                        </provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <listPrefixDef>
+                <prefixDef matchPattern="(.+)" replacementPattern="../authority/bibliography.xml#$1" ident="bib"/><!--Това какво е?-->
+            </listPrefixDef>
+        </encodingDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="13-06.jpg"/>
+     </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="chu">
+                <ab>
+                   <lb n="1"/> <g type="cross"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_07120/">пр</w> <w lemma="багъророжденъ"><expan><abbr>багрор</abbr><ex>о</ex><abbr>жд</abbr><ex>е</ex><abbr>нѣмь</abbr><ex></ex></expan></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_02992/"></w> 
+                   <lb n="2"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_00459/"><expan><abbr>бл</abbr><ex>а</ex><abbr>г</abbr><ex>о</ex><abbr>в</abbr><ex>ѣрн</ex><abbr>ѣм</abbr><ex></ex></expan></w> : <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_02992/"></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_10593/"><expan><abbr>хр</abbr><ex>сто</ex><abbr>люб</abbr><ex></ex></expan>    
+                   <lb n="3" break="no"/>вѣм</w> <g type="dipunct"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_02992/"></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_08440/"><expan><abbr>само</abbr><ex>дрьжьц</ex><abbr></abbr><ex></ex></expan></w>
+                   <lb n="4"/> <w lemmaRef="https://histdict.uni-sofia.bg/evtdict/evt_show/d_05712"><expan><abbr>ц</abbr><ex>а</ex><abbr>р</abbr><ex></ex></expan></w> <persName ref="persons.xml#Mich2A">мха<supplied reason="lost">лѣ</supplied></persName> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_09198/"><supplied reason="lost">сьзда сѧ</supplied></w>  
+                   <lb n="5"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_05542/">об<supplied reason="lost">тѣль</supplied></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_09490/"><supplied reason = "lost">с</supplied></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_03254/"><supplied reason="lost">ме</supplied></w>  
+                   <lb n="6"/> <orig>нꙑ</orig> <gap reason="lost" extent="unknown" unit="character"/>
+                   <lb n="7"/> <orig>нега</orig> <gap reason="lost" extent="unknown" unit="character"/>
+                   <lb n="8"/> <orig>ше</orig> <gap reason="lost" extent="unknown" unit="character"/>
+                   <lb n="9"/> <orig>мь</orig> <gap reason="lost" extent="unknown" unit="character"/>
+                   <lb n="10"/> <orig>хо</orig> <gap reason="lost" extent="unknown" unit="character"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_01122/"><supplied reason = "lost">въ</supplied></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_04262/"><supplied reason = "lost">лѣто</supplied></w>
+                   <lb n="11"/> <date value="6761">ѕ̄ѱ<supplied reason="lost">ѯ</supplied>а̄</date>
+                  </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <head xml:lang="bg">Букви в лигатура:</head>
+                    <head xml:lang="en">Letters in ligatures:</head>
+                         <app loc="1"> <note>прб (пр багрор(о)жд(е)нѣмь)</note> </app>
+                 </listApp>
+            </div>
+            <div type="translation"> 
+                <seg xml:lang="bg">
+                    При багренородния и
+                    благоверен, и христолюбив,
+                    и самодържец
+                    цар Миахил се създаде
+                    тази обител (име...)
+                    (...)
+                    [в годината] 
+                    6761 (=1252)
+                  </seg>
+                <seg xml:lang="en"> 
+                    In the time of the born in the purple and
+                    the pious, and the Christ-loving,
+                    and the autocratic
+                    tsar Michael, this monastery was founded
+                    (...)
+                    [in the year] 
+                    6761 (=1252)
+                </seg>
+            </div>
+            <div type="commentary">
+                <p>
+                    <seg xml:lang="bg"><note>Надписът е открит върху стена от църква на манастирския комплекс в с. Рояк, Провадийско.</note> </seg>
+                    <seg xml:lang="en"><note>The inscription was found on the wall in the church of the Cave monastery complex in Royak village, near Provadia</note></seg>
+                </p> 
+            </div>
+            <div type="bibliography"> 
+                <listBibl>
+                    <bibl sameAs="bib:b1">117-119</bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

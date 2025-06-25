@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="bg">Витовнишки надпис</title><!-- Заглавие -->
+                <title xml:lang="en">Inscription from Vitovnica</title>
+                <editor>
+                    <persName xml:lang="bg">Величка Илиева</persName>
+                    <persName xml:lang="en">Velichka Ilieva</persName>
+                    <persName xml:lang="bg">Казимир Попконстантинов</persName>
+                    <persName xml:lang="en">Kazimir Popkonstantinov</persName>
+                    <persName xml:lang="bg">Ото Кронщайнер</persName>
+                    <persName xml:lang="en">Otto Kronsteiner </persName>
+                </editor> 
+            </titleStmt>            
+            <publicationStmt>
+                <authority>Telamon Project</authority>
+                <date>2025</date>
+                <idno type="filename">13-02</idno><!-- номер на надписа -->
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><country>Serbia</country> 
+                        <altIdentifier  xml:lang="bg">
+                            <settlement></settlement>
+                            <repository><ref target=""></ref></repository><!-- Институция-->
+                            <idno/><!-- Инвентарен номер -->
+                        </altIdentifier>
+                        <altIdentifier xml:lang="en">
+                            <repository><ref target=""></ref></repository>
+                            <idno></idno>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents><!-- Жанр на надписа -->
+                        <summary corresp="inscription_type_genres.xml#b"><!-- добави в @corresp след # съответното id от document-type.xml -->
+                            <seg xml:lang="bg">строителен надпис</seg><!-- с думи -->
+                            <seg xml:lang="en">building inscription</seg>
+                        </summary>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material xml:lang="bg" ref="materials.xml#st">камък-други</material><!-- добави в @ref след # съответното id от material.xml; съдържание на елемента - с думи -->  
+                                    <material xml:lang="en" ref="materials.xml#st">stone-other</material>
+                                    <objectType xml:lang="bg" ref="objects.xml#tabl">плоча</objectType><!-- добави в @ref след # съответното id от object.xml; съдържание на елемента - с думи--> 
+                                    <objectType xml:lang="en" ref="objects.xml#tabl">tablet</objectType>
+                                    <dimensions>
+                                        <height unit="cm" quantity=""></height>
+                                        <width unit="cm" quantity=""></width>
+                                        <depth unit="cm" quantity="" ></depth>
+                                    </dimensions>
+                                </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout></layout> 
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height quantity ="2" unit="cm">2</height><!-- само числова стойност като стойност на атрибута и като съдържание на елемента -->
+                            </handNote>
+                        </handDesc> 
+                        <decoDesc>
+                            <decoNote></decoNote><!-- попълни с описание на декорацията на обекта, ако е налично -->
+                        </decoDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace ref="origloc.xml#Oreshkovica">
+                                <seg xml:lang="bg">Орешковица, Сърбия</seg>
+                                <seg xml:lang="en">Oreshkovica, Serbia</seg>
+                            </origPlace>
+                            <origDate value="1218" evidence="internal-date">
+                                <seg xml:lang="bg">1218</seg>
+                                <seg xml:lang="en">1218</seg>
+                            </origDate>
+                        </origin>
+                        <provenance type="found" when="">
+                            <seg xml:lang="bg"><placeName type="ancientFindspot" ref="Findspot.xml#Vitovnica">Витовнишки манастир, Сърбия</placeName></seg>
+                            <seg xml:lang="en"><placeName type="ancientFindspot" ref="Findspot.xml#Vitovnica">Vitovnica monastery, Serbia</placeName></seg>
+                        </provenance>
+                        <provenance type="observed">
+                            <seg xml:lang="bg"> <placeName ref="currentloc.xml#Vitovnica">Манастир Витовница, Сърбия</placeName></seg>
+                            <seg xml:lang="en"> <placeName ref="currentloc.xml#Vitovnica">Vitovnica monastery, Serbia</placeName></seg>
+                        </provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <listPrefixDef> 
+                <prefixDef/>
+            </listPrefixDef>
+        </encodingDesc>
+    </teiHeader>
+    <facsimile><graphic url="13-02.jpg"/></facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="chu">
+                <ab>
+                    <lb n="1"/> <supplied reason="lost"><g type="cross"/></supplied> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_01122/"><supplied reason="lost">вь</supplied></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_03254/">мѫ</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_06217/"><expan><abbr>ѡ</abbr><ex>т</ex><abbr>ца</abbr><ex></ex></expan></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_02992/"></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_09481/"><expan><abbr>с</abbr><ex></ex><abbr>на</abbr><ex></ex></expan></w> <w lemma="https://histdict.uni-sofia.bg/dictionary/show/d_02992/"></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_08526/"><expan><abbr>с</abbr><ex>вѧ</ex><abbr>таго</abbr><ex></ex></expan></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_02287/"><expan><abbr>д</abbr><ex>ѹ</ex><abbr>ха</abbr><ex></ex></expan></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_00068/">азъ</w> <persName ref="names.xml#n001">ладо</persName> <w lemma="https://histdict.uni-sofia.bg/dictionary/show/d_09481/">с 
+                    <lb n="2" break="no"/><supplied reason="lost">нь</supplied></w> <persName ref="names.xml#n002">бабѹговь</persName> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_06926/">поставхь</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_09490/">сѫ</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_00650/"><expan><abbr>б</abbr><ex>о</ex><abbr>ж</abbr><ex></ex></expan></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_10565/">храм<supplied reason = "lost">ь</supplied></w>   
+                    <lb n="3"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_01122/"><supplied reason = "lost">вь</supplied></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_06296/">памѧть</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_00179/"><expan><abbr>ап</abbr><ex>о</ex><abbr>с</abbr><ex>то</ex><abbr>ла</abbr><ex></ex></expan></w> <persName ref="relig.xml#James">ѣкова</persName> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_02992/"></w> <persName ref="relig.xml#Peter">петра</persName> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_01122/">вь</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_04262/"><expan><abbr>лѣт</abbr><ex>о</ex></expan></w> <date value="6726">ѕ̄ <g type="dipunct"/>ѱ̄<g type="dipunct"/>к͞ѕ</date> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_03258/"><expan><abbr>енд</abbr><ex>кт</ex><abbr>ѡн</abbr><ex>ь</ex></expan></w> <num value="6">ѕ</num>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <head xml:lang="bg">Букви в лигатура:</head><!-- В случай, че има коментари и от друг характер, да се промени съдържанието на елемента или да се добави нов елемент <head> -->
+                    <head xml:lang="en">Letters in ligatures:</head>
+                            <app loc="3"> <note>ап (апостола);</note> <note>аип (ѣковапетра);</note> <note>ав(петрав)</note> <note>ѣт(лѣто)</note></app>
+                </listApp>
+            </div>
+            <div type="translation">
+                <p>
+                    <seg xml:lang="bg">В името на Отца и Сина, и Светия Дух аз, Ладо, син Бабугов, построих този божи храм в памет на апостолите Яков и Петър в годината 6726 (1218), ендикт 6.</seg>
+                    <seg xml:lang="en"> In the name of the Father, and the Son, and the Holy Spirit I, Lado, son of Baboug, built this god's temple in memory of the apostles James and Peter in the year 6726 (1218), edict 6.</seg>
+                </p> 
+            </div>
+            <div type="commentary">
+                <p><seg xml:lang="bg"><note> Надписът е издълбан върху каменна плоча, пренесена от църквата в Орешковица и поставена от северната част на манастирската църква в манастира във Витовница, Сърбия. Под текста на този надпис се намира друг, изписан на арменски език.</note></seg>
+                       <seg xml:lang="en"><note> The stone tablet, on which the inscription is carved, is brought from the church in Oreshkovitsa and placed on the northern side of the monastery church in the monastery of Vitovnica, Serbia. Below the text of this inscription, there is another one written in Armenian.</note></seg>
+                </p> 
+            </div>
+            <div type="bibliography"> 
+                <listBibl>
+                    <bibl sameAs="bib:b1">197-199</bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

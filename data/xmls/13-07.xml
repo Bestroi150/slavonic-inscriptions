@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="bg">Ктиторски надпис от с. Троица, Шуменско</title><!-- Заглавие -->
+                <title xml:lang="en">Donor inscription from Troitsa village, near Shumen</title>
+                <editor>
+                    <persName xml:lang="bg">Величка Илиева</persName>
+                    <persName xml:lang="en">Velichka Ilieva </persName>
+                    <persName xml:lang="bg">Казимир Попконстантинов</persName>
+                    <persName xml:lang="en">Kazimir Popkonstantinov</persName>
+                    <persName xml:lang="bg">Ото Кронщайнер</persName>
+                    <persName xml:lang="en">Otto Kronsteiner </persName>
+                </editor> 
+            </titleStmt>            
+            <publicationStmt>
+                <authority>Telamon Project</authority>
+                <date>2025</date>
+                <idno type="filename">13-07</idno><!-- номер на надписа -->
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><country>Bulgaria</country> 
+                        <altIdentifier  xml:lang="bg"><repository ref="https://museum-shumen.eu/#">РИМ - Шумен</repository><!-- Институция-->
+                            <idno/><!-- Инвентарен номер -->
+                        </altIdentifier> 
+                        <altIdentifier xml:lang="en"> <repository ref="https://museum-shumen.eu/#">Regional museum of history - Shumen</repository>
+                            <idno/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents><!-- Жанр на надписа -->
+                        <summary corresp="inscription_type_genres.xml#b"><!-- добави в @corresp след # съответното id от document-type.xml -->
+                            <seg xml:lang="bg">строителен надпис</seg><!-- с думи -->
+                            <seg xml:lang="en">building inscription</seg>
+                        </summary>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material xml:lang="bg" ref="materials.xml#l">варовик</material><!-- добави в @ref след # съответното id от material.xml; съдържание на елемента - с думи -->  
+                                    <material xml:lang="en" ref="materials.xml#l">limestone</material>
+                                    <objectType xml:lang="bg" ref="objects.xml#tabl">плоча</objectType><!-- добави в @ref след # съответното id от object.xml; съдържание на елемента - с думи--> 
+                                    <objectType xml:lang="en" ref="objects.xml#tabl">tablet</objectType>
+                                    <dimensions> 
+                                        <height quantity="150" unit="cm">150</height> 
+                                        <width quantity="90" unit="cm">90</width>
+                                        <depth quantity="" unit="cm"></depth>
+                                    </dimensions>
+                                  </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout/> 
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote xml:lang="bg">
+                                <height quantity="2,5" unit="cm">2,5</height><!-- само числова стойност като стойност на атрибута и като съдържание на елемента -->
+                                Текстът е писан от двама писачи, като „втората ръка“ се включва след пети ред. 
+                            </handNote>
+                            <handNote xml:lang="en">
+                                <height quantity="2,5" unit="cm">2,5</height><!-- само числова стойност като стойност на атрибута и като съдържание на елемента -->
+                                The text is written by two writers. The second hand starts after the fifth line. 
+                            </handNote>
+                        </handDesc> 
+                        <decoDesc>
+                            <decoNote xml:lang="bg">
+                                Последните 2-3 реда са разделени от издълбан кръст.
+                            </decoNote>
+                            <decoNote xml:lang="en">
+                                The last 2-3 lines are devided by a carved cross.
+                            </decoNote>
+                        </decoDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace ref="origloc.xml#Troitsa">местност Боаза край с. Троица, Шуменско
+                                <seg xml:lang="bg">местност Боаза край с. Троица, Шуменско</seg>
+                                <seg xml:lang="en">Boaza area near the village of Troitsa, Shumen region</seg>
+                            </origPlace>
+                            <origDate value="1263" evidence="internal-date">
+                                <seg xml:lang="bg">1263</seg>
+                                <seg xml:lang="en">1263</seg>
+                            </origDate>
+                        </origin>
+                        <provenance type="found" notBefore="1975" notAfter="1979">
+                            <seg xml:lang="bg"><placeName type="ancientFindspot" ref="Findspot.xml#Troitsa">местност Боаза край с. Троица, Шуменско</placeName></seg>
+                            <seg xml:lang="en"><placeName type="ancientFindspot" ref="Findspot.xml#Troitsa">Boaza area near the village of Troitsa, Shumen region</placeName></seg>
+                        </provenance>
+                        <provenance type="observed">
+                            <seg xml:lang="bg"><placeName ref="currentloc.xml#Shumen">Шумен</placeName></seg>
+                            <seg xml:lang="en"><placeName ref="currentloc.xml#Shumen">Shumen</placeName></seg>
+                        </provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <listPrefixDef>
+                <prefixDef matchPattern="(.+)" replacementPattern="../authority/bibliography.xml#$1" ident="bib"/><!--Това какво е?-->
+            </listPrefixDef>
+        </encodingDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="13-07a.jpg"/>
+        <graphic url="13-07b.jpg"/>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="chu">
+                <ab>
+                    <lb n="1"/> <g type="cross"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_09490/">с</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_10565/">храмъ</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_08526/"><expan><abbr>с</abbr><ex>вѧ</ex><abbr>т</abbr><ex>а</ex><abbr>го</abbr><ex></ex></expan></w> <persName ref="relig.xml#St.Nic">нколꙑ</persName> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_02992/"></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_08526/"><expan><abbr>с</abbr><ex>вѧ</ex><abbr>т</abbr><ex>а</ex><abbr>го</abbr><ex></ex></expan></w> <persName ref="relig.xml#St.Andr">ѧд<supplied reason="lost">реа</supplied></persName> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_04734/"><supplied reason="lost"><expan><abbr>м</abbr><ex>ѫ</ex><abbr></abbr><ex>ен</ex></expan></supplied> 
+                    <lb n="2" break="no"/><expan><abbr>ка</abbr><ex></ex></expan></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_09198/">създа</w> <persName ref="names.xml#n010">сава</persName> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_04463/"><expan><abbr>м</abbr><ex></ex><abbr>л</abbr><ex>о</ex><abbr>стѧ</abbr><ex></ex></expan></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_00650/"><expan><abbr>б</abbr><ex>о</ex><abbr>ж̄ѧ</abbr><ex></ex></expan></w> <roleName ref="titles.xml#n004">м<supplied reason="lost">тро</supplied>
+                    <lb n="3"/>полтъ</roleName> <w lemma="богосъпасьнъ"><expan><abbr>б</abbr><ex>о</ex><abbr>госп</abbr><ex>ас</ex><abbr>наго</abbr><ex></ex></expan></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_01916/"><expan><abbr>град</abbr><ex>а</ex></expan></w> <placeName ref="places.xml#Pl004">прѣс<supplied reason = "lost">лава</supplied></placeName>
+                    <lb n="4"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_02992/"></w> <w lemma="прототронъ">протоѳр<supplied reason = "omitted">о</supplied>нъ</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_02992/"></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_07120/">пр</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_00459/"><expan><abbr>бл</abbr><ex>а</ex><abbr>говѣрн</abbr><ex></ex></expan><supplied reason = "lost">ѣмъ</supplied></w>
+                    <lb n="5"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_02992/"></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_10593/">хрстолюбівѣмъ</w> <w lemmaRef="https://histdict.uni-sofia.bg/evtdict/evt_show/d_05712"><expan><abbr>ц</abbr><ex>а</ex><abbr>р</abbr><ex></ex></expan></w> <persName ref="persons.xml#KTihA">костанд<supplied reason="lost">нѣ асѣ</supplied>
+                    <lb n="6" break="no"/>ні</persName> <g type="dot"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_02992/">і</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_08440/">самодрьжці</w> <g type="dot"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_01667/">всѣмь</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_00562/">блъгарѡмь</w> <g type="dot"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_02992/">ї</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_07120/">пр</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_00641/"><expan><abbr>б</abbr><ex>о</ex><abbr>г̄ѡ</abbr><ex>ь</ex><abbr>ствѣї</abbr><ex></ex></expan></w> <w lemmaRef="https://histdict.uni-sofia.bg/evtdict/evt_show/d_05711"><expan><abbr>ц</abbr><ex>а</ex><abbr>рц</abbr><ex></ex></expan></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_02994/">егѡ</w> <persName ref="persons.xml#Iri">ерні</persName> <g type="dot"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_02992/">і</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_07120/">пр</w> <gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="7"/> <orig>ннѣмъ</orig> <roleName ref="titles.xml#n005">патрарсѣ</roleName> <g type="dot"/> <persName ref="persons.xml#Joachim2">іѡакмѣ</persName> <g type="dot"/> <w lemma="богосъпасьнъ"><expan><abbr>б</abbr><ex>о</ex><abbr>госп</abbr><ex>а</ex><abbr>снаго</abbr><ex></ex></expan></w> <g type="cross"/> <g type="dot"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_01916/">града</w> <g type="dot"/> <placeName ref="places.xml#Pl005">трьнова</placeName> <g type="dot"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_02992/">і</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_01667/">всѣ<supplied reason = "lost">мъ</supplied></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_00562/"><supplied reason = "lost">блъ</supplied>
+                    <lb n="8" break="no"/>гарѡмь</w> <g type="dot"/> <space quantity="2" unit="character"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_01122/">в</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_04262/"><expan><abbr>лѣт</abbr><ex>о</ex></expan></w> <space quantity="1" unit="character"/> <g type="dot"/> <space quantity="1" unit="character"/> <date value="6772">ѕ̄ѱ̄о͞в</date> <space quantity="1" unit="character"/> <g type="dot"/> <space quantity="1" unit="character"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_03259/"><expan><abbr>енд</abbr><ex></ex><abbr>к</abbr><ex>тъ</ex></expan></w> <space quantity="2" unit="character"/> <g type="dot"/> <space quantity="2" unit="character"/> <num value="7">з̄</num>
+                    <lb n="9"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_01122/">в</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_04262/"><expan><abbr>лѣт</abbr><ex>о</ex></expan></w> <date value="6800">ѕ̄ ѡ̄</date>
+                 </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <head xml:lang="bg">Букви в лигатура:</head>
+                    <head xml:lang="en">Letters in ligatures:</head>
+                         <app loc="6"> <note> амо (самодрьжці)</note> <note>мь (всѣмь)</note> <note> ѡмь (блъгарѡмь)</note> <note>пр (пр)</note> <note>тв (бг̄ѡствѣї)</note> <note>ц(цр̄ц)</note> <note>гѡ(егѡ )</note> <note> рн (ерні)</note> </app>
+                         <app loc="7"> <note> атр, ар (патрарсѣ)</note> <note> ѡак (іѡакмѣ)</note> <note>тр, но (трьнова)</note> </app>
+                         <app loc="8"> <note>нк (енⷣк)</note> </app>
+                </listApp>
+            </div>
+            <div type="translation">
+                <seg xml:lang="bg"> 
+                    Този храм на Св. Никола и Св. Андрей мъче
+                    ник създаде Сава с милостта божия митро
+                    полит на богоспасния град Преслав
+                    и прототрон; при благоверния
+                    и христолюбив цар Константин Асен
+                    и самодържец на всички българи и при богочестивата негова царица Ирина и при
+                    ... Йоаким - патриарх на богоспасния град Търново и на всички бъл
+                    гари в годината 6772 (=1263), индикт 7.
+                    ...в годината 6800...
+                </seg>
+                <seg xml:lang="en"> 
+                    This temple of St. Nicholas and St. Andrew the Mar
+                    tyr was built by Sava, by the grace of God Metro
+                    politan bishop of the God-saved city of Preslav 
+                    and a Protothrone; under the pious
+                    and Christ-loving tsar Constantine Asen
+                    and autocrat of all Bulgarians and under his pious Queen Irina and under
+                    ... Joachim - patriarch of the God-saved city of Tarnovo and of all Bul
+                    garians in the year 6772 (=1263), indiction 7.
+                    ...in the year 6800 (=1292)...
+                </seg>
+            </div>
+            <div type="commentary">
+                <p>
+                    <seg xml:lang="bg"><note> „Троишкият ктиторски надпис е изпълнен на два пъти – при съграждането на храма по времето на цар Константин Тих Асен (1263/1264) и вероятно при обновяването на църквата в XIV в., може би по времето на цар Иван Александър“ (Овчаров, Андреев 2006а:256).</note> </seg>
+                    <seg xml:lang="en"><note> “The Donor inscription of Troica was executed two times – during the construction of the temple in the time of tsar Constantine Tih Asen (1263/1264) and probably during the renovation of the church in the 14th century, perhaps during the time of Tsar Ivan Alexander” (Ovcharov, Andreev 2006a:256).</note></seg>
+                </p> 
+            </div>
+            <div type="bibliography"> 
+                <listBibl>
+                    <bibl sameAs="bib:b1">145-148</bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

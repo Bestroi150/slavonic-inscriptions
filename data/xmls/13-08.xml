@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="bg">Надпис от с. Горно Новково</title><!-- Заглавие -->
+                <title xml:lang="en">Inscription from Gorno Novkovo</title>
+                <editor>
+                    <persName xml:lang="bg">Величка Илиева</persName>
+                    <persName xml:lang="en">Velichka Ilieva </persName>
+                    <persName xml:lang="bg">Казимир Попконстантинов</persName>
+                    <persName xml:lang="en">Kazimir Popkonstantinov</persName>
+                    <persName xml:lang="bg">Ото Кронщайнер</persName>
+                    <persName xml:lang="en">Otto Kronsteiner </persName>
+                </editor> 
+            </titleStmt>            
+            <publicationStmt>
+                <authority>Telamon Project</authority>
+                <date>2025</date>
+                <idno type="filename">13-08</idno><!-- номер на надписа -->
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><country>Bulgaria</country> 
+                        <altIdentifier  xml:lang="bg"><repository ref="https://museumtg.com/">РИМ - Търговище</repository><!-- Институция-->
+                            <idno/><!-- Инвентарен номер -->
+                        </altIdentifier> 
+                        <altIdentifier xml:lang="en"><repository ref="https://museumtg.com/">Regional museum of history - Targovishte</repository>
+                            <idno/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents><!-- Жанр на надписа -->
+                        <summary corresp="inscription_type_genres.xml#attr"><!-- добави в @corresp след # съответното id от document-type.xml -->
+                            <seg xml:lang="bg">надпис с приписков характер</seg><!-- с думи -->
+                            <seg xml:lang="en">attributional inscription</seg>
+                        </summary>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material xml:lang="bg" ref="materials.xml#st">камък-други</material><!-- добави в @ref след # съответното id от material.xml; съдържание на елемента - с думи -->  
+                                    <material xml:lang="en" ref="materials.xml#st">stone-other</material>
+                                    <objectType xml:lang="bg" ref="objects.xml#tabl">плоча</objectType><!-- добави в @ref след # съответното id от object.xml; съдържание на елемента - с думи--> 
+                                    <objectType xml:lang="en" ref="objects.xml#tabl">tablet</objectType>
+                                    <dimensions> 
+                                        <height quantity="110" unit="cm">110</height> 
+                                        <width quantity="60" unit="cm">60</width>
+                                    </dimensions>
+                                  </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout/> 
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height atLeast="3" atMost="8" unit="cm">3 - 8</height><!-- само числова стойност като стойност на атрибута и като съдържание на елемента -->
+                             </handNote>
+                        </handDesc> 
+                        <decoDesc>
+                            <decoNote></decoNote>
+                        </decoDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace ref="origloc.xml#unknown">неизвестно
+                                <seg xml:lang="bg">неизвестно</seg>
+                                <seg xml:lang="en">unknown</seg>
+                            </origPlace>
+                            <origDate notBefore="1192" notAfter="1292" evidence="internal-date">
+                                <seg xml:lang="bg">1192-1292</seg>
+                                <seg xml:lang="en">1192-1292</seg>
+                            </origDate>
+                        </origin>
+                        <provenance type="found" when="1982">
+                            <seg xml:lang="bg"><placeName type="ancientFindspot" ref="Findspot.xml#GornoNovkovo">землището на с. Горно Новково</placeName></seg>
+                            <seg xml:lang="en"><placeName type="ancientFindspot" ref="Findspot.xml#GornoNovkovo">Gorno Novkovo's area</placeName></seg>
+                        </provenance>
+                        <provenance type="observed">
+                            <seg xml:lang="bg"><placeName ref="currentloc.xml#Targovishte">Търговище</placeName></seg>
+                            <seg xml:lang="en"><placeName ref="currentloc.xml#Targovishte">Targovishte</placeName></seg>
+                        </provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <listPrefixDef>
+                <prefixDef matchPattern="(.+)" replacementPattern="../authority/bibliography.xml#$1" ident="bib"/><!--Това какво е?-->
+            </listPrefixDef>
+        </encodingDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="13-08a.jpg"/>
+        <graphic url="13-08b.jpg"/>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="chu">
+                <ab>
+                      <lb n="1"/> <g type="cross"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_01122/">в</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_04262/"><expan><abbr>л</abbr><ex>ѣ</ex><abbr>то</abbr><ex></ex></expan></w> 
+                      <lb n="2"/> <date value="6700">ѕѱ</date> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_00068/">азь</w> <persName ref="names.xml#n012">га
+                      <lb n="3" break="no"/>гань</persName> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_07635/">прѣда<supplied reason = "lost">хь</supplied></w> 
+                      <lb n="4"/> <persName ref="names.xml#n013">хнтꙋ</persName> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_01874/">горѫ</w> <gap reason="lost" extent="unknown" unit="character"/>
+                      <lb n="5"/> <orig>щ</orig> <space quantity="2" unit="character"/> <orig>ѫмꙋпо</orig> <gap reason="lost" extent="unknown" unit="character"/>
+                      <lb n="6"/> <orig>мꙋ</orig> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_05708/">овѫ<supplied reason="lost">дѹ</supplied></w> 
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp></listApp>
+            </div>
+            <div type="translation">
+                <seg xml:lang="bg"> 
+                    В годината 
+                    6700 аз, Гаган, предадох
+                    на Хинто гора(та)
+                    ...
+                    ... от другата страна...
+                </seg>
+                <seg xml:lang="en"> 
+                    In the year
+                    6700 I, Gagan, gave 
+                    to Hinto (the) forest
+                    ...
+                    ... on the other side...
+                </seg>
+            </div>
+            <div type="commentary">
+                <p>
+                    <seg xml:lang="bg"><note> Паметникът е намерен случайно в землището на с. Горно Новково.</note> </seg>
+                    <seg xml:lang="en"><note> The inscription is found by accident in the area of Gorno Novkovo.</note></seg>
+                </p> 
+            </div>
+            <div type="bibliography"> 
+                <listBibl>
+                    <bibl sameAs="bib:b1">53-56</bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

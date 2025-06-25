@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="bg">Кърчевски надпис</title><!-- Заглавие -->
+                <title xml:lang="en">Karchevski inscription</title>
+                <editor>
+                    <persName xml:lang="bg">Гордана Томович</persName>
+                    <persName xml:lang="en">Gordana Tomovich</persName>
+                    <persName xml:lang="bg">Величка Илиева</persName>
+                    <persName xml:lang="en">Velichka Ilieva</persName>
+                </editor> 
+            </titleStmt>            
+            <publicationStmt>
+                <authority>Telamon Project</authority>
+                <date>2025</date>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><country>Bulgaria</country> 
+                        <altIdentifier  xml:lang="bg">
+                            <repository><ref></ref></repository><!-- Институция-->
+                            <idno></idno><!-- Инвентарен номер -->
+                        </altIdentifier>
+                        <altIdentifier xml:lang="en">
+                            <repository><ref target=""></ref></repository>
+                            <idno></idno>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents><!-- Жанр на надписа -->
+                        <summary corresp="inscription_type_genres.xml#b"><!-- добави в @corresp след # съответното id от document-type.xml -->
+                            <seg xml:lang="bg">строителен надпис</seg><!-- с думи -->
+                            <seg xml:lang="en">building inscription</seg>
+                        </summary>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material xml:lang="bg" ref="material.xml#g">гранит</material><!-- добави в @ref след # съответното id от material.xml; съдържание на елемента - с думи -->  
+                                    <material xml:lang="en" ref="material.xml#g">granite</material>
+                                    <objectType xml:lang="bg" ref="objects.xml#w">стена</objectType><!-- добави в @ref след # съответното id от object.xml; съдържание на елемента - с думи--> 
+                                    <objectType xml:lang="en">wall</objectType>
+                                    <dimensions>
+                                        <height unit="cm" quantity="112">112</height>
+                                        <width unit="cm" quantity="40">40</width>
+                                        <depth unit="cm" quantity="" ></depth>
+                                    </dimensions>
+                                </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout></layout> 
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height unit="cm" atleast="7" atMost="8">7-8</height><!-- само числова стойност като стойност на атрибута и като съдържание на елемента -->
+                            </handNote>
+                        </handDesc> 
+                        <decoDesc>
+                            <decoNote></decoNote><!-- попълни с описание на декорацията на обекта, ако е налично -->
+                        </decoDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace ref="origloc.xml#Karchevo"><!-- добави в @ref след # съответното id от origloc.xml; съдържание на елемента - с думи -->
+                                <seg xml:lang="bg">Кърчево</seg>
+                                <seg xml:lang="en">Karchevo</seg>
+                            </origPlace>
+                            <origDate notBefore="1197" notAfter="1207" evidence="reign">
+                                <seg xml:lang="bg">1197-1207 в.</seg>
+                                <seg xml:lang="en">1197-1207 c.</seg>
+                            </origDate>
+                        </origin>
+                        <provenance type="found">
+                            <seg xml:lang="bg"><placeName type="ancientFindspot" ref="Findspot.xml#Karchevo">Кърчево</placeName></seg>
+                            <seg xml:lang="en"><placeName>Karchevo</placeName> 
+                            </seg>
+                        </provenance>
+                        <provenance type="observed">
+                            <seg xml:lang="bg"><placeName type="ancientFindspot" ref="currentloc.xml#Krc">Кърчево</placeName></seg>
+                            <seg xml:lang="en"><placeName>Karydochori</placeName> 
+                            </seg>
+                        </provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="13-01.jpg"/>
+        <graphic url="13-01-2.jpg"/>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="chu">
+                <ab>
+<lb n="1"/> <g type="cross"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_00068/">азъ</w> <persName ref="names.xml#n015">врана</persName> <roleName ref="titles.xml#n001">дѹка велкъ</roleName> 
+<lb n="2"/><w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_09429/">сътъвор<supplied reason="omitted">хъ</supplied></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_01916/">града</w> <placeName ref="places.xml#Pl007">крцува</placeName>
+<lb n="3"/><w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_04349/"><supplied reason="lost">ма</supplied>ѣ</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_04693/">мѣсъца</w> <num value="21">ка</num> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_02666/">за</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_04537/">молтъ 
+<lb n="4" break="no"/> вꙑ</w> <persName ref="persons.xml#Kalo"><expan><ex>ана</ex><abbr>калоіѡ</abbr></expan></persName> <w lemmaRef="https://histdict.uni-sofia.bg/evtdict/evt_show/d_05712"><expan><abbr>ц</abbr><ex>а</ex><abbr>рѣ</abbr></expan><ex></ex></w>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <head xml:lang="bg"></head><!-- В случай, че има коментари и от друг характер, да се промени съдържанието на елемента или да се добави нов елемент <head> -->
+                    <head xml:lang="en"></head>
+                    <rdg></rdg>
+                    <head xml:lang="bg">Апарат:</head>
+                    <head xml:lang="en">Apparatus:</head>
+                </listApp>
+            </div>
+            <div type="translation">
+                <p>
+                    <seg xml:lang="bg">Аз, Врана дука велик, сътворих град Крицува/Кърчово, месец май, 21, за молитва на КалоЙоан цар</seg>
+                    <seg xml:lang="en"> I, Vrana great duka, built Kricuva fortress, the month of May, 21th, for the prayer of tzar KaloIoan</seg>
+                </p> 
+            </div>
+            <div type="commentary">
+                <p>
+                    <seg xml:lang="bg"><note>Някои изследователи четат в текста хронограма, датираща паметника от 6712 (=1204/05) година. От факсимилето на надписа се вижда, че букви с титли в значение на цифри липсват издълбани. </note></seg>
+                    <seg xml:lang="en"> <note>Some researchers read in the text a chronogram, dating the monument to the year 6712 (=1204/05). The facsimile of the inscription doesn't show any letters with titles in the meaning of numbers at this place.</note></seg>
+                </p> 
+            </div>
+            <div type="bibliography"> 
+                <listBibl>
+                    <bibl sameAs="bib:b1">129</bibl>
+                    <bibl sameAs="bib:b4">37</bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

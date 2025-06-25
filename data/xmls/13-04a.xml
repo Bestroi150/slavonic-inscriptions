@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="bg">Графити до Търновски надпис от 1230 г. (1)</title><!-- Заглавие -->
+                <title xml:lang="en">Graffiti next to the Inscription from Tarnovo, 1230 (1)</title>
+                <editor>
+                    <persName xml:lang="bg">Казимир Попконстантинов</persName>
+                    <persName xml:lang="en">Kazimir Popkonstantinov</persName>
+                    <persName xml:lang="bg">Ото Кронщайнер</persName>
+                    <persName xml:lang="en">Otto Kronsteiner </persName>
+                </editor> 
+            </titleStmt>            
+            <publicationStmt>
+                <authority>Telamon Project</authority>
+                <date>2025</date>
+                <idno type="filename">13-04a</idno><!-- номер на надписа -->
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><country>Bulgaria</country> 
+                        <altIdentifier  xml:lang="bg">
+                            <settlement></settlement>
+                            <repository ref=""></repository><!-- Институция Не знам в коя институция-->
+                            <idno/><!-- Инвентарен номер -->
+                        </altIdentifier>
+                        <altIdentifier xml:lang="en">
+                            <repository ref=""></repository>
+                            <idno></idno>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents><!-- Жанр на надписа -->
+                        <summary corresp="inscription_type_genres.xml#attr"><!-- добави в @corresp след # съответното id от document-type.xml -->
+                            <seg xml:lang="bg">надписи с приписков характер</seg><!-- с думи -->
+                            <seg xml:lang="en">attributional inscription</seg>
+                        </summary>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material xml:lang="bg" ref="materials.xml#m">мрамор</material><!-- добави в @ref след # съответното id от material.xml; съдържание на елемента - с думи -->  
+                                    <material xml:lang="en" ref="materials.xml#m">marble</material>
+                                    <objectType xml:lang="bg" ref="objects.xml#col">колона</objectType><!-- добави в @ref след # съответното id от object.xml; съдържание на елемента - с думи--> 
+                                    <objectType xml:lang="en" ref="objects.xml#col">column</objectType>
+                                    <dimensions>
+                                        <height unit="cm" quantity="250">250</height>
+                                        <dim type="diameter" unit="cm" quantity="145">145</dim>
+                                     </dimensions>
+                                </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout></layout> 
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>                               
+                        </handDesc> 
+                        <decoDesc>
+                            <decoNote/><!-- попълни с описание на декорацията на обекта, ако е налично -->
+                        </decoDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace ref="origloc.xml#Tarnovo">
+                                <seg xml:lang="bg">Църква "Св. Четиридесет мъченици", Търново</seg>
+                                <seg xml:lang="en">Holy Forty Martyrs Church, Tarnovo</seg>
+                            </origPlace>
+                            <origDate value="1230" evidence="archaeological context">
+                                <seg xml:lang="bg">1230</seg>
+                                <seg xml:lang="en">1230</seg>
+                            </origDate>
+                        </origin>
+                        <provenance type="found" when="1858">
+                            <seg xml:lang="bg"><placeName type="ancientFindspot" ref="Findspot.xml#Tarnovo">Църква "Св. Четиридесет мъченици", Велико търново</placeName></seg>
+                            <seg xml:lang="en"><placeName type="ancientFindspot" ref="Findspot.xml#Tarnovo">Holy Forty Martyrs Church, Veliko Tarnovo</placeName></seg>
+                        </provenance>
+                        <provenance type="observed">
+                            <seg xml:lang="bg"><placeName ref="currentloc.xml#Tarnovo">Църква "Св. 40 мъченици", Велико Търново</placeName></seg>
+                            <seg xml:lang="en"><placeName ref="currentloc.xml#Tarnovo">Holy Forty Martyrs Church, Veliko Tarnovo</placeName></seg>
+                        </provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <listPrefixDef>
+                <prefixDef matchPattern="(.+)" replacementPattern="../authority/bibliography.xml#$1" ident="bib"/><!--Това какво е?-->
+            </listPrefixDef>
+        </encodingDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="13-04.jpg"/><!--Да направя снимка-->
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="chu">
+                <ab>
+                   <lb n="1"/><w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_00068/">азь</w> <persName ref="names.xml#n005">драгѡ</persName> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_07958/">пса</w> 
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                </listApp>
+            </div>
+            <div type="translation">
+                <seg xml:lang="bg">Аз, Драго писа</seg>
+                <seg xml:lang="en">I, Drago wrote</seg>
+            </div>
+            <div type="commentary">
+                <p>
+                    <seg xml:lang="bg"><note>Този и още един графит (13-04b) са оставени между текста на Търновския надпис от 1230 година (13-03). Някои изследователи предполагат, че това са подписи на каменоделците, издялали надписа, докато други смятат, че са случайни и по-късно добавени.</note> </seg>
+                    <seg xml:lang="en"><note>This graffiti plus one more (13-04b) were left between the lines of the text of the Tarnovo inscription from 1230 (13-03). Some researchers suggest that these are signatures of the stonemasons who carved the inscription, while others believe they are accidental and added later.</note></seg>
+                <!--ДА СЕ СЛОЖАТ ПРЕПРАТКИ КЪМ ДРУГИТЕ ПАМЕТНИЦИ-->
+                </p> 
+            </div>
+            <div type="bibliography"> 
+                <listBibl>
+                    <bibl sameAs="bib:b1">167</bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

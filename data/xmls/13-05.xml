@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="bg">Станимашки надпис на Иван Асен II, 1231 г.</title><!-- Заглавие -->
+                <title xml:lang="en">Stanimaka inscription of Ioan Asen II, 1231</title>
+                <editor>
+                    <persName xml:lang="bg">Казимир Попконстантинов</persName>
+                    <persName xml:lang="en">Kazimir Popkonstantinov</persName>
+                    <persName xml:lang="bg">Ото Кронщайнер</persName>
+                    <persName xml:lang="en">Otto Kronsteiner </persName>
+                </editor> 
+            </titleStmt>            
+            <publicationStmt>
+                <authority>Telamon Project</authority>
+                <date>2025</date>
+                <idno type="filename">13-05</idno><!-- номер на надписа -->
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><country>Bulgaria</country> 
+                        <altIdentifier  xml:lang="bg">
+                            <settlement></settlement>
+                            <repository ref=""></repository><!-- Институция Не знам в коя институция-->
+                            <idno/><!-- Инвентарен номер -->
+                        </altIdentifier>
+                        <altIdentifier xml:lang="en">
+                            <repository ref=""></repository>
+                            <idno></idno>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents><!-- Жанр на надписа -->
+                        <summary corresp="inscription_type_genres.xml#chr"><!-- добави в @corresp след # съответното id от document-type.xml -->
+                            <seg xml:lang="bg">летописен надпис</seg><!-- с думи -->
+                            <seg xml:lang="en">chronicle inscription</seg>
+                        </summary>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material xml:lang="bg" ref="materials.xml#st">камък-други</material><!-- добави в @ref след # съответното id от material.xml; съдържание на елемента - с думи -->  
+                                    <material xml:lang="en" ref="materials.xml#st">stone-other</material>
+                                    <objectType xml:lang="bg" ref="objects.xml#r">скала</objectType>
+                                    <objectType xml:lang="en">rock</objectType>
+                                    <dimensions>
+                                        <height unit="cm" quantity=""></height>
+                                        <width unit="cm" quantity=""></width>
+                                        <depth unit="cm" quantity="" ></depth>
+                                    </dimensions>
+                                 </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout></layout> 
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height quantity ="5" unit="cm">5</height><!-- само числова стойност като стойност на атрибута и като съдържание на елемента -->
+                            </handNote>
+                        </handDesc> 
+                        <decoDesc>
+                            <decoNote/>
+                        </decoDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace ref="origloc.xml#AsensFortress">
+                                <seg xml:lang="bg">Асенова крепост</seg>
+                                <seg xml:lang="en">Asen's Fortress</seg>
+                            </origPlace>
+                            <origDate value="1231" evidence="internal-date">
+                                <seg xml:lang="bg">1231</seg>
+                                <seg xml:lang="en">1231</seg>
+                            </origDate>
+                        </origin>
+                        <provenance type="found" when="1706">
+                            <seg xml:lang="bg"><placeName type="ancientFindspot" ref="Findspot.xml#AsensFortress">Асенова крепост, Станимака (Асеновград)</placeName></seg>
+                            <seg xml:lang="en"><placeName type="ancientFindspot" ref="Findspot.xml#AsensFortress">Asen's Fortress, Stanimaka (Asenovgrad)</placeName></seg>
+                        </provenance>
+                        <provenance type="observed">
+                            <seg xml:lang="bg"><placeName ref="currentloc.xml#AsensFortress">Асенова крепост, Станимака (Асеновград)</placeName></seg>
+                            <seg xml:lang="en"><placeName ref="currentloc.xml#AsensFortress">Asen's Fortress, Stanimaka (Asenovgrad)</placeName></seg>
+                        </provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <listPrefixDef>
+                <prefixDef matchPattern="(.+)" replacementPattern="../authority/bibliography.xml#$1" ident="bib"/><!--Това какво е?-->
+            </listPrefixDef>
+        </encodingDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="13-05.jpg"/>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="chu">
+                <ab>
+                    <lb n="1"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_01122/">в</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_04262/"><expan><abbr>лѣт</abbr><ex>о</ex></expan></w> <g type="dipunct"/> <date value="6739"> ѕ̄ѱ̄ <g type="dipunct"/> л̄ѳ <g type="dipunct"/></date> 
+                    <lb n="2"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_03259"><expan><abbr>енд</abbr><ex>кта</ex></expan></w> <g type="dipunct"/><num value="4">д</num><g type="dipunct"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_00647/"><expan><abbr>б</abbr><ex>ог</ex><abbr>ѡ</abbr><ex>мь</ex></expan></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_01237/">въздвже<supplied reason="omitted">н</supplied>     
+                    <lb n="3" break="no"/>нꙑ</w> <g type="dipunct"/> <w lemmaRef="https://histdict.uni-sofia.bg/evtdict/evt_show/d_05712"><expan><abbr>ц</abbr><ex>а</ex><abbr>р</abbr><ex>ь</ex></expan></w> <g type="dipunct"/> <persName ref="persons.xml#IA2">асѣнь</persName> <g type="dot"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_00562/">блъга
+                    <lb n="4" break="no"/>ромь</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_02992/"></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_01959/">гръкомь</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_09607/">таже</w>
+                    <lb n="5"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_02992/"></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_07565/">промъ</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_08919/">страна
+                    <lb n="6" break="no"/>мь</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_06926/">постав</w> <persName ref="persons.xml#Aleksii"> алек
+                    <lb n="7" break="no"/>сѣ</persName> <roleName ref="titles.xml#n006">севаста</roleName> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_02992/"></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_09198/">ѕ  
+                    <lb n="8" break="no"/>зда</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_09490/">се</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_01916/">градъ</w>
+                 </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                  <head xml:lang="bg">Букви в лигатура:</head>
+                  <head xml:lang="en">Letters in ligatures:</head>
+                    <app loc="3"> <note>цр (ц(а)р(ь))</note> <note>нь (асѣнь)</note> <note>лъ (блъга)</note></app>
+                    <app loc="4"> <note>мь (ромь)</note> <note>г, мь ( гръкомь)</note> </app>
+                    <app loc="5"> <note>пр ( промъ)</note> </app>
+                    <app loc="6"> <note>мь (мь)</note> <note>ав (постав)</note> </app>
+                    <app loc="8"> <note>г (се градъ)</note> </app>
+                </listApp>
+            </div>
+            <div type="translation">
+                <seg xml:lang="bg"> 
+                    В годината 6739 (=1231), 
+                    индикт 4, от Бога въздигнатият цар Асен - (цар) на бълга-
+                    ри и гърци, а също и
+                    на други стра-
+                    ни, постави Алек-
+                    сий (за) севаст и по-
+                    строи тази крепост.
+                </seg>
+                <seg xml:lang="en"> 
+                    In the year 6739 (=1231), 
+                    indiction 4: tsar Asen, raised by God's will - (tsar) of the Bulga-
+                    rians and the Greeks, and also of 
+                    other countries, 
+                    appointed Alexius 
+                    (for) sevast and 
+                    built this fortress.
+                </seg>
+            </div>
+            <div type="commentary">
+                <p>
+                    <seg xml:lang="bg"><note> Текстът на паметника за първи път е копиран и публикуван от Пол Люкас през 1706 година. През 1883 година по нареждане на асеновградския кмет гръкофил Атанас Епитропу надписът е заличен, но през 1899 година е възстановен върху същата скала под ръководството на Васил Златарски според оригиналните му преписи.</note> </seg>
+                    <seg xml:lang="en"><note> The text of the inscription was first copied and published by Paul Lucas in 1706. In 1883, by order of the grecophile Asenovgrad mayor - Atanas Epitropou, the inscription was erased. It was restored in 1899 on the same rock under the guidance of Vasil Zlatarski according to its original copies. </note></seg>
+                </p> 
+            </div>
+            <div type="bibliography"> 
+                <listBibl>
+                    <bibl sameAs="bib:b1">14-15</bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

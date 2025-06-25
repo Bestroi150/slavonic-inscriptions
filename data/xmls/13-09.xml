@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="bg">Безименен надпис от 1292 г., Патриаршията в Търново</title><!-- Заглавие -->
+                <title xml:lang="en">Unknown inscription - 1292, Patriarchal church in Tarnovo</title>
+                <editor>
+                    <persName xml:lang="bg">Никола Ангелов</persName>
+                    <persName xml:lang="en">Nikola Angelov</persName>
+                    <persName xml:lang="bg">Величка Илиева</persName>
+                    <persName xml:lang="en">Velichka Ilieva </persName>
+                </editor> 
+            </titleStmt>            
+            <publicationStmt>
+                <authority>Telamon Project</authority>
+                <date>2025</date>
+                <idno type="filename">13-09</idno><!-- номер на надписа -->
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><country>Bulgaria</country> 
+                        <altIdentifier  xml:lang="bg"><repository></repository><!-- Институция-->
+                            <idno/><!-- Инвентарен номер -->
+                        </altIdentifier> 
+                        <altIdentifier xml:lang="en"><repository></repository>
+                            <idno/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents><!-- Жанр на надписа -->
+                        <summary corresp="inscription_type_genres.xml#v"><!-- добави в @corresp след # съответното id от document-type.xml -->
+                            <seg xml:lang="bg">надписи с неустановен характер, случайни надписи</seg><!-- с думи -->
+                            <seg xml:lang="en">varia</seg>
+                        </summary>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material xml:lang="bg" ref="materials.xml#m">мрамор</material><!-- добави в @ref след # съответното id от material.xml; съдържание на елемента - с думи -->  
+                                    <material xml:lang="en" ref="materials.xml#m">marble</material>
+                                    <objectType xml:lang="bg" ref="objects.xml#tabl">плоча</objectType><!-- добави в @ref след # съответното id от object.xml; съдържание на елемента - с думи--> 
+                                    <objectType xml:lang="en" ref="objects.xml#tabl">tablet</objectType>
+                                <dimensions/> 
+                                  </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout> 
+                                    <lenght quantity="16" unit="cm">16</lenght> 
+                                    <width quantity="29" unit="cm">29</width>
+                                    <width quantity="10" unit="cm">10</width>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height quantity ="2" unit="cm">2</height><!-- само числова стойност като стойност на атрибута и като съдържание на елемента -->
+                            </handNote>
+                        </handDesc> 
+                        <decoDesc>
+                            <decoNote/>
+                        </decoDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace ref="origloc.xml#Tarnovo">
+                                <seg xml:lang="bg">Търново</seg>
+                                <seg xml:lang="en">Tarnovo</seg>
+                            </origPlace>
+                            <origDate value="1292" evidence="internal-date">
+                                <seg xml:lang="bg">1292</seg>
+                                <seg xml:lang="en">1292</seg>
+                            </origDate>
+                        </origin>
+                        <provenance type="found" when="1960">
+                            <seg xml:lang="bg"><placeName type="ancientFindspot" ref="findsp.xml#Tsarevets">Царевец, Търново</placeName>. Паметникът е намерен на 31.10.1960 г., преупотребен като строителен материал в подпорния зид, намиращ се северно от пътя за вътрешността на Патриаршията.</seg>
+                            <seg xml:lang="en"><placeName type="ancientFindspot" ref="findsp.xml#Tsarevets">Tsarevets, Tarnovo</placeName>. The monument was found on October 31, 1960, reused as building material in the retaining wall, located north of the road leading into the interior of the Patriarchate.</seg>
+                        </provenance>
+                        <provenance type="observed"><!--ПРЕДСТОИ ДА СЕ ВИДИ КЪДЕ Е В МОМЕНТА. Намерих стр. 115. Няма друга информация-->
+                            <seg xml:lang="bg"><placeName ref="https://www.wikidata.org/wiki/Q512147">Царевец, Търново</placeName></seg>
+                            <seg xml:lang="en"><placeName ref="https://www.wikidata.org/wiki/Q512147">Tsarevets, Tarnovo</placeName></seg>
+                        </provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <listPrefixDef>
+                <prefixDef matchPattern="(.+)" replacementPattern="../authority/bibliography.xml#$1" ident="bib"/><!--Това какво е?-->
+            </listPrefixDef>
+        </encodingDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="13-09.jpg"/>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="chu">
+                <ab>
+                      <lb n="1"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_01122/"><supplied reason="lost">в</supplied><unclear>ъ</unclear></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_04262/"><expan><abbr>лѣ</abbr><ex>то</ex></expan></w> <date value="6800">⸱ꙅ⸱ѡ⸱</date>
+                      <lb n="2"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_02992/">і</w> <number value="5">е̄</number> <orig>м</orig> <gap reason="lost" atLeast="2" atMost="3" unit="character" cert="low"/> <orig>ꙁ</orig> <gap reason="lost" extent="unknown" unit="character"/>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <head xml:lang="bg">Букви в лигатура:</head><!-- В случай, че има коментари и от друг характер, да се промени съдържанието на елемента или да се добави нов елемент <head> -->
+                    <head xml:lang="en">Letters in ligatures:</head>
+                        <app loc="1"><note>лѣ (лѣ(то))</note></app>
+                </listApp>
+            </div>
+            <div type="translation">
+                <seg xml:lang="bg"> 
+                    В годината 6800 
+                    и 5 м...з... 
+                </seg>
+                <seg xml:lang="en"> 
+                    In the year 6800
+                    and 5 m...z...
+                </seg>
+            </div>
+            <div type="commentary">
+                <p>
+                    <seg xml:lang="bg"><note>Паметникът с надписа е намерен на 31.10.1960 г. в подпорен зид, северно от пътя за вътрешността на Патриаршията, употребен като строителен материал.“ (Ангелов 1980: 115).</note> </seg>
+                    <seg xml:lang="en"><note> The inscription was found on October 31, 1960, in a retaining wall, north of the road to the interior of the Patriarchal Church, used as building material. (Angelov 1980: 115).</note></seg>
+                </p> 
+            </div>
+            <div type="bibliography"> 
+                <listBibl>
+                    <bibl sameAs="bib:b3">114-115</bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
