@@ -846,41 +846,44 @@ def display_monument_images(root, image_data, monument_id):
         return
 
     # Use a subheader for a clear visual separation without nesting expanders.
-    st.subheader("Monument Images")
-
-    # --- Thumbnail Grid ---
+    st.subheader("Monument Images")    # --- Thumbnail Grid ---
     num_cols = 4  # Adjust the number of columns as you see fit
     cols = st.columns(num_cols)
 
     for i, graphic in enumerate(graphics):
         url = graphic.get("url")
-        if not url or url not in image_data:
+        # Look for image by filename in our hardcoded images
+        image_filename = None
+        for img_name in image_data.keys():
+            if url and (url in img_name or img_name in url):
+                image_filename = img_name
+                break
+        
+        if not image_filename:
             continue
 
         with cols[i % num_cols]:
             # Display the thumbnail image
             st.image(
-                image_data[url]["data"],
+                image_data[image_filename]["data"],
                 caption=f"Image {i + 1}",
                 use_container_width=True
             )
             # Button to trigger the dialog for the full-size image with unique key
             dialog_key = f"dialog_image_url_{monument_id}"
-            if st.button("🔍 View", key=f"view_dialog_{monument_id}_{url}_{i}"):
-                st.session_state[dialog_key] = url
-
-    # --- Modal Logic ---
+            if st.button("🔍 View", key=f"view_dialog_{monument_id}_{image_filename}_{i}"):
+                st.session_state[dialog_key] = image_filename    # --- Modal Logic ---
     # This part will activate when a "View" button is clicked.
     dialog_key = f"dialog_image_url_{monument_id}"
     if dialog_key in st.session_state and st.session_state[dialog_key]:
-        url = st.session_state[dialog_key]
+        image_filename = st.session_state[dialog_key]
         modal = st.container()
         modal.image(
-            image_data[url]["data"],
-            caption=f"Full-size view of {url}",
+            image_data[image_filename]["data"],
+            caption=f"Full-size view of {image_filename}",
             use_container_width=True
         )
-        if modal.button("Close", key=f"close_dialog_{monument_id}_{url}"):
+        if modal.button("Close", key=f"close_dialog_{monument_id}_{image_filename}"):
             # To close the modal, we remove the trigger from session state
             # and rerun the script.
             del st.session_state[dialog_key]
@@ -922,66 +925,61 @@ precoded_xmls = load_precoded_xmls(str(DATA_DIR / 'xmls'))
 st.title("TEI Monument Visualization (Plain Text Versions)")
 
 st.markdown("""
-This application displays scholarly records of ancient Greek inscriptions.
-Upload one or more TEI XML files to view key sections and information.
+This application displays scholarly records of ancient Greek inscriptions from pre-loaded TEI XML files.
+The application automatically loads XML files from the data/xmls folder and images from the images folder.
 For the apparatus, translation, commentary, and bibliography sections only the English text is extracted and displayed as plain text.
 """)
 
-# Create two columns for uploaders and pre-coded files
-col1, col2 = st.columns(2)
+def load_hardcoded_images():
+    """Load all images from the hardcoded images folder."""
+    image_data = {}
+    images_dir = BASE_DIR / 'images'
+    
+    if not images_dir.exists():
+        st.warning(f"Images directory not found at {images_dir}")
+        return image_data
+    
+    try:
+        # Look for common image file extensions
+        image_extensions = ['*.jpg', '*.jpeg', '*.png', '*.gif', '*.bmp', '*.tiff']
+        
+        for extension in image_extensions:
+            for img_path in images_dir.glob(extension):
+                try:
+                    with open(img_path, 'rb') as f:
+                        img_bytes = f.read()
+                    
+                    # Create a BytesIO object that behaves like an uploaded file
+                    image_bytes = BytesIO(img_bytes)
+                    
+                    # Verify the image can be opened
+                    with Image.open(image_bytes) as pil_img:
+                        # Reset BytesIO for storing
+                        image_bytes.seek(0)
+                        image_data[img_path.name] = {
+                            'data': image_bytes,
+                            'type': img_path.suffix.lower()
+                        }
+                except Exception as e:
+                    st.warning(f"Could not process image {img_path.name}: {str(e)}")
+                    continue
+        
+        if image_data:
+            st.info(f"Loaded {len(image_data)} images from the images folder")
+        else:
+            st.info("No images found in the images folder")
+            
+    except Exception as e:
+        st.error(f"Error loading images from directory: {str(e)}")
+    
+    return image_data
 
-with col1:
-    use_precoded = st.checkbox("Use pre-coded XML files", value=True)
-    uploaded_files = st.file_uploader(
-        "Upload additional TEI XML files", 
-        type=["xml"], 
-        accept_multiple_files=True,
-        key="xml_uploader"
-    )
-
-with col2:
-    uploaded_images = st.file_uploader(
-        "Upload additional images", 
-        type=["jpg", "jpeg", "png"], 
-        accept_multiple_files=True,
-        key="image_uploader"
-    )
-
-# Combine pre-coded and uploaded files if needed
+# Load pre-coded XML files and hardcoded images
 working_files = []
-if use_precoded:
-    working_files.extend(precoded_xmls)
+working_files.extend(precoded_xmls)
 
-if uploaded_files:
-    for uploaded_file in uploaded_files:
-        try:
-            # Process the XML file directly from memory
-            root, raw_xml = parse_tei(uploaded_file)
-            if root is not None:
-                working_files.append({
-                    'name': uploaded_file.name,
-                    'root': root,
-                    'raw_xml': raw_xml
-                })
-        except Exception as e:
-            st.error(f"Error processing file {uploaded_file.name}: {str(e)}")
-            continue
-
-# Create a dictionary to store image data
-image_data = {}
-if uploaded_images:
-    for img in uploaded_images:
-        try:
-            # Process the image directly from memory
-            image_bytes = BytesIO(img.getvalue())
-            with Image.open(image_bytes) as pil_img:
-                image_data[img.name] = {
-                    'data': img,
-                    'type': img.type
-                }
-        except Exception as e:
-            st.warning(f"Could not process image {img.name}: {str(e)}")
-            continue
+# Load hardcoded images
+image_data = load_hardcoded_images()
 
 # Continue with file processing only if we have files to work with
 if working_files:
