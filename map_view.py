@@ -190,6 +190,7 @@ def create_pydeck_map(df):
     }
     
     return pdk.Deck(
+        map_style="mapbox://styles/mapbox/light-v11"
         layers=[layer],
         initial_view_state=view_state,
         tooltip=tooltip
