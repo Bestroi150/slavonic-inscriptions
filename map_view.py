@@ -197,7 +197,7 @@ def create_pydeck_map(df):
     if mapbox_token:
         return pdk.Deck(
             map_style='mapbox://styles/mapbox/light-v10',
-            mapbox_api_key=mapbox_token,
+            mapbox_key=mapbox_token,
             layers=[layer],
             initial_view_state=view_state,
             tooltip=tooltip
