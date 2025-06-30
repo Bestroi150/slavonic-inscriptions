@@ -6,6 +6,7 @@ import streamlit as st
 import folium
 import pydeck as pdk
 import pandas as pd
+import os
 
 def get_xml_references(xml_string):
     """Parses the XML string and returns a set of all 'ref' attribute values."""
@@ -143,6 +144,9 @@ def create_pydeck_map(df):
     if df.empty:
         return None
 
+    # Get Mapbox token from environment variable (GitHub secret)
+    mapbox_token = os.environ.get('MAP_BOX_TOKEN', '')
+    
     # Define colors for different sources (using RGB values for PyDeck)
     source_colors = {
         'Origin': [31, 119, 180],    # blue
@@ -189,8 +193,19 @@ def create_pydeck_map(df):
         }
     }
     
-    return pdk.Deck(
-        layers=[layer],
-        initial_view_state=view_state,
-        tooltip=tooltip
-    )
+    # Create the map with Mapbox as the base map if token is available
+    if mapbox_token:
+        return pdk.Deck(
+            map_style='mapbox://styles/mapbox/light-v10',
+            mapbox_api_key=mapbox_token,
+            layers=[layer],
+            initial_view_state=view_state,
+            tooltip=tooltip
+        )
+    else:
+        # Fallback to default base map if no token is available
+        return pdk.Deck(
+            layers=[layer],
+            initial_view_state=view_state,
+            tooltip=tooltip
+        )
