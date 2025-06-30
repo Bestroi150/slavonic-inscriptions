@@ -1674,6 +1674,9 @@ if working_files:
             return m
 
         def create_pydeck_map(df):
+            # Get Mapbox token from environment variable
+            mapbox_token = os.environ.get('MAP_BOX_TOKEN')
+            
             # Define colors for each source
             color_lookup = {
                 'Origin': [255, 0, 0, 160],      # Red
@@ -1711,13 +1714,19 @@ if working_files:
                 }
             }
 
-            # Create and return the PyDeck map
-            return pdk.Deck(
-                map_style='mapbox://styles/mapbox/light-v9',
-                initial_view_state=initial_view_state,
-                layers=[layer],
-                tooltip=tooltip
-            )
+            # Create and return the PyDeck map - conditionally add mapbox style only if token exists
+            deck_args = {
+                'initial_view_state': initial_view_state,
+                'layers': [layer],
+                'tooltip': tooltip
+            }
+            
+            # Only add Mapbox properties if token is available
+            if mapbox_token:
+                deck_args['map_style'] = 'mapbox://styles/mapbox/light-v9'
+                deck_args['mapbox_key'] = mapbox_token
+            
+            return pdk.Deck(**deck_args)
 
         # Load authority files
         json_data = {}
