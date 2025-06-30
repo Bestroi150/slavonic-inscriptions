@@ -1723,7 +1723,7 @@ if working_files:
             
             # Only add Mapbox properties if token is available
             if mapbox_token:
-                deck_args['map_style'] = 'mapbox://styles/mapbox/light-v9'
+                deck_args['map_style'] = 'mapbox://styles/mapbox/light-v11'
                 deck_args['mapbox_key'] = mapbox_token
             
             return pdk.Deck(**deck_args)
