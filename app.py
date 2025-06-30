@@ -542,7 +542,7 @@ def parse_tei(file):
 def format_leiden_text(elem):
     """
     Recursively traverse the element tree to create a plain text version of the
-    Greek text (edition) with Leiden+ style formatting, covering full EpiDoc cases.
+    Old Church Slavonic text (edition) with Leiden+ style formatting, covering full EpiDoc cases.
     """
     text = ''
     if elem.text:
