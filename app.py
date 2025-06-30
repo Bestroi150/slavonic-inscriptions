@@ -925,7 +925,7 @@ precoded_xmls = load_precoded_xmls(str(DATA_DIR / 'xmls'))
 st.title("TEI Monument Visualization (Plain Text Versions)")
 
 st.markdown("""
-This application displays scholarly records of ancient Greek inscriptions from pre-loaded TEI XML files.
+This application displays scholarly records of Old Church Slavonic inscriptions from pre-loaded TEI XML files.
 The application automatically loads XML files from the data/xmls folder and images from the images folder.
 For the apparatus, translation, commentary, and bibliography sections only the English text is extracted and displayed as plain text.
 """)
