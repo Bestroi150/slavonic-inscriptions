@@ -45,7 +45,7 @@ def load_bibliography(biblio_xml_path):
         date_el = imp.find("tei:date", NS)
         date = date_el.text.strip() if date_el is not None else ""
 
-        # 4) Build a simple APA-style string (tweak as you wish)
+        # 4) Build a simple APA-style string 
         parts = []
         if author_str:
             parts.append(f"{author_str} ({date})")
