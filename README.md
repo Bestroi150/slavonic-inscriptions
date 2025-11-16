@@ -1,6 +1,6 @@
 # Slavonic Inscriptions
 
-A web application for exploring and analyzing Slavonic inscriptions with network visualization and mapping capabilities.
+A web application for exploring and analyzing Slavonic inscriptions, encoded in TEI XML  with network visualization and mapping capabilities.
 
 ## Features
 
