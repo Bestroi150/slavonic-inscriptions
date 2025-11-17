@@ -49,4 +49,4 @@ python app.py
 - **Bibliography**: Bibliography references and citations
 
 ## License
-This project is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License. See LICENSE file for details.
+This project is licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0) License](https://github.com/Bestroi150/slavonic-inscriptions/blob/main/LICENSE). See LICENSE file for details.
