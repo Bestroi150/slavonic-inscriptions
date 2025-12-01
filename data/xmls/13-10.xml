@@ -31,7 +31,7 @@
                     <msContents><!-- Жанр на надписа -->
                         <summary corresp="inscription_type_genres.xml#chr"><!-- добави в @corresp след # съответното id от document-type.xml -->
                             <seg xml:lang="bg">летописен надпис</seg><!-- с думи -->
-                            <seg xml:lang="en">chroniclе inscription</seg>
+                            <seg xml:lang="en">chronicle inscription</seg>
                         </summary>
                     </msContents>
                     <physDesc>
@@ -134,4 +134,5 @@
             </div>
         </body>
     </text>
+
 </TEI>
