@@ -119,7 +119,7 @@
                             <forename xml:lang="en">Kosta</forename>
                         </author>
                         <title level="m" xml:lang="bg">Кирилски епиграфски паметници от църквата в с. Балша, Софийско. – В: Нумизматика, сфрагистика и епиграфика, 225–236.</title>
-                        <title level="m" xml:lang="en"> СТР. 225-236</title>
+                        <title level="m" xml:lang="en"> Cyrillic Epigraphic Monuments from the Church in Village Balsha, Sofia. – In: Numismatics, Sphragistics and Epigraphy, 225–236.</title>
                                 <imprint>
                                     <biblScope unit="volume"></biblScope>
                                     <pubPlace xml:lang="bg">
@@ -134,7 +134,7 @@
                                 </imprint></monogr>
                 </biblStruct>
                 <biblStruct xml:id="b6">
-                    <monogr><!-- КАК ОТБЕЛЯЗВАМ СТАТИИ В СПИСАНИЯ? А ТУК Е ЦИТИРАНО ПО КНИГА НА ОВЧАРОВ, СЪБРАЛА НЕГОВИ ТРУДОВЕ-->    
+                    <monogr>    
                         <author>
                             <surname xml:lang="bg">Овчаров</surname>
                             <surname xml:lang="en">Ovcharov</surname>
@@ -147,8 +147,8 @@
                             <forename xml:lang="bg">Коста</forename>
                             <forename xml:lang="en">Kosta</forename>
                         </author>
-                        <title level="m" xml:lang="bg">Новооткритият Висарионов надпис от Велико Търново и събитията в България през 40-те години на XIII в. – В: Векове, 1991, 1–2, цит. по Исторически приноси към старобългарската и старославянската епиграфика и книжовност. София: АИ „Марин Дринов“, 2006, с. 7–12</title>
-                        <title level="m" xml:lang="en"> СТР. 7-12</title>
+                        <title level="m" xml:lang="bg">Новооткритият Висарионов надпис от Велико Търново и събитията в България през 40-те години на XIII в., цит. по Исторически приноси към старобългарската и старославянската епиграфика и книжовност. София, 2006, с. 7–12</title>
+                        <title level="m" xml:lang="en"> The Newly Discovered Vissarionov Inscription from Veliko Tarnovo and the Events in Bulgaria in the 1940s of the 13th Century. – In: Historical Contributions to the Old Bulgarian and Old Cyrillic Epigraphy and Literature. Sofia, 2006, pp. 7–12</title>
                                 <imprint>
                                     <biblScope unit="volume"></biblScope>
                                     <pubPlace xml:lang="bg">
@@ -159,11 +159,234 @@
                                         <settlement>Sofia</settlement>
                                         <country>Bulgaria</country>
                                     </pubPlace>
-                                    <date>2003</date>
+                                    <date>2006</date>
                                 </imprint></monogr>
                 </biblStruct>
-          
-                <!-- ДОТУК. Предстои още много. Това е само за проверка-->            
+                <biblStruct xml:id="b7">
+                    <monogr> 
+                        <author>
+                            <surname xml:lang="bg">Хаджиев</surname>
+                            <surname xml:lang="en">Hadjiev</surname>
+                            <forename xml:lang="bg">Коста</forename>
+                            <forename xml:lang="en">Kosta</forename>
+                        </author>
+                        <title level="m" xml:lang="bg">Надгробни и възпоменателни надписи от средновековния град Червен. – В: Филология. История. Изкуствознание. Сборник изследвания в чест на проф. дфн Стефан Смядовски, София, 2010. с. 150–170.</title>
+                        <title level="m" xml:lang="en">Grave and Commemorative Inscriptions from the Medieval Town of Cherven. – In: Philology. History. Art History. Collection of Studies in Honor of Prof. Dfn Stefan Semyonovski, Sofia, 2010, pp. 150–170</title>
+                                <imprint>
+                                    <biblScope unit="volume"></biblScope>
+                                    <pubPlace xml:lang="bg">
+                                        <settlement>София</settlement>
+                                        <country>България</country>
+                                    </pubPlace>
+                                    <pubPlace xml:lang="en">
+                                        <settlement>Sofia</settlement>
+                                        <country>Bulgaria</country>
+                                    </pubPlace>
+                                    <date>2010</date>
+                                </imprint></monogr>
+                </biblStruct>
+               <biblStruct xml:id="b8">
+                    <monogr> <!--Изданието е в колектив. Само една част е с автор Н. Ангелов-->
+                        <author>
+                            <surname xml:lang="bg">Ангелов</surname>
+                            <surname xml:lang="en">Angelov</surname>
+                            <forename xml:lang="bg">Никола</forename>
+                            <forename xml:lang="en">Nikola</forename>
+                        </author>
+                        <title level="m" xml:lang="bg">Надписи, монограми, букви и знаци. – В: Средновековният Червен, София, 1985. с. 236–272.</title>
+                        <title level="m" xml:lang="en">“Inscriptions, Monograms, Letters and Signs.” In: Medieval Cherven, Sofia, 1985, pp. 236–272.</title>
+                                <imprint>
+                                    <biblScope unit="volume">1</biblScope>
+                                    <pubPlace xml:lang="bg">
+                                        <settlement>София</settlement>
+                                        <country>България</country>
+                                    </pubPlace>
+                                    <pubPlace xml:lang="en">
+                                        <settlement>Sofia</settlement>
+                                        <country>Bulgaria</country>
+                                    </pubPlace>
+                                    <date>1985</date>
+                                </imprint></monogr>
+                </biblStruct>
+                <biblStruct xml:id="b9">
+                    <monogr> 
+                <author>
+                    <surname xml:lang="bg">Овчаров</surname>
+                    <surname xml:lang="en">Ovcharov</surname>
+                    <forename xml:lang="bg">Николай</forename>
+                    <forename xml:lang="en">Nikolay</forename>
+                </author>
+                <author>
+                    <surname xml:lang="bg">Андреев</surname>
+                    <surname xml:lang="en">Andreev</surname>
+                    <forename xml:lang="bg">Христо</forename>
+                    <forename xml:lang="en">Hristo</forename>
+                </author>
+                <title level="m" xml:lang="bg">Надписи върху стенописния фрагмент с ктиторска композиция от пещерната църква „Св. Марина“, цит. по Исторически приноси към старобългарската и старославянската епиграфика и книжовност. София, 2006, с. 379–384</title>
+                <title level="m" xml:lang="en"> Inscriptions on the Wall Painting Fragment with a Ktitory Composition from the Cave Church of St. Marina, cited in Historical Contributions to the Old Bulgarian and Old Cyrillic Epigraphy and Literature. Sofia, 2006, pp. 379–384</title>
+                                <imprint>
+                                    <biblScope unit="volume"></biblScope>
+                                    <pubPlace xml:lang="bg">
+                                        <settlement>София</settlement>
+                                        <country>България</country>
+                                    </pubPlace>
+                                    <pubPlace xml:lang="en">
+                                        <settlement>Sofia</settlement>
+                                        <country>Bulgaria</country>
+                                    </pubPlace>
+                                    <date>2006</date>
+                                </imprint></monogr>
+                </biblStruct>
+                 <biblStruct xml:id="b10">
+                    <monogr> 
+                <author>
+                    <surname xml:lang="bg">Овчаров</surname>
+                    <surname xml:lang="en">Ovcharov</surname>
+                    <forename xml:lang="bg">Николай</forename>
+                    <forename xml:lang="en">Nikolay</forename>
+                </author>
+                <author>
+                    <surname xml:lang="bg">Андреев</surname>
+                    <surname xml:lang="en">Andreev</surname>
+                    <forename xml:lang="bg">Христо</forename>
+                    <forename xml:lang="en">Hristo</forename>
+                </author>
+                <title level="m" xml:lang="bg">Християнският култов комплекс при селата Троица и Осмар (Шуменско) според епиграфските сведения от XIII-XIV в., цит. по Исторически приноси към старобългарската и старославянската епиграфика и книжовност. София, 2006, с. 239–258.</title>
+                <title level="m" xml:lang="en">Christian Cult Complex in the Villages of Troitsa and Osmar (Shumen) according to Epigraphic Evidence from the 13th-14th Centuries, cited in Historical Contributions to the Old Bulgarian and Old Cyrillic Epigraphy and Literature. Sofia, 2006, pp. 239–258</title>
+                                <imprint>
+                                    <biblScope unit="volume"></biblScope>
+                                    <pubPlace xml:lang="bg">
+                                        <settlement>София</settlement>
+                                        <country>България</country>
+                                    </pubPlace>
+                                    <pubPlace xml:lang="en">
+                                        <settlement>Sofia</settlement>
+                                        <country>Bulgaria</country>
+                                    </pubPlace>
+                                    <date>2006</date>
+                                </imprint></monogr>
+                </biblStruct>
+                 <biblStruct xml:id="b11">
+                    <monogr>   
+                        <author>
+                            <surname xml:lang="bg">Овчаров</surname>
+                            <surname xml:lang="en">Ovcharov</surname>
+                            <forename xml:lang="bg">Николай</forename>
+                            <forename xml:lang="en">Nikolay</forename>
+                        </author>
+                        <title level="m" xml:lang="bg">Burials of persons of the Bulgarian royal family from the fourteenth century in the territories of today’s republics of Yugoslavia and Macedonia., цит. по Исторически приноси към старобългарската и старославянската епиграфика и книжовност. София, 2006, с. 150–169.</title>
+                        <title level="m" xml:lang="en">Burials of persons of the Bulgarian royal family from the fourteenth century in the territories of today’s republics of Yugoslavia and Macedonia., cited in Historical Contributions to the Old Bulgarian and Old Cyrillic Epigraphy and Literature. Sofia, 2006, pp. 150–169.</title>
+                                <imprint>
+                                    <biblScope unit="volume"></biblScope>
+                                    <pubPlace xml:lang="bg">
+                                        <settlement>София</settlement>
+                                        <country>България</country>
+                                    </pubPlace>
+                                    <pubPlace xml:lang="en">
+                                        <settlement>Sofia</settlement>
+                                        <country>Bulgaria</country>
+                                    </pubPlace>
+                                    <date>2006</date>
+                                </imprint></monogr>
+                </biblStruct>
+                <biblStruct xml:id="b12">
+                    <monogr>   
+                        <author>
+                            <surname xml:lang="bg">Овчаров</surname>
+                            <surname xml:lang="en">Ovcharov</surname>
+                            <forename xml:lang="bg">Николай</forename>
+                            <forename xml:lang="en">Nikolay</forename>
+                        </author>
+                        <title level="m" xml:lang="bg">Новооткрити надписи за "Архиепископи на България" от XIII-XIV в. в Охридската църква "Св. София", цит. по Исторически приноси към старобългарската и старославянската епиграфика и книжовност. София, 2006, с. 35–43.</title>
+                        <title level="m" xml:lang="en">Newly discovered inscriptions for "Archbishops of Bulgaria" of the 13th-14th centuries in the Church of St. Sophia in Ohrid, cited in Historical Contributions to the Old Bulgarian and Old Cyrillic Epigraphy and Literature. Sofia, 2006, pp. 35–43.</title>
+                                <imprint>
+                                    <biblScope unit="volume"></biblScope>
+                                    <pubPlace xml:lang="bg">
+                                        <settlement>София</settlement>
+                                        <country>България</country>
+                                    </pubPlace>
+                                    <pubPlace xml:lang="en">
+                                        <settlement>Sofia</settlement>
+                                        <country>Bulgaria</country>
+                                    </pubPlace>
+                                    <date>2006</date>
+                                </imprint></monogr>
+                </biblStruct>
+                <biblStruct xml:id="b13">
+                    <monogr> 
+                        <author>
+                            <surname xml:lang="bg">Хаджиев</surname>
+                            <surname xml:lang="en">Hadjiev</surname>
+                            <forename xml:lang="bg">Коста</forename>
+                            <forename xml:lang="en">Kosta</forename>
+                        </author>
+                        <title level="m" xml:lang="bg">Врачански надпис от времето на цар Иван Александър. – В: Нумизматика, сфрагистика и епиграфика, София, 2004, с. 201–204.</title>
+                        <title level="m" xml:lang="en">One Vratsa inscription from the time of Tsar Ivan Alexander. – In: Numismatics, Sigillography and Epigraphy, Sofia, 2004, pp. 201–204.</title>
+                                <imprint>
+                                    <biblScope unit="volume"></biblScope>
+                                    <pubPlace xml:lang="bg">
+                                        <settlement>София</settlement>
+                                        <country>България</country>
+                                    </pubPlace>
+                                    <pubPlace xml:lang="en">
+                                        <settlement>Sofia</settlement>
+                                        <country>Bulgaria</country>
+                                    </pubPlace>
+                                    <date>2004</date>
+                                </imprint></monogr>
+                </biblStruct>
+                 <biblStruct xml:id="b14">
+                    <monogr>
+                        <author>
+                            <surname xml:lang="bg">Константинова</surname>
+                            <surname xml:lang="en">Konstantinova</surname>
+                            <forename xml:lang="bg">Величка</forename>
+                            <forename xml:lang="en">Velichka</forename>
+                        </author>
+                        <title level="m" xml:lang="bg">Средновековни надписи от Шуменско (XII–XV в.). – В: Старобългаристика. София, VII (1983), 3, с. 68–78.</title>
+                        <title level="m" xml:lang="en">Medieval Inscriptions from Shumen (XII–XV centuries). – In: Palaeobulgarica. Sofia, VII (1983), 3, pp. 68–78.</title>
+                                <imprint>
+                                    <biblScope unit="volume"></biblScope>
+                                    <pubPlace xml:lang="bg">
+                                        <settlement>София</settlement>
+                                        <country>България</country>
+                                    </pubPlace>
+                                    <pubPlace xml:lang="en">
+                                        <settlement>Sofia</settlement>
+                                        <country>Bulgaria</country>
+                                    </pubPlace>
+                                    <date>1983</date>
+                                </imprint></monogr>
+                </biblStruct>
+                <!-- ДОТУК--> 
+
+                 <biblStruct xml:id="b">
+                    <monogr>
+                        <author>        
+                       <surname xml:lang="bg">Дуйчев</surname>
+                            <surname xml:lang="en">Dujchev</surname>
+                            <forename xml:lang="bg">Иван</forename>
+                            <forename xml:lang="en">Ivan</forename>
+                        </author>
+                        <title level="m" xml:lang="bg">Из старата българска книжнина</title>
+                        <title level="m" xml:lang="en">(Studies) from Old Bulgarian Literature</title>
+                        <imprint>
+                           <biblScope unit="volume">II</biblScope>
+                           <pubPlace xml:lang="bg">
+                                <settlement>София</settlement>
+                                <country>България</country>
+                            </pubPlace>
+                            <pubPlace xml:lang="en">
+                                <settlement>Sofia</settlement>
+                                <country>Bulgaria</country>
+                            </pubPlace>
+                            <date>1944</date>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+
+
+                         
             </listBibl>
         </body>
     </text>
