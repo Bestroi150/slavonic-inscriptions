@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="bg">Надпис от местността Осмарски боаз, Шуменско</title><!-- Заглавие -->
+                <title xml:lang="en">Inscription from the Osmarski Boaz area, Shumen region</title>
+                <editor>
+                    <persName xml:lang="bg">Анна-Мария Тотоманова</persName>
+                    <persName xml:lang="en">Anna-Maria Totomanova</persName>
+                    <persName xml:lang="bg">Казимир Попконстантинов</persName>
+                    <persName xml:lang="en">Kazimir Popkonstantinov</persName>
+                    <persName xml:lang="bg">Ото Кронщайнер</persName>
+                    <persName xml:lang="en">Otto Kronsteiner</persName>
+                </editor>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Bashtina Project</authority>
+                <date>2025</date>
+                <idno type="filename">13-13</idno><!-- номер на надписа -->
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><country>Bulgaria</country> 
+                        <altIdentifier  xml:lang="bg"><repository ref=""></repository><!-- Институция-->
+                            <idno/><!-- Инвентарен номер -->
+                        </altIdentifier> 
+                        <altIdentifier xml:lang="en"><repository ref=""></repository>
+                            <idno/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents><!-- Жанр на надписа -->
+                        <summary corresp="inscription_type_genres.xml#v"><!-- добави в @corresp след # съответното id от document-type.xml -->
+                            <seg xml:lang="bg">надписи с неустановен характер, случайни надписи</seg><!-- с думи -->
+                            <seg xml:lang="en">varia</seg>
+                        </summary>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material xml:lang="bg" ref="materials.xml#st">камък-други</material><!-- добави в @ref след # съответното id от material.xml; съдържание на елемента - с думи -->  
+                                    <material xml:lang="en" ref="materials.xml#st">stone-other</material>
+                                    <objectType xml:lang="bg" ref="objects.xml#w">стена</objectType><!--Какъв да е обектът?-->
+                                    <objectType xml:lang="en" ref="objects.xml#w">wall</objectType>
+                                    <dimensions>
+                                        <height unit="cm" quantity=""></height>
+                                        <width unit="cm" quantity=""></width>
+                                        <depth unit="cm" quantity=""></depth>
+                                    </dimensions>
+                                  </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout xml:lang="bg"></layout> 
+                                <layout xml:lang="en"></layout> 
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height atLeast="4" atMost="5" unit="cm">4-5</height>
+                            </handNote>
+                        </handDesc> 
+                        <decoDesc>
+                            <decoNote/>
+                        </decoDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace ref="origloc.xml#Osmar">
+                                <seg xml:lang="bg">Скален манастир "Диреклията" в близост до с. Осмар, Шуменско</seg>
+                                <seg xml:lang="en">Rock monastery "Direkliyata" near the village of Osmar, Shumen region</seg>
+                            </origPlace>
+                            <origDate notBefore="1200" notAfter="1299" evidence="historical context">
+                                <seg xml:lang="bg">XIII в.</seg>
+                                <seg xml:lang="en">XIII c.</seg>
+                            </origDate>
+                        </origin>
+                        <provenance type="found" when="">
+                            <seg xml:lang="bg"><placeName type="ancientFindspot" ref="Findspot.xml#Osmar">Скален манастир "Диреклията" в близост до с. Осмар, Шуменско</placeName></seg>
+                            <seg xml:lang="en"><placeName type="ancientFindspot" ref="Findspot.xml#Osmar">Rock monastery "Direkliyata" near the village of Osmar, Shumen region</placeName></seg>
+                        </provenance>
+                        <provenance type="observed">
+                            <seg xml:lang="bg"><placeName ref="currentloc.xml#Osmar">Скален манастир "Диреклията" в близост до с. Осмар, Шуменско</placeName></seg>
+                            <seg xml:lang="en"><placeName ref="currentloc.xml#Osmar">Rock monastery "Direkliyata" near the village of Osmar, Shumen region</placeName></seg>
+                        </provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url=""/>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="chu">
+                <ab>
+                    <lb n="1"/> <g type="cross"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_09490/">се</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_10565/">хра  
+                    <lb n="2" break="no"/>мь</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_05506/">о</w> <persName ref="relig.xml#ArchMich"><expan><abbr>арх</abbr><ex>стратга</ex></expan>Міхалъꙗ</persName> 
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <head xml:lang="bg"></head>
+                    <head xml:lang="en"></head>
+                        <app loc=""> <note></note></app>
+                </listApp>
+            </div>
+            <div type="translation">
+                <seg xml:lang="bg"> 
+                    Този храм
+                    за архангел Михаил.
+                </seg>
+                <seg xml:lang="en"> 
+                    This temple
+                    to archangel Michael.
+                </seg>
+            </div>
+            <div type="commentary">
+                <p>
+                    <seg xml:lang="bg"><note>Надписът е открит от Ст. Маслев върху югозападната стена на църквата „Св. Архангел Михаил“ (известна и като скална църква „Диреклията“), наречена така заради каменния стълб (дирек) пред входа на обителта. В. Константинова казва: „Тук трябва да добавим и това, че между м от храмь и лигатурното изписване на арх добре се вижда едно о, дадено и в преписа на Маслев, без да бъде обяснено неговото наличие. Вероятно в случая авторът на надписа е бил повлиян от предаването на гр. език на определителния член ὁ при изписване на ὁ ἄρχαγγελος.“ (Константинова 1983:74). Проф. Тотоманова разчита съкращението като "архистратиг".</note></seg>
+                    <seg xml:lang="en"><note>The inscription was discovered by St. Maslev on the southwest wall of the Church of St. Archangel Michael (also known as the rock-hewn church “Direkliata”), so named after the stone pillar (direk) standing in front of the monastery entrance. V. Konstantinova says: "Here we must add that between the word 'храм' and the ligatured spelling of 'арх' we can clearly see a letter 'о', given also in Maslev's transcription, without being explained. Probably in this case the author of the inscription was influenced by the rendering of the Greek language with the definite article ὁ when writing ὁ ἄρχαγγελος." (Konstantinova 1983:74). Prof. Totomanova interprets the abbreviation as "archistrategos".</note></seg>
+                </p> 
+            </div>
+            <div type="bibliography"> 
+                <listBibl>
+                    <bibl sameAs="bib:b1">101-102</bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

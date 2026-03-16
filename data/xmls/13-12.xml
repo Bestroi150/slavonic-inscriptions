@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="bg">Поменателен надпис от старата църква „Св. Петка“ в с. Балша, Софийско</title><!-- Заглавие -->
+                <title xml:lang="en">Commemorative inscription from the old church "St. Petka" in Balsha, Sofia region</title>
+                <editor>
+                    <persName xml:lang="bg">Коста Хаджиев</persName>
+                    <persName xml:lang="en">Kosta Hadjiev</persName>
+                </editor>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Bashtina Project</authority>
+                <date>2025</date>
+                <idno type="filename">13-12</idno><!-- номер на надписа -->
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><country>Bulgaria</country> 
+                        <altIdentifier  xml:lang="bg"><repository ref=""></repository><!-- Институция-->
+                            <idno/><!-- Инвентарен номер -->
+                        </altIdentifier> 
+                        <altIdentifier xml:lang="en"><repository ref=""></repository>
+                            <idno/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents><!-- Жанр на надписа -->
+                        <summary corresp="inscription_type_genres.xml#f">
+                            <seg xml:lang="bg">надгробен надпис</seg><!-- с думи -->
+                            <seg xml:lang="en">funerary inscription</seg>
+                        </summary>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material xml:lang="bg" ref="materials.xml#m">мрамор</material>
+                                    <material xml:lang="en" ref="materials.xml#m">marble</material>
+                                    <objectType xml:lang="bg" ref="objects.xml#tabl">плоча</objectType>
+                                    <objectType xml:lang="en" ref="objects.xml#tabl">slab</objectType>
+                                    <dimensions>
+                                        <height unit="cm" quantity=""></height>
+                                        <width unit="cm" quantity=""></width>
+                                        <depth unit="cm" quantity=""></depth>
+                                    </dimensions>
+                                  </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout xml:lang="bg"></layout> 
+                                    <height unit="cm" quantity="29">29</height>  
+                                    <width unit="cm" quantity="40">40</width>
+                                    <depth unit="cm" quantity=""></depth>
+                                <layout xml:lang="en"></layout> 
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height atLeast="1,8" atMost="4" unit="cm">1,8 - 4</height>
+                            </handNote>
+                        </handDesc> 
+                        <decoDesc>
+                            <decoNote/>
+                        </decoDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace ref="origloc.xml#unknown">неизвестно
+                                <seg xml:lang="bg"></seg>
+                                <seg xml:lang="en"></seg>
+                            </origPlace>
+                            <origDate notBefore="1200" notAfter="1250" evidence="lettering">
+                                <seg xml:lang="bg">първа пол. на XIII в.</seg>
+                                <seg xml:lang="en">first half of the XIII c.</seg>
+                            </origDate>
+                        </origin>
+                        <provenance type="found" when=""> 
+                            <seg xml:lang="bg"><placeName type="ancientFindspot" ref="Findspot.xml#Balsha">Външната страна на северозападния ъгъл на църквата „Св. Петка“ в с. Балша, Софийско.</placeName></seg>
+                            <seg xml:lang="en"><placeName type="ancientFindspot" ref="Findspot.xml#Balsha">The exterior of the northwest corner of the church "St. Petka" in Balsha, Sofia Region</placeName></seg>
+                        </provenance>
+                        <provenance type="observed">
+                            <seg xml:lang="bg"><placeName ref="currentloc.xml#Balsha">църквата „Св. Петка“ в с. Балша, Софийско</placeName></seg>
+                            <seg xml:lang="en"><placeName ref="currentloc.xml#Balsha">church "St. Petka" in Balsha, Sofia Region</placeName></seg>
+                        </provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="13-12.jpg"/>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="chu">
+                <ab>
+                    <lb n="1"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_03618/">ка<unclear>м</unclear>ень</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_08903/">стльпь</w> <w lemma="граматкъ">гра  
+                    <lb n="2" break="no"/>матка</w> <w lemmaRef="https://histdict.uni-sofia.bg/evtdict/evt_show/d_04266">прѣста
+                    <lb n="3" break="no"/>в</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_08538">сѧ</w> <persName ref="names.xml#n003">ѣ<space quantity="2" unit="character"/>нь</persName> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_00647/"><expan><abbr>б</abbr><ex>ог</ex><abbr>ь</abbr></expan></w>
+                    <lb n="4"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_01998/">да</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_02994/">го</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_06815/">пом<space quantity="2" unit="character"/>ене</w>  
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <head xml:lang="bg"></head>
+                    <head xml:lang="en"></head>
+                        <app loc=""><note></note></app>
+                </listApp>
+            </div>
+            <div type="translation">
+                <seg xml:lang="bg"> 
+                    Каменен стълб на гра-
+                    матика. Предста-
+                    ви се Ян. Бог
+                    да го помене!
+                </seg>
+                <seg xml:lang="en"> 
+                    A stone pillar of a gram-
+                    marian. Jan presen-
+                    ted himself. May God 
+                    remember him!
+                </seg>
+            </div>
+            <div type="commentary">
+                <p>
+                    <seg xml:lang="bg"><note>„Блокът е преизползван поне два пъти – за поменателен знак и в строежа на църквата“ (Хаджиев 2003:225). На редове 3 и 4 в камъка се вижда издълбана малка ямка с неясно предназначение.</note></seg>
+                    <seg xml:lang="en"><note>„The block was reused at least twice – as a memorial and in the construction of the church.“ (Hadjiev 2003:225). On lines 3 and 4 of the stone, a small depression is visible with an unclear purpose.</note></seg>
+                </p> 
+            </div>
+            <div type="bibliography"> 
+                <listBibl>
+                    <bibl sameAs="bib:b5">225-229</bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

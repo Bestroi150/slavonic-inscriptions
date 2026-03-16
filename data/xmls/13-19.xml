@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="bg">Имена върху варовиков блок от църквата на крепостта Червен, Русенско</title><!-- Заглавие -->
+                <title xml:lang="en">Names on a limestone block from the church of the fortress of Cherven, Ruse region</title>
+                <editor>
+                    <persName xml:lang="bg">Величка Илиева</persName>
+                    <persName xml:lang="en">Velichka Ilieva</persName>
+                    <persName xml:lang="bg">Казимир Попконстантинов</persName>
+                    <persName xml:lang="en">Kazimir Popkonstantinov</persName>
+                    <persName xml:lang="bg">Ото Кронщайнер</persName>
+                    <persName xml:lang="en">Otto Kronsteiner </persName>
+                </editor> 
+            </titleStmt>            
+            <publicationStmt>
+                <authority>Bashtina Project</authority>
+                <date>2025</date>
+                <idno type="filename">13-19</idno><!-- номер на надписа -->
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><country>Bulgaria</country> 
+                        <altIdentifier xml:lang="bg"><repository></repository><!-- Институция-->
+                            <idno/><!-- Инвентарен номер -->
+                        </altIdentifier> 
+                        <altIdentifier xml:lang="en"><repository></repository>
+                            <idno/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents><!-- Жанр на надписа -->
+                        <summary corresp="inscription_type_genres.xml#v"><!-- добави в @corresp след # съответното id от document-type.xml -->
+                            <seg xml:lang="bg">надписи с неустановен характер, случайни надписи</seg><!-- с думи -->
+                            <seg xml:lang="en">varia</seg>
+                        </summary>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material xml:lang="bg" ref="materials.xml#l">варовик</material><!-- добави в @ref след # съответното id от material.xml; съдържание на елемента - с думи -->  
+                                    <material xml:lang="en" ref="materials.xml#l">limestone</material>
+                                    <objectType xml:lang="bg" ref="objects.xml#w">стена</objectType><!-- добави в @ref след # съответното id от object.xml; съдържание на елемента - с думи--> 
+                                    <objectType xml:lang="en" ref="objects.xml#w">wall</objectType>
+                                    <dimensions> 
+                                        <height quantity="20" unit="cm">20</height>
+                                        <width quantity="41" unit="cm">41</width>
+                                        <depth quantity="7" unit="cm">7</depth>
+                                    </dimensions>
+                                  </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout></layout> 
+                                <layout></layout> 
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote xml:lang="bg">Буквите в отделните редове не са еднакви по височина.
+                                <height unit="cm" atleast="1,5" atMost="3">1,5-3</height>
+                            </handNote>
+                            <handNote xml:lang="en">The letters in the different lines are not of the same height.
+                                <height unit="cm" atleast="1,5" atMost="3">1,5-3</height>
+                            </handNote>
+                        </handDesc> 
+                        <decoDesc>
+                            <decoNote xml:lang="bg"></decoNote>
+                            <decoNote xml:lang="en"></decoNote>
+                        </decoDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace ref="origloc.xml#Cherven">
+                                <seg xml:lang="bg">Крепост Червен</seg>
+                                <seg xml:lang="en">Cherven fortress</seg>
+                            </origPlace>
+                            <origDate notBefore="1200" notAfter="1299" evidence="archaeological_context">
+                                <seg xml:lang="bg">XIII в.</seg>
+                                <seg xml:lang="en">13th c.</seg>
+                            </origDate>
+                        </origin>
+                        <provenance type="found" when="">
+                            <seg xml:lang="bg"><placeName type="ancientFindspot" ref="Findspot.xml#Cherven">Надписът произхожда от разрушенията на църква № 4 без по-точни данни за местонамирането.</placeName></seg>
+                            <seg xml:lang="en"><placeName type="ancientFindspot" ref="Findspot.xml#Cherven">The inscription is found among the ruins of the Church No. 4, with no more precise information about its location.</placeName></seg>
+                        </provenance>
+                        <provenance type="observed">
+                            <seg xml:lang="bg"><placeName ref="currentloc.xml#Cherven">Крепост Червен, църква № 4.</placeName></seg>
+                            <seg xml:lang="en"><placeName ref="currentloc.xml#Cherven">Cherven Fortress, church No. 4.</placeName></seg>
+                        </provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        </teiHeader>
+    <facsimile>
+        <graphic url="13-19-f.jpg"/>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="chu">
+                <ab>
+                    <lb n="1"/> <persName ref="names.xml#n017">савн</persName>
+                    <lb n="2"/> <persName ref="names.xml#n018">нфонть</persName>
+                    <lb n="3"/> <orig>іх</orig> <persName ref="names.xml#n019">калнкь</persName> <orig>п</orig> 
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <head xml:lang="bg">Букви в лигатура:</head> 
+                    <head xml:lang="en">Letters in ligatures:</head>
+                         <app loc="1"> <note>ав (савн)</note></app>
+                         <app loc="2"> <note>н (нфонть)</note></app>
+                         <app loc="3"> <note>нк (калнкь)</note></app>
+                </listApp>
+            </div>
+            <div type="translation">
+                <seg xml:lang="bg"> 
+                            Савин
+                            Нифонт
+                    ...их Калиник пи...
+                </seg>
+                <seg xml:lang="en"> 
+                            Savin
+                            Nifont
+                    ...их Kalinik пи...
+                </seg>
+            </div>
+            <div type="commentary">
+                <p>
+                    <seg xml:lang="bg"><note>Според Н. Ангелов последният ред може да се възстанови по следния начин: "[азъ мн]х(ъ) калнкъ пса(хъ)"(Ангелов 1985:242).</note></seg>
+                    <seg xml:lang="en"><note>According to N. Angelov, the last line can be reconstructed as follows: "[азъ мн]х(ъ) калнкъ пса(хъ)" (Angelov 1985:242)</note></seg>
+                </p> 
+            </div>
+            <div type="bibliography"> 
+                <listBibl>
+                    <bibl sameAs="bib:b1">47-48</bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

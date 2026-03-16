@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="bg">Поменателен надпис за неизвестно лице от крепостта Червен, Русенско</title><!-- Заглавие -->
+                <title xml:lang="en">Commemorative inscription for an unknown person from the fortress of Cherven, Ruse Region</title>
+                <editor>
+                    <persName xml:lang="bg">Никола Ангелов</persName>
+                    <persName xml:lang="en">Nikola Angelov</persName>
+                </editor> 
+            </titleStmt>            
+            <publicationStmt>
+                <authority>Bashtina Project</authority>
+                <date>2025</date>
+                <idno type="filename">13-16b</idno><!-- номер на надписа -->
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><country>Bulgaria</country> 
+                        <altIdentifier xml:lang="bg"><repository></repository><!-- Институция-->
+                            <idno/><!-- Инвентарен номер -->
+                        </altIdentifier> 
+                        <altIdentifier xml:lang="en"><repository></repository>
+                            <idno/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents><!-- Жанр на надписа -->
+                        <summary corresp="inscription_type_genres.xml#f"><!-- добави в @corresp след # съответното id от document-type.xml -->
+                            <seg xml:lang="bg">надгробен надпис</seg><!-- с думи -->
+                            <seg xml:lang="en">funerary inscription</seg>
+                        </summary>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material xml:lang="bg" ref="materials.xml#st">камък-други</material><!-- добави в @ref след # съответното id от material.xml; съдържание на елемента - с думи -->  
+                                    <material xml:lang="en" ref="materials.xml#st">stone-other</material>
+                                    <objectType xml:lang="bg" ref="objects.xml#w">стена</objectType><!-- добави в @ref след # съответното id от object.xml; съдържание на елемента - с думи--> 
+                                    <objectType xml:lang="en" ref="objects.xml#w">wall</objectType>
+                                    <dimensions> 
+                                        <height quantity="9,5" unit="cm">9,5</height> 
+                                        <width quantity="32,5" unit="cm">32,5</width>
+                                        <depth quantity="" unit="cm"></depth>
+                                    </dimensions>
+                                  </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout xml:lang="bg">Надписът е изпълнен в един ред с дължина 25 см</layout> 
+                                <layout xml:lang="en">The inscription is carved in a single line - 25 cm in length</layout> 
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote xml:lang="bg">
+                                <height unit="cm" atleast="2,5" atMost="3">2,5-3</height><!-- само числова стойност като стойност на атрибута и като съдържание на елемента -->
+                            </handNote>
+                        </handDesc> 
+                        <decoDesc>
+                            <decoNote xml:lang="bg"></decoNote>
+                            <decoNote xml:lang="en"></decoNote>
+                        </decoDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace ref="origloc.xml#Cherven">
+                                <seg xml:lang="bg">Крепост Червен</seg>
+                                <seg xml:lang="en">Cherven fortress</seg>
+                            </origPlace>
+                            <origDate notBefore="1250" notAfter="1299" evidence="lettering">
+                                <seg xml:lang="bg">след първата половина на XIII в.</seg>
+                                <seg xml:lang="en">after the first half of the XIIIth c.</seg>
+                            </origDate>
+                        </origin>
+                        <provenance type="found" when="">
+                            <seg xml:lang="bg"><placeName type="ancientFindspot" ref="Findspot.xml#Cherven">Надписът произхожда от църква № 4 без по-точни данни за местонамирането.</placeName></seg>
+                            <seg xml:lang="en"><placeName type="ancientFindspot" ref="Findspot.xml#Cherven">The inscription originates from Church No. 4, with no more precise information about its location.</placeName></seg>
+                        </provenance>
+                        <provenance type="observed">
+                            <seg xml:lang="bg"><placeName ref="currentloc.xml#Cherven">Надписът произхожда от църква № 4.</placeName></seg>
+                            <seg xml:lang="en"><placeName ref="currentloc.xml#Cherven">The inscription is from Church No. 4.</placeName></seg>
+                        </provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        </teiHeader>
+    <facsimile>
+        <graphic url="13-16b.jpg"/>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="chu">
+                <ab>
+                    <lb n="1"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_01716">вѣнаа</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_06296">пам<supplied reason = "lost">ѧт</supplied></w>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <head xml:lang="bg">Букви в лигатура:</head> 
+                    <head xml:lang="en">Letters in ligatures:</head>
+                         <app loc="1"><note>ѣ(вѣнаа)</note> <note>па(памѧт)</note></app>
+                </listApp>
+            </div>
+            <div type="translation">
+                <seg xml:lang="bg"> 
+                    Вечна пам(ет).
+                </seg>
+                <seg xml:lang="en"> 
+                    Eternal memory.
+                </seg>
+            </div>
+            <div type="commentary">
+                <p>
+                    <seg xml:lang="bg"><note>Възможно е надписът да е оставен върху камък, взидан в стените на църквата над гроб, изкопан край нея. Според Н. Ангелов този надпис има много общи особености с предходния (13-16а): еднакво съдържание, едни и същи лигатури, еднакво оформяне на буквите и размери. Всичко това е доказателство, че майсторът каменodелец, който е издълбал надписите, е един и същ“ (Ангелов 1985:237).</note></seg>
+                    <seg xml:lang="en"><note>It is possible that the inscription was left on a stone placed in the walls of the church above a grave, excavated near it. According to N. Angelov, this inscription shares many common features with the previous one (13-16a): identical content, the same ligatures, identical letter forms and dimensions. All this is evidence that the stonemason who carved the inscriptions was the same person"(Angelov 1985: 237).</note></seg>
+                </p> 
+            </div>
+            <div type="bibliography"> 
+                <listBibl>
+                    <bibl sameAs="bib:b8">236-237</bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

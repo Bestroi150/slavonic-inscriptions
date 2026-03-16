@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="bg">Поменателен надпис за патриарх Висарион</title><!-- Заглавие -->
+                <title xml:lang="en">Commemorative inscription for patriarch Visarion</title>
+                <editor>
+                    <persName xml:lang="bg">Николай Овчаров</persName>
+                    <persName xml:lang="en">Nikolay Ovcharov</persName>
+                    <persName xml:lang="bg">Коста Хаджиев</persName>
+                    <persName xml:lang="en">Kosta Hadjiev</persName>
+                </editor>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Bashtina Project</authority>
+                <date>2025</date>
+                <idno type="filename">13-14</idno><!-- номер на надписа -->
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><country>Bulgaria</country> 
+                        <altIdentifier  xml:lang="bg"><repository ref=""></repository><!-- Институция-->
+                            <idno/><!-- Инвентарен номер -->
+                        </altIdentifier> 
+                        <altIdentifier xml:lang="en"><repository ref=""></repository>
+                            <idno/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents><!-- Жанр на надписа -->
+                        <summary corresp="inscription_type_genres.xml#f"><!-- добави в @corresp след # съответното id от document-type.xml -->
+                            <seg xml:lang="bg">надгробен надпис</seg><!-- с думи -->
+                            <seg xml:lang="en">funerary inscription</seg>
+                        </summary>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material xml:lang="bg" ref="materials.xml#m">мрамор</material><!-- добави в @ref след # съответното id от material.xml; съдържание на елемента - с думи -->  
+                                    <material xml:lang="en" ref="materials.xml#m">marble</material>
+                                    <objectType xml:lang="bg" ref="objects.xml#col">колона</objectType>
+                                    <objectType xml:lang="en" ref="objects.xml#col">column</objectType>
+                                    <dimensions>
+                                        <height unit="cm" quantity="12">12</height>
+                                        <width unit="cm" quantity="22">22</width>
+                                        <depth unit="cm" quantity=""></depth>
+                                    </dimensions>
+                                  </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout xml:lang="bg">Надписът е изписан с тънко острие в четири, сравнително прави редове.</layout> 
+                                <layout xml:lang="en">The inscription is engraved with a fine point, arranged in four comparatively straight lines.</layout> 
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height atLeast="0,7" atMost="3,3" unit="cm">0,7-3,3</height>
+                            </handNote>
+                        </handDesc> 
+                        <decoDesc>
+                            <decoNote/>
+                        </decoDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace ref="origloc.xml#Tarnovo">
+                                <seg xml:lang="bg">Църква "Св. Св. Петър и Павел", Велико Търново</seg>
+                                <seg xml:lang="en">Church of Saints Peter and Paul, Veliko Tarnovo</seg>
+                            </origPlace>
+                            <origDate notBefore="1200" notAfter="1299" evidence="office"> 
+                                <seg xml:lang="bg">XIII в.</seg>
+                                <seg xml:lang="en">XIII c.</seg>
+                            </origDate>
+                        </origin>
+                        <provenance type="found" when="">
+                            <seg xml:lang="bg"><placeName type="ancientFindspot" ref="Findspot.xml#Tarnovo">Църква "Св. Св. Петър и Павел", Велико Търново</placeName></seg>
+                            <seg xml:lang="en"><placeName type="ancientFindspot" ref="Findspot.xml#Tarnovo">Church of Saints Peter and Paul, Veliko Tarnovo</placeName></seg>
+                        </provenance>
+                        <provenance type="observed">
+                            <seg xml:lang="bg"><placeName ref="currentloc.xml#Tarnovo">Църква "Св. Св. Петър и Павел", Велико Търново</placeName></seg>
+                            <seg xml:lang="en"><placeName ref="currentloc.xml#Tarnovo">Church of Saints Peter and Paul, Veliko Tarnovo</placeName></seg>
+                        </provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="13-14-f.jpg"/>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="chu">
+                <ab>
+                    <lb n="1"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_04693/"><expan><abbr>м</abbr><ex>ѣсѧ</ex><abbr>ца</abbr></expan></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_08570/">септѧбр<supplied reason="lost">а</supplied></w>  
+                    <lb n="2"/> <num value="20">к</num> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_02322/">ден</w> <w lemmaRef="https://histdict.uni-sofia.bg/evtdict/evt_show/d_04266">прѣстав</w>
+                    <lb n="3"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_08538/">сѧ</w> <persName ref="persons.xml#Visarion">всаронъ</persName> <roleName ref="titles.xml#n005"><expan><abbr>па</abbr><ex>трар</ex><abbr>х</abbr><ex>ъ</ex></expan></roleName>
+                    <lb n="4"/> <roleName ref="titles.xml#n005"><expan><abbr>патр̄а</abbr><ex>р</ex><abbr>х</abbr><ex>ъ</ex></expan></roleName>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <head xml:lang="bg">Букви в лигатура:</head>
+                    <head xml:lang="en">Letters in ligatures:</head>
+                </listApp>
+            </div>
+            <div type="translation">
+                <seg xml:lang="bg"> 
+                    Месец септември,
+                    20-я ден, представи
+                    се Висарион патриарх,
+                    патриарх.
+                </seg>
+                <seg xml:lang="en"> 
+                    Month of September,
+                    20th day presented
+                    himself Vissarion Patriarch,
+                    Patriarch.
+                </seg>
+            </div>
+            <div type="commentary">
+                <p>
+                    <seg xml:lang="bg"><note>Върху същата мраморна колона от църквата "Св. Св. Петър и Павел" са оставени още няколко графита, които обаче не могат да се датират.</note></seg>
+                    <seg xml:lang="en"><note>Several more graffiti were left on this same marble column from the church of St. Peter and St. Paul, but they cannot be dated.</note></seg>
+                </p> 
+            </div>
+            <div type="bibliography"> 
+                <listBibl>
+                    <bibl sameAs="bib:b6">7-12</bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

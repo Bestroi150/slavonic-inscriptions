@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="bg">Надпис от с. Невша, Провадийско</title><!-- Заглавие -->
+                <title xml:lang="en">Nevsha Inscription, Provadia region</title>
+                <editor>
+                    <persName xml:lang="bg">Казимир Попконстантинов</persName>
+                    <persName xml:lang="en">Kazimir Popkonstantinov</persName>
+                    <persName xml:lang="bg">Ото Кронщайнер</persName>
+                    <persName xml:lang="en">Otto Kronsteiner </persName>
+                </editor>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Bashtina Project</authority>
+                <date>2025</date>
+                <idno type="filename">13-11</idno><!-- номер на надписа -->
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><country>Bulgaria</country> 
+                        <altIdentifier  xml:lang="bg"><repository ref="https://www.museumvarna.com/">РИМ - Варна</repository><!-- Институция-->
+                            <idno/><!-- Инвентарен номер -->
+                        </altIdentifier> 
+                        <altIdentifier xml:lang="en"><repository ref="https://www.museumvarna.com/">Varna Regional museum of history</repository>
+                            <idno/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents><!-- Жанр на надписа -->
+                        <summary corresp="inscription_type_genres.xml#attr"><!-- добави в @corresp след # съответното id от document-type.xml -->
+                            <seg xml:lang="bg">надпис с приписков характер</seg><!-- с думи -->
+                            <seg xml:lang="en">attributional inscription</seg>
+                        </summary>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material xml:lang="bg" ref="materials.xml#l">варовик</material><!-- добави в @ref след # съответното id от material.xml; съдържание на елемента - с думи -->  
+                                    <material xml:lang="en" ref="materials.xml#l">limestone</material>
+                                    <objectType xml:lang="bg" ref="objects.xml#r">скала</objectType>
+                                    <objectType xml:lang="en" ref="objects.xml#r">rock</objectType>
+                                    <dimensions>
+                                        <height unit="cm" quantity="30">30</height>
+                                        <width unit="cm" quantity="32">32</width>
+                                        <depth unit="cm" quantity="12,5">12,5</depth>
+                                    </dimensions>
+                                  </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout xml:lang="bg"></layout> 
+                                <layout xml:lang="en"></layout> 
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height atLeast="3" atMost="5" unit="cm">3-5</height>
+                            </handNote>
+                        </handDesc> 
+                        <decoDesc>
+                            <decoNote/>
+                        </decoDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace ref="origloc.xml#unknown">неизвестно
+                                <seg xml:lang="bg"></seg>
+                                <seg xml:lang="en"></seg>
+                            </origPlace>
+                            <origDate notBefore="1200" notAfter="1299" evidence="archaeological_context">
+                                <seg xml:lang="bg">XIII в.</seg>
+                                <seg xml:lang="en">XIII c.</seg>
+                            </origDate>
+                        </origin>
+                        <provenance type="found" when="">
+                            <seg xml:lang="bg"><placeName type="ancientFindspot" ref="Findspot.xml#Nevsha">землището на с. Невша</placeName></seg>
+                            <seg xml:lang="en"><placeName type="ancientFindspot" ref="Findspot.xml#Nevsha">Nevsha's area</placeName></seg>
+                        </provenance>
+                        <provenance type="observed">
+                            <seg xml:lang="bg"><placeName ref="currentloc.xml#Varna">Варна</placeName></seg>
+                            <seg xml:lang="en"><placeName ref="currentloc.xml#Varna">Varna</placeName></seg>
+                        </provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="13-11a.jpg"/>
+        <graphic url="13-11b.jpg"/>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="chu">
+                <ab>
+                    <lb n="1"/> <g type="cross"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_00068/">азъ</w> <persName ref="names.xml#n016">хнатъ</persName> <w lemma="граматкъ">кра  
+                    <lb n="2" break="no"/>маткъ</w> <orig>ѣнꙋ</orig>
+                    <lb n="3"/> <gap reason="lost" extent="unknown" unit="character"/> <orig>ьлвъ</orig> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_07958/">псат</w>  
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <head xml:lang="bg"></head>
+                    <head xml:lang="en"></head>
+                </listApp>
+            </div>
+            <div type="translation">
+                <seg xml:lang="bg"> 
+                    Аз, Хинат гра
+                    матик Ян...
+                    ...ьлвъ (да) пиша
+                </seg>
+                <seg xml:lang="en"> 
+                    I, Hinat gra
+                    mmarian Yan...
+                    ...iliv (to) write 
+                </seg>
+            </div>
+            <div type="commentary">
+                <p>
+                    <seg xml:lang="bg"><note> Лексемата "граматикъ" е изписана с к вместо г. Между редовете на този надпис се чете и друг, по-плитко издълбан вариант на същия текст.</note></seg>
+                    <seg xml:lang="en"><note> The lexeme "граматикъ" is spelled with "к" instead of "г". Between the lines of this inscription, another, shallower carved variant of the same text is readable.</note></seg>
+                </p> 
+            </div>
+            <div type="bibliography"> 
+                <listBibl>
+                    <bibl sameAs="bib:b1">88-92</bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

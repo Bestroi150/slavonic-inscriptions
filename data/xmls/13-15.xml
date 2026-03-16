@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="bg">Шуменски надпис на Герги</title><!-- Заглавие -->
+                <title xml:lang="en">Shumen inscription of Gergi</title>
+                <editor>
+                    <persName xml:lang="bg">Анна-Мария Тотоманова</persName>
+                    <persName xml:lang="en">Anna-Maria Totomanova</persName>
+                    <persName xml:lang="bg">Казимир Попконстантинов</persName>
+                    <persName xml:lang="en">Kazimir Popkonstantinov</persName>
+                    <persName xml:lang="bg">Ото Кронщайнер</persName>
+                    <persName xml:lang="en">Otto Kronsteiner </persName>
+                </editor> 
+            </titleStmt>            
+            <publicationStmt>
+                <authority>Bashtina Project</authority>
+                <date>2025</date>
+                <idno type="filename">13-15</idno><!-- номер на надписа -->
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><country>Bulgaria</country> 
+                        <altIdentifier  xml:lang="bg"><repository ref="https://museum-shumen.eu/#">РИМ - Шумен</repository>
+                            <idno/><!-- Инвентарен номер -->
+                        </altIdentifier> 
+                        <altIdentifier xml:lang="en"> <repository ref="https://museum-shumen.eu/#">Regional museum of history - Shumen</repository>
+                            <idno/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents><!-- Жанр на надписа -->
+                        <summary corresp="inscription_type_genres.xml#attr">
+                            <seg xml:lang="bg">надпис с приписков характер</seg><!-- с думи -->
+                            <seg xml:lang="en">attributional inscription</seg>
+                        </summary>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material xml:lang="bg" ref="materials.xml#st">камък-други</material><!-- добави в @ref след # съответното id от material.xml; съдържание на елемента - с думи -->  
+                                    <material xml:lang="en" ref="materials.xml#st">stone-other</material>
+                                    <objectType xml:lang="bg" ref="objects.xml#w">стена</objectType><!-- добави в @ref след # съответното id от object.xml; съдържание на елемента - с думи--> 
+                                    <objectType xml:lang="en" ref="objects.xml#w">wall</objectType>
+                                    <dimensions> 
+                                        <height quantity="30" unit="cm">30</height> 
+                                        <width quantity="40" unit="cm">40</width>
+                                        <depth quantity="" unit="cm"></depth>
+                                    </dimensions>
+                                  </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout/> 
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <height quantity="4" unit="cm">4</height><!-- само числова стойност като стойност на атрибута и като съдържание на елемента -->
+                            </handNote>
+                        </handDesc> 
+                        <decoDesc>
+                            <decoNote/>
+                        </decoDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace ref="origloc.xml#Shumen">
+                                <seg xml:lang="bg">Шуменска крепост</seg>
+                                <seg xml:lang="en">Shumen fortress</seg>
+                            </origPlace>
+                            <origDate notBefore="1275" notAfter="1350" evidence="historical context">
+                                <seg xml:lang="bg">края на XIII – първата половина на XIV в.</seg>
+                                <seg xml:lang="en">end of the XIIIth c. - first half of the XIVth c.</seg>
+                            </origDate>
+                        </origin>
+                        <provenance type="found" when="1962">
+                            <seg xml:lang="bg"><placeName type="ancientFindspot" ref="Findspot.xml#Shumen">Шуменска крепост</placeName></seg>
+                            <seg xml:lang="en"><placeName type="ancientFindspot" ref="Findspot.xml#Shumen">Shumen fortress</placeName></seg>
+                        </provenance>
+                        <provenance type="observed">
+                            <seg xml:lang="bg"><placeName ref="currentloc.xml#Shumen">Шумен</placeName></seg>
+                            <seg xml:lang="en"><placeName ref="currentloc.xml#Shumen">Shumen</placeName></seg>
+                        </provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <facsimile>
+        <graphic url="13-15a.jpg"/>
+        <graphic url="13-15b.jpg"/>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="chu">
+                <ab>
+                    <lb n="1"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_00068/">азъ</w> <persName ref="names.xml#n007">герг</persName> <w lemma="поглѧдат">поглѧда<supplied reason = "lost">хь</supplied></w>  
+                    <lb n="2"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_02178/">долѹ</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_02992/"></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_01887/">горѣ</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_02992/"></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_08268/">рекохъ</w>   
+                    <lb n="3"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_00647/"><expan><abbr>б</abbr><ex>ож</ex><abbr>е</abbr></expan></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_04753/">на</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_03254/">мѧ</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_09646/">твое</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_03060/">зба
+                    <lb n="4" break="no"/>в</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_05470/">нъ</w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_06051/">ѿ</w> <w lemma="татарнъ">татаръ</w> 
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <head xml:lang="bg">Букви в лигатура:</head> 
+                    <head xml:lang="en">Letters in ligatures:</head>
+                         <app loc="1"> <note>п (герг поглѧда[хь])</note></app>
+                         <app loc="3"> <note>м (мѧ)</note></app>
+                         <app loc="4"> <note>н (в нъ)</note> <note>ѿ (отъ)</note></app>
+                </listApp>
+            </div>
+            <div type="translation">
+                <seg xml:lang="bg"> 
+                    Аз, Герги, погледнах
+                    долу и горе и рекох:
+                    "Боже, в името твое изба-
+                    ви ни от татарите!"
+                </seg>
+                <seg xml:lang="en"> 
+                    I, Gergi, looked 
+                    down and looked up and said:
+                    "God, in your name save
+                    us from the tatars"
+                </seg>
+            </div>
+            <div type="commentary">
+                <p>
+                    <seg xml:lang="bg"><note>Надписът е изписан върху камък на една от стените на Шуменската крепост.</note></seg>
+                    <seg xml:lang="en"><note>The inscription is carved on a stone, set in one of the walls of the Shumen Fortress.</note></seg>
+                </p> 
+            </div>
+            <div type="bibliography"> 
+                <listBibl>
+                    <bibl sameAs="bib:b1">130-131</bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

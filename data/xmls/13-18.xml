@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="bg">Поменателен надпис на Михей от крепостта Червен, Русенско</title><!-- Заглавие -->
+                <title xml:lang="en">Commemorative inscription of Mihei (Micah) from the fortress of Cherven, Ruse Region</title>
+                <editor>
+                    <persName xml:lang="bg">Анна-Мария Тотоманова</persName>
+                    <persName xml:lang="en">Anna-Maria Totomanova</persName>
+                    <persName xml:lang="bg">Коста Хаджиев</persName>
+                    <persName xml:lang="en">Kosta Hadjiev</persName>
+                </editor> 
+            </titleStmt>            
+            <publicationStmt>
+                <authority>Bashtina Project</authority>
+                <date>2025</date>
+                <idno type="filename">13-18</idno><!-- номер на надписа -->
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><country>Bulgaria</country> 
+                        <altIdentifier xml:lang="bg"><repository></repository><!-- Институция-->
+                            <idno/><!-- Инвентарен номер -->
+                        </altIdentifier> 
+                        <altIdentifier xml:lang="en"><repository></repository>
+                            <idno/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents><!-- Жанр на надписа -->
+                        <summary corresp="inscription_type_genres.xml#f">
+                            <seg xml:lang="bg">надгробен надпис</seg><!-- с думи -->
+                            <seg xml:lang="en">funerary inscription</seg>
+                        </summary>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material xml:lang="bg" ref="materials.xml#l">варовик</material>
+                                    <material xml:lang="en" ref="materials.xml#l">limestone</material>
+                                    <objectType xml:lang="bg" ref="objects.xml#w">стена</objectType>
+                                    <objectType xml:lang="en" ref="objects.xml#w">wall</objectType>
+                                    <dimensions> 
+                                        <height quantity="" unit="cm"></height>
+                                        <width quantity="" unit="cm"></width>
+                                        <depth quantity="" unit="cm"></depth>
+                                    </dimensions>
+                                  </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout xml:lang="bg">
+                                    Дължината на текста в част I. е 23 см.
+                                    Дължината на текста в част II. е 22 см.
+                                </layout>
+                                <layout xml:lang="en">
+                                    The length of the text in part I. is 23 cm.
+                                    The length of the text in part II. is 22 cm.
+                                </layout> 
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote xml:lang="bg">
+                                Размер на буквите на I.: <height unit="cm" atleast="2,5" atMost="4,5">2,5-4,5</height>.
+                                Размер на буквите на II: <height unit="cm" atleast="2" atMost="3,8">2-3,8</height>.
+                            </handNote>
+                            <handNote xml:lang="en">
+                                Leter size of I.: <height unit="cm" atleast="2,5" atMost="4,5">2,5-4,5</height>.
+                                Letter size of II.: <height unit="cm" atleast="2" atMost="3,8">2-3,8</height>.
+                            </handNote>
+                        </handDesc> 
+                        <decoDesc>
+                            <decoNote xml:lang="bg"></decoNote>
+                            <decoNote xml:lang="en"></decoNote>
+                        </decoDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace ref="origloc.xml#Cherven">
+                                <seg xml:lang="bg">Крепост Червен</seg>
+                                <seg xml:lang="en">Cherven fortress</seg>
+                            </origPlace>
+                            <origDate notBefore="1200" notAfter="1299" evidence="archaeological_context">
+                                <seg xml:lang="bg">XIII в.</seg>
+                                <seg xml:lang="en">13th c.</seg>
+                            </origDate>
+                        </origin>
+                        <provenance type="found" when="">
+                            <seg xml:lang="bg"><placeName type="ancientFindspot" ref="Findspot.xml#Cherven">Варовиковият блок, на който се четат надписите, е намерен до абсидата на църква № 4 от крепостта Червен.</placeName></seg>
+                            <seg xml:lang="en"><placeName type="ancientFindspot" ref="Findspot.xml#Cherven">The limestone block, on which the inscriptions are carved, was found near the apse of Church No. 4 at the Cherven fortress.</placeName></seg>
+                        </provenance>
+                        <provenance type="observed">
+                            <seg xml:lang="bg"><placeName ref="currentloc.xml#Cherven">Крепост Червен</placeName></seg>
+                            <seg xml:lang="en"><placeName ref="currentloc.xml#Cherven">Cherven Fortress</placeName></seg>
+                        </provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        </teiHeader>
+    <facsimile>
+        <graphic url=""/>
+    </facsimile>
+    <text>
+        <body>
+            <div type="textpart" n="I" xml:space="preserve" xml:lang="chu">
+                <ab>
+                    <lb n="1"/> <g type="cross"/> <persName ref="names.xml#n051">момїлъ</persName> 
+                </ab>
+            </div>
+            <div type="textpart" n="II" xml:space="preserve" xml:lang="chu">
+                <ab>
+                    <lb n="1"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_04693/"><expan><abbr>м</abbr><ex>ѣсѧ</ex><abbr>ца</abbr></expan></w> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_00183">апрл</w> 
+                    <lb n="2"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_07052">по</w> <persName ref="names.xml#n052">мхе</persName> <orig>м</orig> <gap reason="lost" extent="unknown" unit="character"/>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <head xml:lang="bg">Букви в лигатура:</head> 
+                    <head xml:lang="en">Letters in ligatures:</head>
+                         <app loc=""><note></note></app>
+                </listApp>
+            </div>
+            <div type="translation">
+                <seg xml:lang="bg"> 
+                    I. Момчил.
+                    II. Месец април
+                        почина Михей
+                </seg>
+                <seg xml:lang="en"> 
+                    I. Momchil.
+                    II. Month of April
+                        Mihey passed away
+                </seg>
+            </div>
+            <div type="commentary">
+                <p>
+                    <seg xml:lang="bg"><note> Паметникът представлява фрагментиран ъглов варовиков блок, като част I. се намира върху лявата половина на лицевата страна, а част II. - върху дясната лицева страна. „Графиката на двата надписа е сходна, но има и разлики.(…) Това ни дава основание да приемем, че надписите са изписани от две лица, като първият е автограф, а вторият е поменателен. Има вероятност двете части да са от един надпис (…)“ (Хаджиев 2010:165).</note></seg>
+                    <seg xml:lang="en"><note> The epigraph is a fragmented corner limestone block. Part I is located on the left half of the front face, while Part II is on the right front face. “The script of the two inscriptions is similar, though certain differences can be observed. (…) This gives us reason to assume that the inscriptions were written by two different individuals, the first text being an autograph and the second text - commemorative. There is also a possibility that the two parts originally belonged to a single inscription (…)” (Hadzhiev 2010: 165). </note></seg>
+                </p> 
+            </div>
+            <div type="bibliography"> 
+                <listBibl>
+                    <bibl sameAs="bib:b7">165</bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

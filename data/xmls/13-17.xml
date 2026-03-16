@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="bg">Поменателен надпис на митрополит Павел от крепостта Червен, Русенско</title><!-- Заглавие -->
+                <title xml:lang="en">Commemorative inscription of Metropolitan Pavel from the fortress of Cherven, Ruse Region</title>
+                <editor>
+                    <persName xml:lang="bg">Казимир Попконстантинов</persName>
+                    <persName xml:lang="en">Kazimir Popkonstantinov</persName>
+                    <persName xml:lang="bg">Ото Кронщайнер</persName>
+                    <persName xml:lang="en">Otto Kronsteiner </persName>
+                </editor> 
+            </titleStmt>            
+            <publicationStmt>
+                <authority>Bashtina Project</authority>
+                <date>2025</date>
+                <idno type="filename">13-17</idno><!-- номер на надписа -->
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><country>Bulgaria</country> 
+                        <altIdentifier xml:lang="bg"><repository></repository><!-- Институция-->
+                            <idno/><!-- Инвентарен номер -->
+                        </altIdentifier> 
+                        <altIdentifier xml:lang="en"><repository></repository>
+                            <idno/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents><!-- Жанр на надписа -->
+                        <summary corresp="inscription_type_genres.xml#f"><!-- добави в @corresp след # съответното id от document-type.xml -->
+                            <seg xml:lang="bg">надгробен надпис</seg><!-- с думи -->
+                            <seg xml:lang="en">funerary inscription</seg>
+                        </summary>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material xml:lang="bg" ref="materials.xml#l">варовик</material>
+                                    <material xml:lang="en" ref="materials.xml#l">limestone</material>
+                                    <objectType xml:lang="bg" ref="objects.xml#w">стена</objectType>
+                                    <objectType xml:lang="en" ref="objects.xml#w">wall</objectType>
+                                    <dimensions> 
+                                        <height quantity="23,5" unit="cm">23,5</height>
+                                        <width quantity="32" unit="cm">32</width>
+                                        <depth quantity="8,5" unit="cm">8,5</depth>
+                                    </dimensions>
+                                  </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout></layout> 
+                                <layout></layout> 
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote xml:lang="bg">
+                                <height unit="cm" atleast="1" atMost="4">1-4</height>
+                            </handNote>
+                        </handDesc> 
+                        <decoDesc>
+                            <decoNote xml:lang="bg"></decoNote>
+                            <decoNote xml:lang="en"></decoNote>
+                        </decoDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace ref="origloc.xml#Cherven">
+                                <seg xml:lang="bg">Крепост Червен</seg>
+                                <seg xml:lang="en">Cherven fortress</seg>
+                            </origPlace>
+                            <origDate notBefore="1200" notAfter="1299" evidence="archaeological_context">
+                                <seg xml:lang="bg">XIII в.</seg>
+                                <seg xml:lang="en">13th c.</seg>
+                            </origDate>
+                        </origin>
+                        <provenance type="found" when="">
+                            <seg xml:lang="bg"><placeName type="ancientFindspot" ref="Findspot.xml#Cherven">Надписът произхожда от църква № 4 без по-точни данни за местонамирането.</placeName></seg>
+                            <seg xml:lang="en"><placeName type="ancientFindspot" ref="Findspot.xml#Cherven">The inscription originates from Church No. 4, with no more precise information about its location.</placeName></seg>
+                        </provenance>
+                        <provenance type="observed">
+                            <seg xml:lang="bg"><placeName ref="currentloc.xml#Cherven">Крепост Червен, църква № 4.</placeName></seg>
+                            <seg xml:lang="en"><placeName ref="currentloc.xml#Cherven">Cherven Fortress, church No. 4.</placeName></seg>
+                        </provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        </teiHeader>
+    <facsimile>
+        <graphic url="13-17-f.jpg"/>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="chu">
+                <ab>
+                    <lb n="1"/> <w lemmaRef="https://histdict.uni-sofia.bg/dictionary/show/d_07052">по</w> <roleName ref="titles.xml#n004">мтрополтъ</roleName> <orig>ѧ</orig>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <head xml:lang="bg">Букви в лигатура:</head> 
+                    <head xml:lang="en">Letters in ligatures:</head>
+                         <app loc="1"><note>м, тр (мтрополтъ)</note></app>
+                </listApp>
+            </div>
+            <div type="translation">
+                <seg xml:lang="bg"> 
+                    Почина митрополит
+                </seg>
+                <seg xml:lang="en"> 
+                    The metropolitan ... passed away
+                </seg>
+            </div>
+            <div type="commentary">
+                <p>
+                    <seg xml:lang="bg"><note>Според Н. Ангелов надписът има и втори ред. От него личат четири запазени букви, между които има място за още две. "Напълно възможно е възстановяването на името Па(ве)лъ" (Ангелов 1985:242).</note></seg>
+                    <seg xml:lang="en"><note>According to N. Angelov, the inscription also has a second line. Four preserved letters can be seen there, with space for two more between them. “It is quite possible to reconstruct the name Pa(ve)lъ.” (Angelov 1985: 242)</note></seg>
+                </p> 
+            </div>
+            <div type="bibliography"> 
+                <listBibl>
+                    <bibl sameAs="bib:b1">47-48</bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
