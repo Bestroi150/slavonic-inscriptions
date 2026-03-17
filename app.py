@@ -1228,12 +1228,15 @@ if working_files:
                 translation_div = None
                 commentary_div = None
                 biblio_div = None
+                textpart_divs = []  # Top-level textpart divs (no edition wrapper)
 
                 if body_elem is not None:
                     for div in body_elem.findall("tei:div", NS):
                         div_type = div.attrib.get("type", "")                # Check for edition in Greek or Church Slavonic
                         if div_type == "edition" and div.attrib.get("{http://www.w3.org/XML/1998/namespace}lang") in ["grc", "chu"]:
                             edition_div = div
+                        elif div_type == "textpart":
+                            textpart_divs.append(div)
                         elif div_type == "apparatus":
                             apparatus_div = div
                         elif div_type == "translation":
@@ -1243,11 +1246,16 @@ if working_files:
                         elif div_type == "bibliography":
                             biblio_div = div
 
-                # Format the Greek edition text using Leiden+ formatting.
+                # Format the Church Slavonic / Greek edition text using Leiden+ formatting.
                 if edition_div is not None:
                     leiden_text = format_leiden_text(edition_div)
+                elif textpart_divs:
+                    leiden_text = "\n\n".join(
+                        f"{tp.attrib.get('n', '')}.\n{format_leiden_text(tp).strip()}"
+                        for tp in textpart_divs
+                    )
                 else:
-                    leiden_text = "No Greek edition text available."
+                    leiden_text = "No Church Slavonic text available."
 
                 # Extract plain text for apparatus, translation, commentary using only English segments.
                 apparatus_text = extract_apparatus_english(apparatus_div)
@@ -1336,6 +1344,17 @@ if working_files:
                         f'<div class="ocs-text custom-font">{formatted_text.replace(chr(10), "<br>")}</div>', 
                         unsafe_allow_html=True
                     )
+                elif textpart_divs:
+                    # Render each textpart with its label (e.g. I., II.)
+                    for tp in textpart_divs:
+                        n = tp.attrib.get('n', '')
+                        part_text = format_leiden_text(tp).strip()
+                        part_text = "\n".join(line for line in part_text.splitlines() if line.strip())
+                        label = f"<strong>{n}.</strong><br>" if n else ""
+                        st.markdown(
+                            f'<div class="ocs-text custom-font">{label}{part_text.replace(chr(10), "<br>")}</div>',
+                            unsafe_allow_html=True
+                        )
                 else:
                     st.write("No Church Slavonic text available.")
 
