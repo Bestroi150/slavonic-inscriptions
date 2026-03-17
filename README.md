@@ -48,5 +48,11 @@ python app.py
 - **Inscriptions**: XML files containing inscription data and metadata
 - **Bibliography**: Bibliography references and citations
 
+## Changelog
+
+### 2026-03-17
+- **Textpart visualization**: Added support for TEI XML files that use `<div type="textpart">` elements directly inside `<body>` (without a `<div type="edition">` wrapper). Each part is now rendered individually with its label (e.g. **I.**, **II.**) in the Church Slavonic custom font. This handles inscriptions such as `13-18.xml` (Commemorative inscription of Mihei from Cherven fortress) which contains two distinct text parts on the same stone block.
+
+
 ## License
 This project is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License. See [LICENSE](https://github.com/Bestroi150/slavonic-inscriptions/blob/main/LICENSE) file for details.
