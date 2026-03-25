@@ -412,11 +412,11 @@ else:
   
 # Create sidebar
 with st.sidebar:
-    st.image(str(STATIC_DIR / 'imgs/logo.jpg'), width=300, caption="Old Church Slavonic Inscriptions")
+    st.image(str(STATIC_DIR / 'imgs/logo.jpg'), width=300, caption="Bashtina Digital Epigraphy")
     st.header("Project Information")
     
     st.markdown("""
-    **Epigraphic Database Viewer-Generic EpiDoc** is a tool designed to visualize and analyze inscriptions.
+    **Bashtina** is a tool designed to visualize and analyze inscriptions.
     
     **Features**:
     - Upload and view XML inscriptions data
@@ -425,7 +425,7 @@ with st.sidebar:
     - Analyze inscriptions with basic statistics
     
     **Developed by**:
-    Kristiyan Simeonov, Sofia University
+    Kristiyan Simeonov, Sofia University "St. Kliment Ohridski"
     """)    # Add navigation buttons
    
 
